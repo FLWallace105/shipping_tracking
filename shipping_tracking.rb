@@ -101,8 +101,19 @@ module ShippingInfo
     end
 
     def process_vizion_api_data(myhash)
+      #use below later for bulk updating no time now ...
       local_milestones = Array.new
+      #2021-05-24T00:00:00.000+06:00
+      myformat =  "%Y-%m-%d %H:%M:%S.%L"
+      
+      #Nuke and pave container_milestones table by container_id
       myhash.each do |myh|
+        container_id = myh['payload']['container_id']
+        #Nuke and pave container_milestones table by container_id
+        delete_sql = "delete from container_milestones where container_id = \'#{container_id}\'"
+        ActiveRecord::Base.connection.execute(delete_sql)
+
+
         puts "-----"
         puts myh
         my_temp_milestone = myh['payload']['milestones']
@@ -112,7 +123,15 @@ module ShippingInfo
           is_planned = myt['planned']
           puts "is_planned = #{is_planned}"
           if is_planned == false
+            myt['container_id'] = container_id
             local_milestones.push(myt)
+            temp_timestamp = myt['timestamp'].gsub(/\+\d+:\d\d/i, "")
+            temp_timestamp = temp_timestamp.gsub(/\T/i, " ")
+            #puts temp_timestamp
+            #puts myformat
+
+            my_milestone_timestamp = DateTime.strptime(temp_timestamp, myformat)
+            ContainerMilestone.create(container_id: container_id, milestone_timestamp: temp_timestamp, location_name: myt['location']['name'], location_city: myt['location']['city'], location_country: myt['location']['country'], location_unlocode: myt['location']['unlocode'], location_facility: myt['location']['facility'], description: myt['description'], raw_descripition: myt['raw_description'], vessel_imo: myt['vessel_imo'], vessel_mmsi: myt['vessel_mmsi'], voyage: myt['voyage'], mode: myt['mode'], vessel: myt['vessel'], latitude: myt['location']['geolocation']['latitude'], longitude: myt['location']['geolocation']['longitude'] )
 
           else
             puts "milestone is planned: #{myt}"
@@ -123,7 +142,10 @@ module ShippingInfo
 
       end
 
-      puts local_milestones.inspect
+      #puts local_milestones.inspect
+      my_milestone_recs = ContainerMilestone.where("container_id = ?", 'ECMU4670610').order(:milestone_timestamp).reverse.first
+      puts my_milestone_recs.inspect
+      
 
     end
 
