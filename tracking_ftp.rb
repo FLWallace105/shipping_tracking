@@ -20,6 +20,8 @@ class TrackingFTP < Net::FTP
         mlsd.select { |entry| entry.type == 'file' && /.csv/.match?(entry.pathname) }.each do |entry|
           puts "Found #{entry.pathname}"
           process_tracking_csv(entry.pathname)
+          #here move files to Archive
+          move_file_to_archive(entry.pathname)
         end
     end
 
@@ -36,14 +38,33 @@ class TrackingFTP < Net::FTP
         puts mynew_csv.inspect
         mynew_csv.each do |row|
             puts row.inspect
+            shipping_company = row['Shipper Name']
+            container_id = row['Container #']
+            if container_id != nil && container_id !~ /\//i
+              my_container = ContainerTracking.find_by_container_id(container_id)
+              if my_container != nil
+                puts "Not creating new record"
+              else
+                ContainerTracking.create(shipping_company: shipping_company, container_id: container_id)
+              end
+            else
+              puts "container_id = #{container_id}, bad data, skipping this row."
+            end
         end
-        
-        
-        
-
+           
     end
 
-    
+    def move_file_to_archive(path)
+      begin
+        puts "Archiving #{path} on FTP server"
+        pathname = Pathname.new path
+        rename(path, pathname.dirname + 'Archive' + pathname.basename)
+      rescue Net::FTPPermError => e
+        puts e
+        puts 'Archive file exists already or cannot be overwritten. Removing original.'
+        delete path
+      end
+    end
 
 
 end

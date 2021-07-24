@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2021_07_23_213830) do
     t.jsonb "latest_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "finished_journey"
+    t.boolean "finished_journey", default: false
+    t.index ["container_id"], name: "index_container_trackings_on_container_id"
   end
 
 end

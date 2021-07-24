@@ -93,9 +93,37 @@ module ShippingInfo
       #--header 'X-API-Key: yourApiKey'
       reference_id = "5fd35ba9-2a08-4a4a-9959-7f4f5db1d341"
 
-      my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}", :headers => @my_basic_header, :timeout => 80)
-      puts my_reference_info.inspect
+      my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
+      #puts my_reference_info.inspect
+      process_vizion_api_data(my_reference_info.parsed_response)
 
+
+    end
+
+    def process_vizion_api_data(myhash)
+      local_milestones = Array.new
+      myhash.each do |myh|
+        puts "-----"
+        puts myh
+        my_temp_milestone = myh['payload']['milestones']
+        my_temp_milestone.each do |myt|
+          puts "*****"
+          puts myt
+          is_planned = myt['planned']
+          puts "is_planned = #{is_planned}"
+          if is_planned == false
+            local_milestones.push(myt)
+
+          else
+            puts "milestone is planned: #{myt}"
+          end
+          puts "****"
+        end
+        puts "------"
+
+      end
+
+      puts local_milestones.inspect
 
     end
 

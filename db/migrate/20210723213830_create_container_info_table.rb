@@ -8,9 +8,10 @@ class CreateContainerInfoTable < ActiveRecord::Migration[6.1]
       t.string :bill_of_lading
       t.jsonb :latest_status
       t.timestamps
-      t.boolean :finished_journey
+      t.boolean :finished_journey, default: false
 
 
     end
+    add_index :container_trackings, :container_id
   end
 end
