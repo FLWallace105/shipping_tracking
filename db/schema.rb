@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_24_220121) do
+ActiveRecord::Schema.define(version: 2021_07_25_175625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(version: 2021_07_24_220121) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "finished_journey", default: false
     t.index ["container_id"], name: "index_container_trackings_on_container_id"
+  end
+
+  create_table "shipping_lines_carrier_codes", force: :cascade do |t|
+    t.string "carrier_name"
+    t.bigint "carrier_id"
+    t.string "carrier_code"
+    t.index ["carrier_code"], name: "index_shipping_lines_carrier_codes_on_carrier_code"
+  end
+
+  create_table "shipping_lines_scac_codes", force: :cascade do |t|
+    t.bigint "carrier_code"
+    t.string "scac_code"
   end
 
 end

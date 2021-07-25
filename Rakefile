@@ -25,6 +25,15 @@ namespace :request_ftp_info do
         ShippingInfo::TrackGetter.new.test_call_reference_id
     end
 
+    desc 'load in shipping code list and scac code list'
+    task :load_in_shipping_scac_code_list do |t|
+        ShippingInfo::TrackGetter.new.load_in_shipping_lines_info
+    end
+
+    desc 'create Vizion API tracking references for container tracking table'
+    task :create_vizion_tracking_reference do |t|
+        ShippingInfo::TrackGetter.new.create_vizion_references_from_container_trackings
+    end
 
 
 end
