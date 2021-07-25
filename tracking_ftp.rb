@@ -84,4 +84,56 @@ class TrackingFTP < Net::FTP
     end
 
 
+    def upload_tracking_file_ftp
+      #Grab all container_trackings where finished_journey = f
+      
+      #tracking_csv = CSV.generate do |csv|
+      
+      container_ids = Array.new
+      my_containers = ContainerTracking.where("finished_journey = ?", false)
+      my_containers.each do |myc|
+        container_ids.push(myc.container_id)
+
+      end
+      puts "container_id = #{container_ids.inspect}"
+
+      filename = name_csv
+      CSV.open(filename, 'a+') do |csv|
+        csv << ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']
+      container_ids.each do |mycont|
+        my_rec = ContainerMilestone.where("container_id = ?", mycont).order(:milestone_timestamp).reverse.first
+        if my_rec.nil?
+          puts "Container_id #{mycont} has no milestones"
+        else
+          #Create CSV row here
+          csv << [my_rec.container_id, my_rec.milestone_timestamp, my_rec.location_name, my_rec.location_city, my_rec.location_country, my_rec.location_unlocode, my_rec.location_facility, my_rec.description, my_rec.raw_descripition, my_rec.vessel_imo, my_rec.vessel_mmsi, my_rec.voyage, my_rec.mode, my_rec.vessel]
+
+        end
+
+      end
+
+      end #csv generate
+      upload_orders_csv(filename)
+
+
+
+    end
+
+    def name_csv
+      
+      "Container_tracking_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
+    end
+
+
+    def upload_orders_csv(file)
+      directory = '/Inbound'
+      puts "Starting orders csv upload of #{file} to #{directory} on ftp server"
+      chdir directory
+      put(File.open(file))
+      close
+      File.delete(file)
+      puts 'Successfully uploaded CSV'
+    end
+
+
 end

@@ -35,5 +35,16 @@ namespace :request_ftp_info do
         ShippingInfo::TrackGetter.new.create_vizion_references_from_container_trackings
     end
 
+    desc 'get milestones from Vizion from container_tracking table'
+    task :get_milestones_container_tracking do |t|
+        ShippingInfo::TrackGetter.new.create_milestones_from_container_tracking
+    end
+
+    desc 'upload tracking file to FAM FTP server'
+    task :upload_tracking_file do |t|
+        TrackingFTP.new.upload_tracking_file_ftp
+    end
+    
+
 
 end

@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_07_25_175625) do
     t.string "vessel"
     t.string "latitude"
     t.string "longitude"
+    t.index ["container_id", "milestone_timestamp"], name: "cont_id_mile_ts", unique: true
     t.index ["container_id"], name: "index_container_milestones_on_container_id"
   end
 
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 2021_07_25_175625) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "finished_journey", default: false
+    t.boolean "uploaded", default: false
     t.index ["container_id"], name: "index_container_trackings_on_container_id"
   end
 

@@ -9,6 +9,7 @@ class CreateContainerInfoTable < ActiveRecord::Migration[6.1]
       t.jsonb :latest_status
       t.timestamps
       t.boolean :finished_journey, default: false
+      t.boolean :uploaded, default: false
 
 
     end

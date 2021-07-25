@@ -20,6 +20,10 @@ class CreateContainerMilestone < ActiveRecord::Migration[6.1]
 
     end
     add_index :container_milestones, :container_id
+    #add_index :container_milestones, [:container_id, :milestone_timestamp], unique: :true
+    #CREATE UNIQUE INDEX index_name ON table_name(column_name, [...]);
+
+    execute 'CREATE UNIQUE INDEX cont_id_mile_ts on container_milestones(container_id, milestone_timestamp );'
 
   end
 end

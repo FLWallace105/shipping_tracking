@@ -121,25 +121,46 @@ module ShippingInfo
       #curl --location --request GET 'https://demo.vizionapi.com/references/905c8e59-631d-4338-9e47-0fca2d6ee61c/updates' \
       #--header 'X-API-Key: yourApiKey'
       reference_id = "5fd35ba9-2a08-4a4a-9959-7f4f5db1d341"
+      container_id =  'ECMU4670610'
 
       my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
       #puts my_reference_info.inspect
-      process_vizion_api_data(my_reference_info.parsed_response)
+      process_vizion_api_data(my_reference_info.parsed_response, container_id)
 
 
     end
 
-    def process_vizion_api_data(myhash)
+    def create_milestones_from_container_tracking
+      #Get milestones for all containter_tracking where finished_journey = f
+      my_containers = ContainerTracking.where("finished_journey = ?", false)
+      my_containers.each do |mycont|
+        reference_id = mycont.vizion_reference_id
+        container_id = mycont.container_id
+        my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
+
+        process_vizion_api_data(my_reference_info.parsed_response, container_id)
+
+        puts "Sleeping 3"
+        sleep 3
+
+        
+
+      end
+
+
+    end
+
+    def process_vizion_api_data(myhash, container_id)
       #use below later for bulk updating no time now ...
       local_milestones = Array.new
       #2021-05-24T00:00:00.000+06:00
       myformat =  "%Y-%m-%d %H:%M:%S.%L"
       #testing only 
-      container_id = 'ECMU4670610'
+      #container_id = 'ECMU4670610'
       #Nuke and pave container_milestones table by container_id
-      delete_sql = "delete from container_milestones where container_id = \'#{container_id}\'"
-      ActiveRecord::Base.connection.execute(delete_sql)
-      
+      #delete_sql = "delete from container_milestones where container_id = \'#{container_id}\'"
+      #ActiveRecord::Base.connection.execute(delete_sql)
+      #exit
       #Nuke and pave container_milestones table by container_id
       myhash.each do |myh|
         #container_id = myh['payload']['container_id']
@@ -155,15 +176,23 @@ module ShippingInfo
           is_planned = myt['planned']
           puts "is_planned = #{is_planned}"
           if is_planned == false
-            myt['container_id'] = container_id
-            local_milestones.push(myt)
+            #myt['container_id'] = container_id
+            
             temp_timestamp = myt['timestamp'].gsub(/\+\d+:\d\d/i, "")
             temp_timestamp = temp_timestamp.gsub(/\T/i, " ")
             #puts temp_timestamp
             #puts myformat
 
             my_milestone_timestamp = DateTime.strptime(temp_timestamp, myformat)
-            ContainerMilestone.create(container_id: container_id, milestone_timestamp: temp_timestamp, location_name: myt['location']['name'], location_city: myt['location']['city'], location_country: myt['location']['country'], location_unlocode: myt['location']['unlocode'], location_facility: myt['location']['facility'], description: myt['description'], raw_descripition: myt['raw_description'], vessel_imo: myt['vessel_imo'], vessel_mmsi: myt['vessel_mmsi'], voyage: myt['voyage'], mode: myt['mode'], vessel: myt['vessel'], latitude: myt['location']['geolocation']['latitude'], longitude: myt['location']['geolocation']['longitude'] )
+            
+            temp_hash = {
+              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt['location']['name'], 'location_city' => myt['location']['city'], 'location_country' => myt['location']['country'], 'location_unlocode' => myt['location']['unlocode'], 'location_facility' => myt['location']['facility'], 'description' => myt['description'], 'raw_descripition' => myt['raw_description'], 'vessel_imo' => myt['vessel_imo'], 'vessel_mmsi' => myt['vessel_mmsi'], 'voyage' => myt['voyage'], 'mode' => myt['mode'], 'vessel' => myt['vessel'], 'latitude' => myt['location']['geolocation']['latitude'], 'longitude' => myt['location']['geolocation']['longitude'] }
+
+            
+
+            local_milestones.push(temp_hash)
+
+            #ContainerMilestone.create(container_id: container_id, milestone_timestamp: temp_timestamp, location_name: myt['location']['name'], location_city: myt['location']['city'], location_country: myt['location']['country'], location_unlocode: myt['location']['unlocode'], location_facility: myt['location']['facility'], description: myt['description'], raw_descripition: myt['raw_description'], vessel_imo: myt['vessel_imo'], vessel_mmsi: myt['vessel_mmsi'], voyage: myt['voyage'], mode: myt['mode'], vessel: myt['vessel'], latitude: myt['location']['geolocation']['latitude'], longitude: myt['location']['geolocation']['longitude'] )
 
           else
             puts "milestone is planned: #{myt}"
@@ -174,9 +203,18 @@ module ShippingInfo
 
       end
 
-      puts local_milestones.inspect
-      my_milestone_recs = ContainerMilestone.where("container_id = ?", 'ECMU4670610').order(:milestone_timestamp).reverse.first
-      puts my_milestone_recs.inspect
+      #Bulk upsert
+      puts "local_milestones = #{local_milestones.inspect}"
+      if local_milestones != []
+        my_result = ContainerMilestone.insert_all(local_milestones)
+        puts "my_result = #{my_result.inspect}"
+      else
+        puts "No milestones yet for this container: #{container_id}"
+      end
+
+      #puts local_milestones.inspect
+      #my_milestone_recs = ContainerMilestone.where("container_id = ?", 'ECMU4670610').order(:milestone_timestamp).reverse.first
+      #puts my_milestone_recs.inspect
       
 
     end
