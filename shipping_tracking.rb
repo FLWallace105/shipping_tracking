@@ -33,7 +33,7 @@ module ShippingInfo
         'include_metadata' => 'true'
       }
 
-      @base_vizion_url = ENV['BASE_VIZION_URL']
+      @base_vizion_url = ENV['BASE_VIZION_URL_SANDBOX']
 
       
     end
