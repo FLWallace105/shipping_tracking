@@ -16,6 +16,7 @@
 This is .env driven for configuration and run by cron jobs. Code refactoring should be implemented at some point, and there is room for conversion into a full Rails project to not only have the current ACS via FTP mode of pulling and pushing data, but user allowed download of CSV data including prior milestones per container for full history as well as the last current milestone, similar to the Influencer app and its download of CSVs to users.
 
 * Full history of container_milestones is potentially available (data exists) but is not implemented.
+* Method TrackingFTP.new.pull_tracking_info will not "clean" data, nor will it send back to ACS rows that have no Master BOL and thus cannot have a Vizion API tracking request created (as there would be no scac code).
 * Method TrackingFTP.new.pull_tracking_info will not check for duplicates in the input file.
 * Current codebase does minimal data cleaning and depends on Master BOL to exist and have first four characters indicate scac code.
 * Current codebase depends entirely on the input file created by ACS having current row headings etc.
