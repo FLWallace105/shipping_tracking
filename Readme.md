@@ -11,6 +11,7 @@
 - [x] Export an estimated time of arrival milestone in separate file for all containers where this exists.
 - [ ] Export milestone history for each container as a separate file.
 - [ ] Mark container_trackings with journey_finished = TRUE after upload to FTP site and some processing finished condition.
+- [ ] When journey is finished, cancel/release the Vizion Reference per their request.
 - [ ] Make the CSV ftp export include the longitude and latitude data. It exists in the table but the current code bombs out when trying to write to the outbound csv file.
 - [ ] Make the app timezone aware. Currently the app strips out timezone information.
 
@@ -25,6 +26,18 @@ This is .env driven for configuration and run by cron jobs. Code refactoring sho
 * Current codebase depends entirely on the input file created by ACS having current row headings etc.
 * Parent/Child relationship in the models container_tracking.rb and container_milestone.rb have yet to be implemented.
 * There is no "cleanup" of old, outmoded data for both the container_milestones table and container_trackings table. Not an issue at launch but should be done to enhance performance with lots of data in the tables.
+
+### Rake Files:
+
+Below are the rake files, the order in which they operate is important. The order is:
+
+1. rake request_ftp_info:get_tracking_info_ftp #This will pull down the CSV export created by ACS and add the data to the table container_trackings from which all trackings depend. It should match in frequency when ACS puts data on the 'Outbound' FTP directory.
+
+2. rake request_ftp_info:create_vizion_tracking_reference #This will create a tracking reference for the container where one does not already exist. This should run a few minutes after the above rake task pulls in new container_ids and new scac codes (from the Master BOL)
+
+3. rake request_ftp_info:get_milestones_container_tracking #This will get the latest milestones for any container via the Vizion API and update the container_milestones table with tracking data. This should run every 3 hours or so.
+
+4. rake request_ftp_info:upload_tracking_file #This will upload first the Last_milestone_container_tracking_xxxx.csv file, and then second the Estimated_arrival_conntainer_tracking_xxxx.csv file, where the xxx is date/time data. This should run around 6 AM, 12 pm, and 6 pm or so.
 
 ```ruby
 rake request_ftp_info:create_vizion_tracking_reference   # create Vizion API tracking references for container tr...
