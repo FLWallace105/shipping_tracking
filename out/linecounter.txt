@@ -1,0 +1,46 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2021-07-26 09:08:15
+count workspace : /Users/FWallace/Shopify/shipping_tracking
+total files : 24
+total code lines : 7767
+total comment lines : 51
+total blank lines : 155
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |             59|              0|             15|   0.76|
+   |            .rb|            366|             50|            129|    4.7|
+   |            .md|             24|              0|              7|   0.31|
+   |           .csv|           7240|              0|              0|     93|
+   |          .lock|             62|              1|              4|   0.80|
+   |           .yml|             16|              0|              0|   0.21|
+   -------------------------------------------------------------------------
+.env, code is 9, comment is 0, blank is 1.
+.gitignore, code is 2, comment is 0, blank is 0.
+config/database.yml, code is 16, comment is 0, blank is 0.
+Container_tracking_2021_07_25_15_10_27_632.csv, code is 1, comment is 0, blank is 0.
+CURRENT CONTAINER LIST.csv, code is 7135, comment is 0, blank is 0.
+db/migrate/20210723213830_create_container_info_table.rb, code is 16, comment is 0, blank is 2.
+db/migrate/20210724220121_create_container_milestone.rb, code is 24, comment is 2, blank is 3.
+db/migrate/20210725175608_create_shipping_lines_carrier_code.rb, code is 10, comment is 0, blank is 4.
+db/migrate/20210725175625_create_shipping_lines_scac_code.rb, code is 8, comment is 0, blank is 6.
+db/schema.rb, code is 46, comment is 12, blank is 7.
+Gemfile, code is 10, comment is 0, blank is 2.
+Gemfile.lock, code is 62, comment is 1, blank is 4.
+models/container_milestone.rb, code is 3, comment is 0, blank is 2.
+models/container_tracking.rb, code is 3, comment is 0, blank is 2.
+models/shipping_line_carrier_code.rb, code is 3, comment is 0, blank is 2.
+models/shipping_line_scac_code.rb, code is 3, comment is 0, blank is 2.
+Rakefile, code is 38, comment is 0, blank is 12.
+Readme.md, code is 24, comment is 0, blank is 7.
+shipping_lines_master.csv, code is 1, comment is 0, blank is 0.
+shipping_lines_scac_codes.csv, code is 103, comment is 0, blank is 0.
+shipping_lines_scac_codes.xlsx, it is a binary file.
+shipping_tracking.rb, code is 146, comment is 27, blank is 72.
+test.csv, code is 0, comment is 0, blank is 0.
+tracking_ftp.rb, code is 104, comment is 9, blank is 27.
+===============================================================================

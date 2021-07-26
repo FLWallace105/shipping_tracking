@@ -101,7 +101,7 @@ class TrackingFTP < Net::FTP
       CSV.open(filename, 'a+') do |csv|
         csv << ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']
       container_ids.each do |mycont|
-        my_rec = ContainerMilestone.where("container_id = ?", mycont).order(:milestone_timestamp).reverse.first
+        my_rec = ContainerMilestone.where("container_id = ? and planned = ?", mycont, false).order(:milestone_timestamp).reverse.first
         if my_rec.nil?
           puts "Container_id #{mycont} has no milestones"
         else
@@ -113,7 +113,33 @@ class TrackingFTP < Net::FTP
       end
 
       end #csv generate
-      upload_orders_csv(filename)
+      upload_tracking_csv(filename, "last_milestone_tracking")
+
+      #Below is estimated_time_arrival = true
+
+      new_filename = estimated_name_csv
+
+      CSV.open(new_filename, 'a+') do |csv|
+        csv << ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']
+      container_ids.each do |mycont|
+        my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont, true).order(:milestone_timestamp).reverse
+        if my_rec.nil?
+          puts "Container_id #{mycont} has no milestones"
+        else
+          #Create CSV row here remember we are not grabbing the first
+          my_rec.each do |myr|
+            csv << [myr.container_id, myr.milestone_timestamp, myr.location_name, myr.location_city, myr.location_country, myr.location_unlocode, myr.location_facility, myr.description, myr.raw_descripition, myr.vessel_imo, myr.vessel_mmsi, myr.voyage, myr.mode, myr.vessel]
+          end
+
+        end
+
+      end
+
+      end #csv generate
+      #below to go back to parent directory
+      
+      upload_tracking_csv(new_filename, "estimated_arrival_tracking")
+      close
 
 
 
@@ -121,19 +147,25 @@ class TrackingFTP < Net::FTP
 
     def name_csv
       
-      "Container_tracking_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
+      "Last_milestone_container_tracking_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
+    end
+
+    def estimated_name_csv
+      "Estimated_arrival_container_tracking_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
     end
 
 
-    def upload_orders_csv(file)
+    def upload_tracking_csv(file, message)
       directory = '/Inbound'
       puts "Starting orders csv upload of #{file} to #{directory} on ftp server"
       chdir directory
       put(File.open(file))
-      close
+      #close
       File.delete(file)
-      puts 'Successfully uploaded CSV'
+      puts "Successfully uploaded CSV #{message}"
     end
+
+    
 
 
 end

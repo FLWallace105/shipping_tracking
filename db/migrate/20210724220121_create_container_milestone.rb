@@ -17,6 +17,8 @@ class CreateContainerMilestone < ActiveRecord::Migration[6.1]
       t.string :vessel
       t.string :latitude
       t.string :longitude
+      t.boolean :estimated_time_arrival, default: false
+      t.boolean :planned, default: false
 
     end
     add_index :container_milestones, :container_id

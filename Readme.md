@@ -8,6 +8,8 @@
 - [x] Use database tables to request information from VizionAPI and save data.
 - [x] Process Vizion API data and convert to form needed for ACS.
 - [x] Export above data into ACS FTP site.
+- [x] Export an estimated time of arrival milestone in separate file for all containers where this exists.
+- [ ] Export milestone history for each container as a separate file.
 - [ ] Mark container_trackings with journey_finished = TRUE after upload to FTP site and some processing finished condition.
 - [ ] Make the CSV ftp export include the longitude and latitude data. It exists in the table but the current code bombs out when trying to write to the outbound csv file.
 - [ ] Make the app timezone aware. Currently the app strips out timezone information.
@@ -23,6 +25,20 @@ This is .env driven for configuration and run by cron jobs. Code refactoring sho
 * Current codebase depends entirely on the input file created by ACS having current row headings etc.
 * Parent/Child relationship in the models container_tracking.rb and container_milestone.rb have yet to be implemented.
 * There is no "cleanup" of old, outmoded data for both the container_milestones table and container_trackings table. Not an issue at launch but should be done to enhance performance with lots of data in the tables.
+
+```ruby
+rake request_ftp_info:create_vizion_tracking_reference   # create Vizion API tracking references for container tr...
+rake request_ftp_info:get_milestones_container_tracking  # get milestones from Vizion from container_tracking table
+rake request_ftp_info:get_tracking_info_ftp              # get csv tracking info from FTP
+rake request_ftp_info:load_in_shipping_scac_code_list    # load in shipping code list and scac code list
+rake request_ftp_info:testing_info                       # testing info
+rake request_ftp_info:testing_vizion                     # test vizion api with supplied container id
+rake request_ftp_info:testing_vizion_info                # test vizion api get update with supplied request id
+rake request_ftp_info:upload_tracking_file               # upload tracking file to FAM FTP server
+#Fix above with more info
+
+
+```
 
 ## Overview:
 This is a very simple plain old Ruby script running from rake tasks that in production will be cron jobs using the gemset wrapper from rvm. The file tracking_ftp.rb inherits from Net::FTP and creates a few methods inside to handle both downloading the input file and processing it (saving to database table container_trackings) and using the container_trackings table and the child container_milestones table to push a CSV file to the FTP endpoint for ACS to consume.

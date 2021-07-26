@@ -1,0 +1,194 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/Users/FWallace/Shopify/shipping_tracking",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2021-07-26 09:08:15",
+            "filesum": 24,
+            "codesum": 7767,
+            "commentsum": 51,
+            "blanksum": 155,
+            "statistics": {
+                "": {
+                    "code": 59,
+                    "comment": 0,
+                    "blank": 15
+                },
+                ".rb": {
+                    "code": 366,
+                    "comment": 50,
+                    "blank": 129
+                },
+                ".md": {
+                    "code": 24,
+                    "comment": 0,
+                    "blank": 7
+                },
+                ".csv": {
+                    "code": 7240,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".lock": {
+                    "code": 62,
+                    "comment": 1,
+                    "blank": 4
+                },
+                ".yml": {
+                    "code": 16,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": ".env"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "config/database.yml"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "Container_tracking_2021_07_25_15_10_27_632.csv"
+                },
+                {
+                    "blank": 0,
+                    "code": 7135,
+                    "comment": 0,
+                    "filename": "CURRENT CONTAINER LIST.csv"
+                },
+                {
+                    "blank": 2,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "db/migrate/20210723213830_create_container_info_table.rb"
+                },
+                {
+                    "blank": 3,
+                    "code": 24,
+                    "comment": 2,
+                    "filename": "db/migrate/20210724220121_create_container_milestone.rb"
+                },
+                {
+                    "blank": 4,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "db/migrate/20210725175608_create_shipping_lines_carrier_code.rb"
+                },
+                {
+                    "blank": 6,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "db/migrate/20210725175625_create_shipping_lines_scac_code.rb"
+                },
+                {
+                    "blank": 7,
+                    "code": 46,
+                    "comment": 12,
+                    "filename": "db/schema.rb"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "Gemfile"
+                },
+                {
+                    "blank": 4,
+                    "code": 62,
+                    "comment": 1,
+                    "filename": "Gemfile.lock"
+                },
+                {
+                    "blank": 2,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "models/container_milestone.rb"
+                },
+                {
+                    "blank": 2,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "models/container_tracking.rb"
+                },
+                {
+                    "blank": 2,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "models/shipping_line_carrier_code.rb"
+                },
+                {
+                    "blank": 2,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "models/shipping_line_scac_code.rb"
+                },
+                {
+                    "blank": 12,
+                    "code": 38,
+                    "comment": 0,
+                    "filename": "Rakefile"
+                },
+                {
+                    "blank": 7,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "Readme.md"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "shipping_lines_master.csv"
+                },
+                {
+                    "blank": 0,
+                    "code": 103,
+                    "comment": 0,
+                    "filename": "shipping_lines_scac_codes.csv"
+                },
+                {
+                    "filename": "shipping_lines_scac_codes.xlsx",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 72,
+                    "code": 146,
+                    "comment": 27,
+                    "filename": "shipping_tracking.rb"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "test.csv"
+                },
+                {
+                    "blank": 27,
+                    "code": 104,
+                    "comment": 9,
+                    "filename": "tracking_ftp.rb"
+                }
+            ]
+        }
+    ]
+}

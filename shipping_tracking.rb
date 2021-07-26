@@ -120,8 +120,8 @@ module ShippingInfo
     def test_call_reference_id
       #curl --location --request GET 'https://demo.vizionapi.com/references/905c8e59-631d-4338-9e47-0fca2d6ee61c/updates' \
       #--header 'X-API-Key: yourApiKey'
-      reference_id = "5fd35ba9-2a08-4a4a-9959-7f4f5db1d341"
-      container_id =  'ECMU4670610'
+      reference_id = "8f7c85e1-865b-4c90-a794-9a8e99aa474b"
+      container_id =  'DFSU6679443'
 
       my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
       #puts my_reference_info.inspect
@@ -175,7 +175,7 @@ module ShippingInfo
           puts myt
           is_planned = myt['planned']
           puts "is_planned = #{is_planned}"
-          if is_planned == false
+          
             #myt['container_id'] = container_id
             
             temp_timestamp = myt['timestamp'].gsub(/\+\d+:\d\d/i, "")
@@ -184,9 +184,17 @@ module ShippingInfo
             #puts myformat
 
             my_milestone_timestamp = DateTime.strptime(temp_timestamp, myformat)
+
+            temp_estimated_time_arrival = false
+            
+            if myt['raw_description'] =~ /estim.+/i
+              temp_estimated_time_arrival = true
+            else
+              temp_estimated_time_arrival = false
+            end
             
             temp_hash = {
-              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt['location']['name'], 'location_city' => myt['location']['city'], 'location_country' => myt['location']['country'], 'location_unlocode' => myt['location']['unlocode'], 'location_facility' => myt['location']['facility'], 'description' => myt['description'], 'raw_descripition' => myt['raw_description'], 'vessel_imo' => myt['vessel_imo'], 'vessel_mmsi' => myt['vessel_mmsi'], 'voyage' => myt['voyage'], 'mode' => myt['mode'], 'vessel' => myt['vessel'], 'latitude' => myt['location']['geolocation']['latitude'], 'longitude' => myt['location']['geolocation']['longitude'] }
+              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt['location']['name'], 'location_city' => myt['location']['city'], 'location_country' => myt['location']['country'], 'location_unlocode' => myt['location']['unlocode'], 'location_facility' => myt['location']['facility'], 'description' => myt['description'], 'raw_descripition' => myt['raw_description'], 'vessel_imo' => myt['vessel_imo'], 'vessel_mmsi' => myt['vessel_mmsi'], 'voyage' => myt['voyage'], 'mode' => myt['mode'], 'vessel' => myt['vessel'], 'latitude' => myt['location']['geolocation']['latitude'], 'longitude' => myt['location']['geolocation']['longitude'], 'planned' =>  myt['planned'], 'estimated_time_arrival' => temp_estimated_time_arrival}
 
             
 
@@ -194,9 +202,7 @@ module ShippingInfo
 
             #ContainerMilestone.create(container_id: container_id, milestone_timestamp: temp_timestamp, location_name: myt['location']['name'], location_city: myt['location']['city'], location_country: myt['location']['country'], location_unlocode: myt['location']['unlocode'], location_facility: myt['location']['facility'], description: myt['description'], raw_descripition: myt['raw_description'], vessel_imo: myt['vessel_imo'], vessel_mmsi: myt['vessel_mmsi'], voyage: myt['voyage'], mode: myt['mode'], vessel: myt['vessel'], latitude: myt['location']['geolocation']['latitude'], longitude: myt['location']['geolocation']['longitude'] )
 
-          else
-            puts "milestone is planned: #{myt}"
-          end
+          
           puts "****"
         end
         puts "------"
