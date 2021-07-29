@@ -147,11 +147,11 @@ class TrackingFTP < Net::FTP
 
     def name_csv
       
-      "Last_milestone_container_tracking_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
+      "Milestone_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
     end
 
     def estimated_name_csv
-      "Estimated_arrival_container_tracking_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
+      "ETA_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
     end
 
 
