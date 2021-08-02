@@ -21,7 +21,7 @@ module ShippingInfo
       @password = ENV['TRACKING_FTP_PASSWORD']
       @port = ENV['TRACKING_FTP_PORT']
 
-      @token = ENV['TRACKING_SANDBOX_TOKEN']
+      @token = ENV['TRACKING_PRODUCTION_TOKEN']
 
       @my_request_header = {
         "X-API-Key" => @token,
@@ -33,7 +33,7 @@ module ShippingInfo
         'include_metadata' => 'true'
       }
 
-      @base_vizion_url = ENV['BASE_VIZION_URL_SANDBOX']
+      @base_vizion_url = ENV['BASE_VIZION_URL_PRODUCTION']
 
       
     end
@@ -165,7 +165,7 @@ module ShippingInfo
 
         end
 
-        if my_reference_info.parsed_response == {"error"=>"Reference not found."}
+        if my_reference_info.parsed_response == {"error"=>"Reference not found."} || my_reference_info.parsed_response == {"message"=>"Endpoint request timed out"}
           puts "Error response, skipping"
           next
         end
@@ -211,13 +211,18 @@ module ShippingInfo
           puts "is_planned = #{is_planned}"
           
             #myt['container_id'] = container_id
+
+            if myt['timestamp'] == nil
+              temp_timestamp = nil
+            else
             
             temp_timestamp = myt['timestamp'].gsub(/\+\d+:\d\d/i, "")
             temp_timestamp = temp_timestamp.gsub(/\T/i, " ")
             #puts temp_timestamp
             #puts myformat
+            end
 
-            my_milestone_timestamp = DateTime.strptime(temp_timestamp, myformat)
+            #my_milestone_timestamp = DateTime.strptime(temp_timestamp, myformat)
 
             temp_estimated_time_arrival = false
             
@@ -228,7 +233,7 @@ module ShippingInfo
             end
             
             temp_hash = {
-              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt['location']['name'], 'location_city' => myt['location']['city'], 'location_country' => myt['location']['country'], 'location_unlocode' => myt['location']['unlocode'], 'location_facility' => myt['location']['facility'], 'description' => myt['description'], 'raw_descripition' => myt['raw_description'], 'vessel_imo' => myt['vessel_imo'], 'vessel_mmsi' => myt['vessel_mmsi'], 'voyage' => myt['voyage'], 'mode' => myt['mode'], 'vessel' => myt['vessel'], 'latitude' => myt['location']['geolocation']['latitude'], 'longitude' => myt['location']['geolocation']['longitude'], 'planned' =>  myt['planned'], 'estimated_time_arrival' => temp_estimated_time_arrival}
+              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt.dig(:location, :name), 'location_city' => myt.dig(:location, :city), 'location_country' => myt.dig(:location, :country), 'location_unlocode' => myt.dig(:location, :unlocode), 'location_facility' => myt.dig(:location, :facility), 'description' => myt.dig(:description), 'raw_descripition' => myt.dig(:raw_description), 'vessel_imo' => myt.dig(:vessel_imo), 'vessel_mmsi' => myt.dig(:vessel_mmsi), 'voyage' => myt.dig(:voyage), 'mode' => myt.dig(:mode), 'vessel' => myt.dig(:vessell), 'latitude' => myt.dig(:location, :geolocation, :latitude), 'longitude' => myt.dig(:location, :geolocation, :longitude), 'planned' =>  myt.dig(:planned), 'estimated_time_arrival' => temp_estimated_time_arrival}
 
             
 
