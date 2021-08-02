@@ -97,7 +97,7 @@ module ShippingInfo
         if mycont.shipping_company == 'EGLV'
           mybody = {
             "scac": mycont.shipping_company,
-            "bill_of_lading" : mycont.bill_of_lading,
+            "bill_of_lading": mycont.bill_of_lading,
             "container_id": mycont.container_id
               
           }.to_json
