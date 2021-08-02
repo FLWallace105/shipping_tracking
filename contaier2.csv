@@ -1,0 +1,11 @@
+id,container_id,milestone_timestamp,location_name,location_city,location_country,location_unlocode,location_facility,description,raw_descripition,vessel_imo,vessel_mmsi,voyage,mode,vessel,latitude,longitude,estimated_time_arrival,planned
+82,DFSU6679443,2021-08-04 14:30:00,LONG BEACH,Long Beach,United States,USLGB,,Vessel arrived at destination port,Estimated Time of Arrival,7434444,353056000,,Vessel,MSC KATIE,33.766666666666666,-118.18333333333334,t,t
+81,DFSU6679443,2021-07-10 12:01:00,YANTIAN,Yantian District,China,CNYTN,,Loaded on vessel,Transshipment Loaded,7434444,353056000,QJ125N,Vessel,MSC KATIE,26.85,119.86666666666666,f,f
+80,DFSU6679443,2021-06-28 15:10:00,YANTIAN,Yantian District,China,CNYTN,,Discharged from vessel at transshipment port,Transshipment Discharged,,,117E,,MOSCOW MAERSK,26.85,119.86666666666666,f,f
+79,DFSU6679443,2021-06-08 18:58:00,SINGAPORE,Singapore,Singapore,SGSIN,,Loaded on vessel,Transshipment Loaded,,,117E,,MOSCOW MAERSK,1.271978728313698,103.768308722207,f,f
+78,DFSU6679443,2021-06-06 02:36:00,SINGAPORE,Singapore,Singapore,SGSIN,,Discharged from vessel at transshipment port,Transshipment Discharged,,,0023S,,SARERA,1.271978728313698,103.768308722207,f,f
+77,DFSU6679443,2021-05-30 22:00:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Loaded on vessel,Loaded,,,0023S,,SARERA,22.30049832559382,91.79452471970988,f,f
+76,DFSU6679443,2021-05-29 23:49:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Positioned In,Positioned In,,,,,,22.30049832559382,91.79452471970988,f,f
+75,DFSU6679443,2021-05-29 23:40:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Positioned Out,Positioned Out,,,,,,22.30049832559382,91.79452471970988,f,f
+74,DFSU6679443,2021-05-27 23:30:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Gate in full,Gate In Full,,,,,,22.30049832559382,91.79452471970988,f,f
+73,DFSU6679443,2021-05-27 23:20:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Gate out empty,Empty to Shipper,,,,,,22.30049832559382,91.79452471970988,f,f

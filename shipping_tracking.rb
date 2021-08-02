@@ -152,7 +152,22 @@ module ShippingInfo
         container_id = mycont.container_id
         my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
 
+        puts "response = #{my_reference_info.parsed_response}, reference_id = #{reference_id}, container_id = #{container_id}"
+
+        if my_reference_info.parsed_response == []
+          puts "No response at all, skipping"
+          next
+
+        end
+
+        if my_reference_info.parsed_response == {"error"=>"Reference not found."}
+          puts "Error response, skipping"
+          next
+        end
+
         process_vizion_api_data(my_reference_info.parsed_response, container_id)
+
+        
 
         puts "Sleeping 3"
         sleep 3

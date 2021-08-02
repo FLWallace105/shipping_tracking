@@ -1,0 +1,11 @@
+id,container_id,milestone_timestamp,location_name,location_city,location_country,location_unlocode,location_facility,description,raw_descripition,vessel_imo,vessel_mmsi,voyage,mode,vessel,latitude,longitude,estimated_time_arrival,planned
+72,TCLU7537047,2021-08-04 14:30:00,LONG BEACH,Long Beach,United States,USLGB,,Vessel arrived at destination port,Estimated Time of Arrival,7434444,353056000,,Vessel,MSC KATIE,33.766666666666666,-118.18333333333334,t,t
+71,TCLU7537047,2021-06-27 10:01:00,SHEKOU,Jonesboro,United States,CNSHK,,Loaded on vessel,Transshipment Loaded,7434444,353056000,QJ125N,Vessel,MSC KATIE,22.45994033143178,113.8929109645951,f,f
+70,TCLU7537047,2021-06-24 21:00:00,SHEKOU,Jonesboro,United States,CNSHK,,Discharged from vessel at transshipment port,Transshipment Discharged,9777216,636017882,FT119E,Vessel,MSC VIVIANA,22.45994033143178,113.8929109645951,f,f
+69,TCLU7537047,2021-06-16 21:37:00,SINGAPORE,Singapore,Singapore,SGSIN,,Loaded on vessel,Transshipment Loaded,9777216,636017882,FT119E,Vessel,MSC VIVIANA,1.271978728313698,103.768308722207,f,f
+68,TCLU7537047,2021-06-09 12:36:00,SINGAPORE,Singapore,Singapore,SGSIN,,Discharged from vessel at transshipment port,Transshipment Discharged,9123582,564065000,0077E,Vessel,KOTA WANGI,1.271978728313698,103.768308722207,f,f
+67,TCLU7537047,2021-06-03 22:27:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Loaded on vessel,Loaded,9123582,564065000,104S,Vessel,KOTA WANGI,22.30049832559382,91.79452471970988,f,f
+66,TCLU7537047,2021-06-02 23:49:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Positioned In,Positioned In,,,,,,22.30049832559382,91.79452471970988,f,f
+65,TCLU7537047,2021-06-02 23:40:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Positioned Out,Positioned Out,,,,,,22.30049832559382,91.79452471970988,f,f
+64,TCLU7537047,2021-06-01 23:30:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Gate in full,Gate In Full,,,,,,22.30049832559382,91.79452471970988,f,f
+63,TCLU7537047,2021-06-01 23:20:00,CHITTAGONG,Chattogram,Bangladesh,BDCGP,,Gate out empty,Empty to Shipper,,,,,,22.30049832559382,91.79452471970988,f,f
