@@ -93,11 +93,25 @@ module ShippingInfo
       my_container_tracking = ContainerTracking.where("vizion_reference_id is null ")
       my_container_tracking.each do |mycont|
         puts mycont.inspect
-        mybody = {
-          "scac": mycont.shipping_company,
-          "container_id": mycont.container_id
-            
-        }.to_json
+        mybody = { }
+        if mycont.shipping_company == 'EGLV'
+          mybody = {
+            "scac": mycont.shipping_company,
+            "bill_of_lading" : mycont.bill_of_lading,
+            "container_id": mycont.container_id
+              
+          }.to_json
+
+
+        else
+          mybody = {
+            "scac": mycont.shipping_company,
+            "container_id": mycont.container_id
+              
+          }.to_json
+
+        end
+        
         my_new_reference = HTTParty.post("#{@base_vizion_url}/references", :headers => @my_request_header, :body => mybody,  :timeout => 80)
 
         if my_new_reference.parsed_response['message'] == 'Reference created successfully.'
