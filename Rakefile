@@ -20,9 +20,15 @@ namespace :request_ftp_info do
         ShippingInfo::TrackGetter.new.test_vizion_api
     end
 
+    desc 'call individual reference id to get milestone info'
+    task :call_reference_id_milestone, :ref_id do |t, args|
+        reference_id = args['ref_id']
+        ShippingInfo::TrackGetter.new.test_vizion_milestone(reference_id)
+    end
+
     desc 'test vizion api get update with supplied request id'
-    task :testing_vizion_info do |t|
-        ShippingInfo::TrackGetter.new.test_call_reference_id
+    task :testing_vizion_info, :args do |t, args|
+        ShippingInfo::TrackGetter.new.test_call_reference_id(*args)
     end
 
     desc 'load in shipping code list and scac code list'

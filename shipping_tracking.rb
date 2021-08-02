@@ -88,6 +88,15 @@ module ShippingInfo
 
     end
 
+    def test_vizion_milestone(reference_id)
+      my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
+
+      
+      puts " reference_id = #{reference_id}"
+      puts "response = #{my_reference_info.parsed_response}"
+
+    end
+
 
     def create_vizion_references_from_container_trackings
       my_container_tracking = ContainerTracking.where("vizion_reference_id is null ")
@@ -131,15 +140,11 @@ module ShippingInfo
 
     end
 
-    def test_call_reference_id
-      #curl --location --request GET 'https://demo.vizionapi.com/references/905c8e59-631d-4338-9e47-0fca2d6ee61c/updates' \
-      #--header 'X-API-Key: yourApiKey'
-      reference_id = "8f7c85e1-865b-4c90-a794-9a8e99aa474b"
-      container_id =  'DFSU6679443'
-
+    def test_call_reference_id(reference_id, container_id)
+      
       my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
-      #puts my_reference_info.inspect
-      process_vizion_api_data(my_reference_info.parsed_response, container_id)
+      puts my_reference_info.inspect
+      #process_vizion_api_data(my_reference_info.parsed_response, container_id)
 
 
     end
