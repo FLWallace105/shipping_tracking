@@ -233,7 +233,7 @@ module ShippingInfo
             end
             
             temp_hash = {
-              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt.dig(:location, :name), 'location_city' => myt.dig(:location, :city), 'location_country' => myt.dig(:location, :country), 'location_unlocode' => myt.dig(:location, :unlocode), 'location_facility' => myt.dig(:location, :facility), 'description' => myt.dig(:description), 'raw_descripition' => myt.dig(:raw_description), 'vessel_imo' => myt.dig(:vessel_imo), 'vessel_mmsi' => myt.dig(:vessel_mmsi), 'voyage' => myt.dig(:voyage), 'mode' => myt.dig(:mode), 'vessel' => myt.dig(:vessell), 'latitude' => myt.dig(:location, :geolocation, :latitude), 'longitude' => myt.dig(:location, :geolocation, :longitude), 'planned' =>  myt.dig(:planned), 'estimated_time_arrival' => temp_estimated_time_arrival}
+              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt.dig(:location, :name), 'location_city' => myt.dig(:location, :city), 'location_country' => myt.dig(:location, :country), 'location_unlocode' => myt.dig(:location, :unlocode), 'location_facility' => myt.dig(:location, :facility), 'description' => myt.dig(:description), 'raw_descripition' => myt.dig(:raw_description), 'vessel_imo' => myt.dig(:vessel_imo), 'vessel_mmsi' => myt.dig(:vessel_mmsi), 'voyage' => myt.dig(:voyage), 'mode' => myt.dig(:mode), 'vessel' => myt.dig(:vessel), 'latitude' => myt.dig(:location, :geolocation, :latitude), 'longitude' => myt.dig(:location, :geolocation, :longitude), 'planned' =>  myt.dig(:planned), 'estimated_time_arrival' => temp_estimated_time_arrival}
 
             
 
