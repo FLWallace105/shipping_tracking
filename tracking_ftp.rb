@@ -115,7 +115,7 @@ class TrackingFTP < Net::FTP
       end #csv generate
       upload_tracking_csv(filename, "last_milestone_tracking")
 
-      Below is estimated_time_arrival = true
+      #Below is estimated_time_arrival = true
 
       new_filename = estimated_name_csv
 
