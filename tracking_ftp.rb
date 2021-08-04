@@ -115,7 +115,7 @@ class TrackingFTP < Net::FTP
       end #csv generate
       upload_tracking_csv(filename, "last_milestone_tracking")
 
-      #Below is estimated_time_arrival = true
+      Below is estimated_time_arrival = true
 
       new_filename = estimated_name_csv
 
@@ -124,10 +124,11 @@ class TrackingFTP < Net::FTP
       container_ids.each do |mycont|
         my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont, true).order(:milestone_timestamp).reverse.first
         if my_rec.nil?
-          puts "Container_id #{mycont} has no milestones"
+          puts "Container_id #{mycont} has no ETAs"
         else
-          #Create CSV row here remember we are not grabbing the first
+          #Create CSV row here we are grabbing the first in reverse milestone timptamp order
             csv << [my_rec.container_id, my_rec.milestone_timestamp, my_rec.location_name, my_rec.location_city, my_rec.location_country, my_rec.location_unlocode, my_rec.location_facility, my_rec.description, my_rec.raw_descripition, my_rec.vessel_imo, my_rec.vessel_mmsi, my_rec.voyage, my_rec.mode, my_rec.vessel]
+            puts my_rec.inspect
           
 
         end
