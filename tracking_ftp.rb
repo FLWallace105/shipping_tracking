@@ -127,9 +127,8 @@ class TrackingFTP < Net::FTP
           puts "Container_id #{mycont} has no milestones"
         else
           #Create CSV row here remember we are not grabbing the first
-          my_rec.each do |myr|
-            csv << [myr.container_id, myr.milestone_timestamp, myr.location_name, myr.location_city, myr.location_country, myr.location_unlocode, myr.location_facility, myr.description, myr.raw_descripition, myr.vessel_imo, myr.vessel_mmsi, myr.voyage, myr.mode, myr.vessel]
-          end
+            csv << [my_rec.container_id, my_rec.milestone_timestamp, my_rec.location_name, my_rec.location_city, my_rec.location_country, my_rec.location_unlocode, my_rec.location_facility, my_rec.description, my_rec.raw_descripition, my_rec.vessel_imo, my_rec.vessel_mmsi, my_rec.voyage, my_rec.mode, my_rec.vessel]
+          
 
         end
 
