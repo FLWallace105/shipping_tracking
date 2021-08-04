@@ -21,9 +21,10 @@ namespace :request_ftp_info do
     end
 
     desc 'call individual reference id to get milestone info'
-    task :call_reference_id_milestone, :ref_id do |t, args|
+    task :call_reference_id_milestone, :ref_id, :container_id do |t, args|
         reference_id = args['ref_id']
-        ShippingInfo::TrackGetter.new.test_vizion_milestone(reference_id)
+        container_id = args['container_id']
+        ShippingInfo::TrackGetter.new.test_vizion_milestone(reference_id, container_id)
     end
 
     desc 'test vizion api get update with supplied request id'

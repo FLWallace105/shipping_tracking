@@ -88,12 +88,35 @@ module ShippingInfo
 
     end
 
-    def test_vizion_milestone(reference_id)
+    def test_vizion_milestone(reference_id, container_id)
       my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
 
       
-      puts " reference_id = #{reference_id}"
+      puts "reference_id = #{reference_id}"
       puts "response = #{my_reference_info.parsed_response}"
+
+      puts "-------------"
+
+      payloads = my_reference_info.parsed_response
+      
+
+      payloads.each do |myp|
+        puts "***start***"
+        puts myp.inspect
+        puts "****** end *****"
+        my_milestones = myp['payload']['milestones']
+        my_milestones.each do |mym|
+          puts "--- milestone start ---"
+          puts mym.inspect
+          puts "---- milestone end -----"
+
+        end
+
+      end
+
+      puts "calling method --"
+
+      process_vizion_api_data(my_reference_info.parsed_response, container_id)
 
     end
 
@@ -232,8 +255,29 @@ module ShippingInfo
               temp_estimated_time_arrival = false
             end
             
+            
+            temp_location_name = myt.dig('location', 'name')
+            temp_location_country = myt.dig('location', 'country')
+            temp_location_city = myt.dig('location', 'city')
+            temp_location_unlocode = myt.dig('location', 'unlocode')
+            temp_location_facility = myt.dig('location', 'facility')
+            temp_description = myt.dig('description')
+            temp_raw_description = myt.dig('raw_description')
+            temp_vessel_imo = myt.dig('vessel_imo')
+            temp_vessel_mmsi = myt.dig('vessel_mmsi')
+            temp_voyage = myt.dig('voyage')
+            temp_mode = myt.dig('mode')
+            temp_vessel = myt.dig('vessel')
+            temp_planned = myt.dig('planned')
+            temp_latitude = myt.dig('location', 'geolocation', 'latitude')
+            temp_longitude = myt.dig('location', 'geolocation', 'longitude')
+            #error_message = response.parsed_response.dig('errors', 'status')
+
             temp_hash = {
-              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => myt.dig(:location, :name), 'location_city' => myt.dig(:location, :city), 'location_country' => myt.dig(:location, :country), 'location_unlocode' => myt.dig(:location, :unlocode), 'location_facility' => myt.dig(:location, :facility), 'description' => myt.dig(:description), 'raw_descripition' => myt.dig(:raw_description), 'vessel_imo' => myt.dig(:vessel_imo), 'vessel_mmsi' => myt.dig(:vessel_mmsi), 'voyage' => myt.dig(:voyage), 'mode' => myt.dig(:mode), 'vessel' => myt.dig(:vessel), 'latitude' => myt.dig(:location, :geolocation, :latitude), 'longitude' => myt.dig(:location, :geolocation, :longitude), 'planned' =>  myt.dig(:planned), 'estimated_time_arrival' => temp_estimated_time_arrival}
+              'container_id' => container_id, 'milestone_timestamp' => temp_timestamp, 'location_name' => temp_location_name, 'location_city' => temp_location_city, 'location_country' => temp_location_country, 'location_unlocode' => temp_location_unlocode, 'location_facility' => temp_location_facility, 'description' => temp_description, 'raw_descripition' => temp_raw_description, 'vessel_imo' => temp_vessel_imo, 'vessel_mmsi' => temp_vessel_mmsi, 'voyage' => temp_voyage, 'mode' => temp_mode, 'vessel' => temp_vessel, 'latitude' => temp_latitude, 'longitude' => temp_longitude, 'planned' =>  temp_planned, 'estimated_time_arrival' => temp_estimated_time_arrival}
+
+              puts "temp_hash = #{temp_hash.inspect}"
+              
 
             
 

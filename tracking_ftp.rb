@@ -141,6 +141,10 @@ class TrackingFTP < Net::FTP
       upload_tracking_csv(new_filename, "estimated_arrival_tracking")
       close
 
+      #Here mark finished_journey = true, upload full history, then mark upload = true
+
+      
+
 
 
     end
