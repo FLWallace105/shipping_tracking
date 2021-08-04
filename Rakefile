@@ -20,6 +20,11 @@ namespace :request_ftp_info do
         ShippingInfo::TrackGetter.new.containers_no_milestones
     end
 
+    desc 'find containers with no ETAs'
+    task :find_containers_no_etas do |t|
+        ShippingInfo::TrackGetter.new.containers_no_etas
+    end
+
     desc 'get csv tracking info from FTP'
     task :get_tracking_info_ftp do |t|
         TrackingFTP.new.pull_tracking_info

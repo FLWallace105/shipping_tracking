@@ -142,6 +142,46 @@ module ShippingInfo
 
     end
 
+    def containers_no_etas
+      puts "Starting"
+      container_ids = Array.new
+      my_containers = ContainerTracking.where("finished_journey = ?", false)
+      my_containers.each do |myc|
+        my_hash = {"container_id" => myc.container_id, "shipping_company" => myc.shipping_company, "vizion_reference_id" => myc.vizion_reference_id, "vision_organization_id" => myc.vision_organization_id, "bill_of_lading" => myc.bill_of_lading }
+        container_ids.push(my_hash)
+
+      end
+      puts "container_id = #{container_ids.inspect}"
+
+      File.delete('containers_no_etas.csv') if File.exist?('containers_no_etas.csv')
+
+      column_header = ["container_id", "shipping_company", "vizion_reference_id","vision_organization_id", "bill_of_lading" ]
+
+      CSV.open('containers_no_etas.csv','a+', :write_headers=> true, :headers => column_header) do |hdr|
+        column_header = nil
+
+      container_ids.each do |mycont|
+        #puts mycont['container_id']
+        my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont['container_id'], true).order(:milestone_timestamp).reverse.first
+        if my_rec.nil?
+          puts "Container_id #{mycont['container_id']} has no milestones"
+        #  csv_data_out = [mycont]
+        else
+          puts "we have an ETA for this container: #{mycont['container_id']}"
+        end
+        csv_data_out = [mycont['container_id'], mycont['shipping_company'], mycont['vizion_reference_id'], mycont['vision_organization_id'], mycont['bill_of_lading'] ]
+        hdr << csv_data_out
+
+      end
+
+    end #CSV
+
+
+    end
+
+
+
+
     def test_vizion_milestone(reference_id, container_id)
       my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
 
