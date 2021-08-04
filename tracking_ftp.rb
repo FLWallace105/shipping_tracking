@@ -122,7 +122,7 @@ class TrackingFTP < Net::FTP
       CSV.open(new_filename, 'a+') do |csv|
         csv << ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']
       container_ids.each do |mycont|
-        my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont, true).order(:milestone_timestamp).reverse
+        my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont, true).order(:milestone_timestamp).reverse.first
         if my_rec.nil?
           puts "Container_id #{mycont} has no milestones"
         else

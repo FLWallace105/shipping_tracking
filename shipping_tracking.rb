@@ -88,6 +88,60 @@ module ShippingInfo
 
     end
 
+
+    def load_container_trackings
+
+      ContainerTracking.delete_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('container_trackings')
+      CSV.foreach('container_trackings.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
+        puts row.inspect
+        ContainerTracking.create(container_id: row['container_id'], shipping_company: row['shipping_company'], vizion_reference_id: row['vizion_reference_id'], vision_organization_id: row['vision_organization_id'], bill_of_lading: row['bill_of_lading'], latest_status: row['latest_status'], created_at: row['created_at'], updated_at: row['updated_at'], finished_journey: row['finished_journey'], uploaded: row['uploaded'])
+
+      end
+
+      ContainerMilestone.delete_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('container_milestones.csv')
+      CSV.foreach('container_milestones.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
+        puts row.inspect
+        ContainerMilestone.create(container_id: row['container_id'], milestone_timestamp: row['milestone_timestamp'] , location_name: row['location_name'], location_city: row['location_city'], location_country: row['location_country'],location_unlocode: row['location_unlocode'], location_facility: row['location_facility'],  description: row['description'], raw_descripition: row['raw_descripition'], vessel_imo: row['vessel_imo'], vessel_mmsi: row['vessel_mmsi'], voyage: row['voyage'], mode: row['mode'], vessel: row['vessel'], latitude: row['latitude'], longitude: row['longitude'], estimated_time_arrival: row['estimated_time_arrival'], planned: row['planned'] )
+
+      end
+
+      
+
+
+      puts "all done"
+
+
+    end
+
+
+    def containers_no_milestones
+      puts "Starting containers with no milestones"
+      my_containers_sql = "select container_id, vizion_reference_id, bill_of_lading from container_trackings where container_id not in (select container_id from container_milestones)"
+      my_containers = ActiveRecord::Base.connection.execute(my_containers_sql).values
+      #puts my_containers.inspect
+      my_containers.each do |myc|
+        #puts myc.inspect
+        temp_container = myc[0]
+        temp_reference_id = myc[1]
+        temp_bill_lading = myc[2]
+        puts "-------------"
+        puts "Container_id = #{temp_container}, reference_id = #{temp_reference_id}, bill_lading: #{temp_bill_lading}"
+        my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{temp_reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
+
+      
+        puts "reference_id = #{temp_reference_id}"
+        puts "response from Vizion = #{my_reference_info.parsed_response}"
+
+        puts "-------------"
+        sleep 4
+
+      end
+
+
+    end
+
     def test_vizion_milestone(reference_id, container_id)
       my_reference_info = HTTParty.get("#{@base_vizion_url}/references/#{reference_id}/updates", :headers => @my_basic_header, :timeout => 80)
 
@@ -114,9 +168,9 @@ module ShippingInfo
 
       end
 
-      puts "calling method --"
+      #puts "calling method --"
 
-      process_vizion_api_data(my_reference_info.parsed_response, container_id)
+      #process_vizion_api_data(my_reference_info.parsed_response, container_id)
 
     end
 

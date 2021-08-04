@@ -1,0 +1,91 @@
+Starting containers with no milestones
+-------------
+Container_id = SLHU4500038, reference_id = ef0b6f5c-257b-43d7-a7da-00d4203efe53, bill_lading: OOLU2669839560
+reference_id = ef0b6f5c-257b-43d7-a7da-00d4203efe53
+response from Vizion = []
+-------------
+-------------
+Container_id = TCLU15296377, reference_id = 7a948ca9-e965-47c5-b512-12feb47fffd5, bill_lading: ONEYDACB14230600
+reference_id = 7a948ca9-e965-47c5-b512-12feb47fffd5
+response from Vizion = []
+-------------
+-------------
+Container_id = TCNU1488934, reference_id = 6167dbbe-0d22-4265-bd8a-46faceda01fd, bill_lading: HLCUDA1210600332
+reference_id = 6167dbbe-0d22-4265-bd8a-46faceda01fd
+response from Vizion = []
+-------------
+-------------
+Container_id = BMOU4860933, reference_id = d0708f82-172c-4813-89ff-b1a0275dc0a5, bill_lading: EGLV236100245777
+reference_id = d0708f82-172c-4813-89ff-b1a0275dc0a5
+response from Vizion = []
+-------------
+-------------
+Container_id = CCLU1918887, reference_id = 94a66a26-b165-4c1b-b3a9-36b6012a5748, bill_lading: COSU6305654100
+reference_id = 94a66a26-b165-4c1b-b3a9-36b6012a5748
+response from Vizion = []
+-------------
+-------------
+Container_id = NLLU4114635, reference_id = 06788e12-71c7-492e-8444-91aae92b8502, bill_lading: OOLU2670294590
+reference_id = 06788e12-71c7-492e-8444-91aae92b8502
+response from Vizion = []
+-------------
+-------------
+Container_id = DFSU7383311, reference_id = a153a4f3-20c9-4588-b178-c212fedc0540, bill_lading: COSU6304334090
+reference_id = a153a4f3-20c9-4588-b178-c212fedc0540
+response from Vizion = []
+-------------
+-------------
+Container_id = OOCU70993407, reference_id = 57428aec-560d-466b-a87c-ea7f049d7a0c, bill_lading: COSU6306596510
+reference_id = 57428aec-560d-466b-a87c-ea7f049d7a0c
+response from Vizion = []
+-------------
+-------------
+Container_id = TEMU6634733, reference_id = 6537e86a-56b3-422a-9f88-b8c7ce31cb06, bill_lading: EGLV235101200809
+reference_id = 6537e86a-56b3-422a-9f88-b8c7ce31cb06
+response from Vizion = []
+-------------
+-------------
+Container_id = TCNU4502888, reference_id = f977934c-443c-4863-96d8-0b53f55de91d, bill_lading: EGLV080100304018
+reference_id = f977934c-443c-4863-96d8-0b53f55de91d
+response from Vizion = []
+-------------
+-------------
+Container_id = TGBU8038883, reference_id = d312c476-ced5-4315-912f-687c359bf3ff, bill_lading: EGLV235101455319
+reference_id = d312c476-ced5-4315-912f-687c359bf3ff
+response from Vizion = []
+-------------
+-------------
+Container_id = EGHU9055060, reference_id = 3dd28af7-7d32-4ab8-8116-1589ad38d0b3, bill_lading: EGLV080100369063
+reference_id = 3dd28af7-7d32-4ab8-8116-1589ad38d0b3
+response from Vizion = []
+-------------
+-------------
+Container_id = HMCU9004244, reference_id = 437f6a69-deed-4156-8fa7-11c10cf789c9, bill_lading: EGLV236100245769
+reference_id = 437f6a69-deed-4156-8fa7-11c10cf789c9
+response from Vizion = []
+-------------
+-------------
+Container_id = TLLU4097549, reference_id = 874d58f9-ba92-4b10-ab6a-0baf988b3483, bill_lading: EGLV080100312282
+reference_id = 874d58f9-ba92-4b10-ab6a-0baf988b3483
+response from Vizion = []
+-------------
+-------------
+Container_id = EISU8327073, reference_id = 7db33078-3d2e-4771-ba3a-6062fbe41d98, bill_lading: EGLV235101455319
+reference_id = 7db33078-3d2e-4771-ba3a-6062fbe41d98
+response from Vizion = []
+-------------
+-------------
+Container_id = TEMU8914590, reference_id = 59e4f24f-cec9-4aec-8904-1a8ac408dc20, bill_lading: EGLV080100444421
+reference_id = 59e4f24f-cec9-4aec-8904-1a8ac408dc20
+response from Vizion = []
+-------------
+-------------
+Container_id = CAIU9790124, reference_id = f1dd0bb8-1641-4a40-934b-6cabcefbea50, bill_lading: EGLV080100312053
+reference_id = f1dd0bb8-1641-4a40-934b-6cabcefbea50
+response from Vizion = []
+-------------
+-------------
+Container_id = EITU1815995, reference_id = 73ee913b-6631-49be-b819-fec7a8e00138, bill_lading: EGLV080100312088
+reference_id = 73ee913b-6631-49be-b819-fec7a8e00138
+response from Vizion = []
+-------------

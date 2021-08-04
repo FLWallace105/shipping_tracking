@@ -10,6 +10,16 @@ namespace :request_ftp_info do
         ShippingInfo::TrackGetter.new.get_ftp_shipping_info
     end
 
+    desc 'load container_trackings csv file from production'
+    task :load_container_trackings do |t|
+        ShippingInfo::TrackGetter.new.load_container_trackings
+    end
+
+    desc 'find containers with no milestones and report info'
+    task :containers_no_milestomes do |t|
+        ShippingInfo::TrackGetter.new.containers_no_milestones
+    end
+
     desc 'get csv tracking info from FTP'
     task :get_tracking_info_ftp do |t|
         TrackingFTP.new.pull_tracking_info
