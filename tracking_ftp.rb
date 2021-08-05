@@ -98,7 +98,7 @@ class TrackingFTP < Net::FTP
       puts "container_id = #{container_ids.inspect}"
 
       filename = name_csv
-      col_sep = '\t'
+      col_sep = "\t"
       CSV.open(filename, 'a+', col_sep: col_sep, :write_headers=> true,
         :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
         

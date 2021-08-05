@@ -1,0 +1,70 @@
+container_id	milestone_timestamp	location_name	location_city	location_country	location_unlocode	location_facility	description	raw_description	vessel_imo	vessel_mmsi	voyage	mode	vessel
+TCLU7537047	2021-08-04 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+DFSU6679443	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+MSCU7160162	2021-08-04 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+CXDU2162167	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+FFAU2714334	2021-08-04 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+INKU2382856	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+MEDU8017039	2021-08-04 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+TCLU5578026	2021-08-04 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+MSCU5248038	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+MEDU6555930	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+MSCU1268695	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+TLLU4443549	2021-08-06 08:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+TGHU9708791	2021-07-20 05:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+ZCSU7106355	2021-07-20 05:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+TGBU7240673	2021-07-20 05:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+ZCSU7381803	2021-07-20 05:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+TCNU4564914	2021-07-10 02:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+OOCU7821056	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CAIU9428331	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CSLU6182287	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CBHU5816262	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+BEAU2044860	2021-08-21 08:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+OOCU7443038	2021-08-21 08:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+OOLU1245915	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CCLU7975366	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+DFSU7284047	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CAIU8016495	2021-08-16 23:00:00 UTC	NEW YORK	New York	United States	USNYC		Vessel arrived at destination port	Estimated Time of Arrival					MSC TOMOKO
+TGCU5008699	2021-08-16 23:00:00 UTC	NEW YORK	New York	United States	USNYC		Vessel arrived at destination port	Estimated Time of Arrival					MSC TOMOKO
+TRHU6250958	2021-08-16 23:00:00 UTC	NEW YORK	New York	United States	USNYC		Vessel arrived at destination port	Estimated Time of Arrival					MSC TOMOKO
+CBHU6290980	2021-08-25 23:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CSNU1076762	2021-09-02 11:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+TEMU0096163	2021-09-02 11:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+HMMU6084523	2021-08-27 13:00:00 UTC	LONG BEACH, CA	Long Beach	United States	USLGB		Estimated arrival at destination	Estimated arrival at destination				Vessel	HYUNDAI MARS
+TCNU5067609	2021-08-27 13:00:00 UTC	LONG BEACH, CA	Long Beach	United States	USLGB		Estimated arrival at destination	Estimated arrival at destination				Vessel	HYUNDAI MARS
+KOCU4318254	2021-08-27 13:00:00 UTC	LONG BEACH, CA	Long Beach	United States	USLGB		Estimated arrival at destination	Estimated arrival at destination				Vessel	HYUNDAI MARS
+KOCU4178194	2021-08-27 13:00:00 UTC	LONG BEACH, CA	Long Beach	United States	USLGB		Estimated arrival at destination	Estimated arrival at destination				Vessel	HYUNDAI MARS
+TRLU7202269	2021-08-12 08:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+SEGU5802374	2021-08-16 13:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9388352	370407000		Vessel	ONE CONTINUITY
+CAIU8967196	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+CSLU1532443	2021-09-08 18:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+SEGU5332711	2021-08-06 08:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+KOCU4193389	2021-08-27 14:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9326768	371110000		Vessel	NORTH BRIDGE
+BSIU9161111	2021-08-24 13:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9312781	372218000		Vessel	NYK VEGA
+CAIU7468931	2021-08-27 14:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9326768	371110000		Vessel	NORTH BRIDGE
+CAIU4564870	2021-08-23 02:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9326768	371110000		Vessel	NORTH BRIDGE
+CBHU9161733	2021-08-02 08:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+SEGU4686032	2021-08-02 08:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CSNU6117709	2021-07-29 06:30:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+TGBU8751446	2021-08-05 06:30:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CBHU8795754	2021-08-05 06:30:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+TCLU4999550	2021-08-24 13:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9312781	372218000		Vessel	NYK VEGA
+GAOU6340626	2021-08-24 13:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9312781	372218000		Vessel	NYK VEGA
+TCNU8925527	2021-08-18 13:45:00 UTC	LOS ANGELES	Los Angeles	United States	USLAX		Vessel arrived at destination port	Estimated Time of Arrival					MSC JOSSELINE
+MSMU5139314	2021-08-18 13:45:00 UTC	LOS ANGELES	Los Angeles	United States	USLAX		Vessel arrived at destination port	Estimated Time of Arrival					MSC JOSSELINE
+FFAU1245525	2021-08-18 13:45:00 UTC	LOS ANGELES	Los Angeles	United States	USLAX		Vessel arrived at destination port	Estimated Time of Arrival					MSC JOSSELINE
+KOCU4614169	2021-08-27 13:00:00 UTC	LONG BEACH, CA	Long Beach	United States	USLGB		Estimated arrival at destination	Estimated arrival at destination				Vessel	HYUNDAI MARS
+KOCU4118050	2021-08-27 13:00:00 UTC	LONG BEACH, CA	Long Beach	United States	USLGB		Estimated arrival at destination	Estimated arrival at destination				Vessel	HYUNDAI MARS
+TCKU6188160	2021-08-12 08:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CAIU9968345	2021-08-18 13:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9388352	370407000		Vessel	ONE CONTINUITY
+HMMU6010407	2021-08-15 23:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9388352	370407000		Vessel	ONE CONTINUITY
+TCNU4554285	2021-08-06 08:00:00 UTC	LOS ANGELES (CA), CHINA. PEOPLE'S REPUBLIC	Washington	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination				Vessel	
+KOCU4919070	2021-08-26 19:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9326768	371110000		Vessel	NORTH BRIDGE
+CAIU7667960	2021-08-24 13:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9312781	372218000		Vessel	NYK VEGA
+TCNU7229890	2021-08-23 02:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9326768	371110000		Vessel	NORTH BRIDGE
+TCNU5069068	2021-08-27 14:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9326768	371110000		Vessel	NORTH BRIDGE
+MAGU5589602	2021-07-27 08:00:00 UTC						Estimated arrival at destination	Estimated arrival at destination				Vessel	
+CAIU9970194	2021-08-24 13:00:00 UTC	LOS ANGELES, CA	Los Angeles	United States	USLAX		Estimated arrival at destination	Estimated arrival at destination	9312781	372218000		Vessel	NYK VEGA
+FFAU1676538	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
+MSDU7646245	2021-08-05 14:30:00 UTC	LONG BEACH	Long Beach	United States	USLGB		Vessel arrived at destination port	Estimated Time of Arrival	7434444	353056000		Vessel	MSC KATIE
