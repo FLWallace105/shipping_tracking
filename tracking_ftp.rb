@@ -85,80 +85,76 @@ class TrackingFTP < Net::FTP
 
 
     def upload_tracking_file_ftp
-      #Grab all container_trackings where finished_journey = f
-      
-      #tracking_csv = CSV.generate do |csv|
-      
-      container_ids = Array.new
-      my_containers = ContainerTracking.where("finished_journey = ?", false)
-      my_containers.each do |myc|
-        container_ids.push(myc.container_id)
+      #Grab all container_trackings where finished_journey = f and associated container_milestones via sql
 
-      end
-      puts "container_id = #{container_ids.inspect}"
+      my_containers_sql = "select container_trackings.container_id , container_trackings.shipping_company, container_milestones.milestone_timestamp, container_milestones.location_name, container_milestones.location_city,  container_milestones.location_country, container_milestones.location_unlocode, container_milestones.location_facility,  container_milestones.description, container_milestones.raw_descripition, container_milestones.vessel_imo, container_milestones.vessel_mmsi, container_milestones.voyage, container_milestones.mode, container_milestones.vessel  from container_trackings, container_milestones where container_trackings.container_id = container_milestones.container_id "
+      my_containers = ActiveRecord::Base.connection.execute(my_containers_sql).values
 
+      #puts my_containers.inspect
+
+      puts "Starting regular milestones"
+      
       filename = name_csv
       #col_sep = "\t"
       CSV.open(filename, 'a+',  :write_headers=> true,
-        :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
+        :headers => ['container_id', 'shipping_company', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
         
-      container_ids.each do |mycont|
-        my_rec = ContainerMilestone.where("container_id = ? and planned = ?", mycont, false).order(:milestone_timestamp).reverse.first
-        if my_rec.nil?
-          puts "Container_id #{mycont} has no milestones"
-        else
+        my_containers.each do |mycont|
+          puts mycont.inspect
+        
           #Create CSV row here
           #wash out commas in selected fields for export
-          temp_location_name = remove_comma(my_rec.location_name)
-          temp_location_city = remove_comma(my_rec.location_city)
-          temp_location_country = remove_comma(my_rec.location_country)
-          temp_location_unlocode = remove_comma(my_rec.location_unlocode)
-          temp_location_facility = remove_comma(my_rec.location_unlocode)
-          temp_description = remove_comma(my_rec.description)
-          temp_raw_description = remove_comma(my_rec.raw_descripition)
-          temp_voyage = remove_comma(my_rec.voyage)
-          temp_mode = remove_comma(my_rec.mode)
-          temp_vessel = remove_comma(my_rec.vessel)
+          temp_location_name = remove_comma(mycont[3])
+          temp_location_city = remove_comma(mycont[4])
+          temp_location_country = remove_comma(mycont[5])
+          temp_location_unlocode = remove_comma(mycont[6])
+          temp_location_facility = remove_comma(mycont[7])
+          temp_description = remove_comma(mycont[8])
+          temp_raw_description = remove_comma(mycont[9])
+          temp_voyage = remove_comma(mycont[12])
+          temp_mode = remove_comma(mycont[13])
+          temp_vessel = remove_comma(mycont[14])
 
-          csv << [my_rec.container_id, my_rec.milestone_timestamp, temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, my_rec.vessel_imo, my_rec.vessel_mmsi, temp_voyage, temp_mode, temp_vessel]
+          csv << [mycont[0], mycont[1], mycont[2], temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, mycont[10], mycont[11], temp_voyage, temp_mode, temp_vessel]
 
-        end
+        
 
       end
 
       end #csv generate
+      
       upload_tracking_csv(filename, "last_milestone_tracking")
 
       #Below is estimated_time_arrival = true
 
       new_filename = estimated_name_csv
 
+      my_containers_sql = "select container_trackings.container_id , container_trackings.shipping_company, container_milestones.milestone_timestamp, container_milestones.location_name, container_milestones.location_city,  container_milestones.location_country, container_milestones.location_unlocode, container_milestones.location_facility,  container_milestones.description, container_milestones.raw_descripition, container_milestones.vessel_imo, container_milestones.vessel_mmsi, container_milestones.voyage, container_milestones.mode, container_milestones.vessel  from container_trackings, container_milestones where container_trackings.container_id = container_milestones.container_id and container_milestones.estimated_time_arrival = 't' and container_trackings.finished_journey = 'f'"
+      my_containers = ActiveRecord::Base.connection.execute(my_containers_sql).values
+
+      puts "STarting ETA info"
+
       CSV.open(new_filename, 'a+', :write_headers=> true,
-        :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
+        :headers => ['container_id', 'shipping_company', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
         
-      container_ids.each do |mycont|
-        my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont, true).order(:milestone_timestamp).reverse.first
-        if my_rec.nil?
-          puts "Container_id #{mycont} has no ETAs"
-        else
-          #Create CSV row here we are grabbing the first in reverse milestone timptamp order
-            #wash out commas in selected fields for export
-          temp_location_name = remove_comma(my_rec.location_name)
-          temp_location_city = remove_comma(my_rec.location_city)
-          temp_location_country = remove_comma(my_rec.location_country)
-          temp_location_unlocode = remove_comma(my_rec.location_unlocode)
-          temp_location_facility = remove_comma(my_rec.location_unlocode)
-          temp_description = remove_comma(my_rec.description)
-          temp_raw_description = remove_comma(my_rec.raw_descripition)
-          temp_voyage = remove_comma(my_rec.voyage)
-          temp_mode = remove_comma(my_rec.mode)
-          temp_vessel = remove_comma(my_rec.vessel)
-
-          csv << [my_rec.container_id, my_rec.milestone_timestamp, temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, my_rec.vessel_imo, my_rec.vessel_mmsi, temp_voyage, temp_mode, temp_vessel]
-          puts my_rec.inspect
+          my_containers.each do |mycont|
+            puts mycont.inspect
           
-
-        end
+            #Create CSV row here
+            #wash out commas in selected fields for export
+            temp_location_name = remove_comma(mycont[3])
+            temp_location_city = remove_comma(mycont[4])
+            temp_location_country = remove_comma(mycont[5])
+            temp_location_unlocode = remove_comma(mycont[6])
+            temp_location_facility = remove_comma(mycont[7])
+            temp_description = remove_comma(mycont[8])
+            temp_raw_description = remove_comma(mycont[9])
+            temp_voyage = remove_comma(mycont[12])
+            temp_mode = remove_comma(mycont[13])
+            temp_vessel = remove_comma(mycont[14])
+  
+            csv << [mycont[0], mycont[1], mycont[2], temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, mycont[10], mycont[11], temp_voyage, temp_mode, temp_vessel]
+        
 
       end
 
