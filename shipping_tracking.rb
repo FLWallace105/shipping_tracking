@@ -344,7 +344,7 @@ module ShippingInfo
 
             temp_estimated_time_arrival = false
             
-            if myt['raw_description'] =~ /estim.+/i
+            if myt['raw_description'] =~ /estim.+/i || ( myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i && myt['planned'] == 'true')
               temp_estimated_time_arrival = true
             else
               temp_estimated_time_arrival = false
