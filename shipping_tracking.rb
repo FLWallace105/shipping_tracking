@@ -165,12 +165,13 @@ module ShippingInfo
         my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont['container_id'], true).order(:milestone_timestamp).reverse.first
         if my_rec.nil?
           puts "Container_id #{mycont['container_id']} has no milestones"
+          csv_data_out = [mycont['container_id'], mycont['shipping_company'], mycont['vizion_reference_id'], mycont['vision_organization_id'], mycont['bill_of_lading'] ]
+          hdr << csv_data_out
         #  csv_data_out = [mycont]
         else
           puts "we have an ETA for this container: #{mycont['container_id']}"
         end
-        csv_data_out = [mycont['container_id'], mycont['shipping_company'], mycont['vizion_reference_id'], mycont['vision_organization_id'], mycont['bill_of_lading'] ]
-        hdr << csv_data_out
+        
 
       end
 
