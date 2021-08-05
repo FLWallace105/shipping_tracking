@@ -129,31 +129,52 @@ class TrackingFTP < Net::FTP
 
       new_filename = estimated_name_csv
 
-      my_containers_sql = "select container_trackings.container_id , container_trackings.shipping_company, container_milestones.milestone_timestamp, container_milestones.location_name, container_milestones.location_city,  container_milestones.location_country, container_milestones.location_unlocode, container_milestones.location_facility,  container_milestones.description, container_milestones.raw_descripition, container_milestones.vessel_imo, container_milestones.vessel_mmsi, container_milestones.voyage, container_milestones.mode, container_milestones.vessel  from container_trackings, container_milestones where container_trackings.container_id = container_milestones.container_id and container_milestones.estimated_time_arrival = 't' and container_trackings.finished_journey = 'f'"
-      my_containers = ActiveRecord::Base.connection.execute(my_containers_sql).values
+      TemporaryEta.delete_all
+      #Now reset index
+      ActiveRecord::Base.connection.reset_pk_sequence!('temporary_etas')
+      
+      
+
+      my_containers_sql = "insert into temporary_etas (container_id, milestone_timestamp, location_name, location_city, location_country, location_unlocode, location_facility, description, raw_descripition, vessel_imo, vessel_mmsi, voyage, mode, vessel, shipping_company)  select container_trackings.container_id ,  container_milestones.milestone_timestamp, container_milestones.location_name, container_milestones.location_city,  container_milestones.location_country, container_milestones.location_unlocode, container_milestones.location_facility,  container_milestones.description, container_milestones.raw_descripition, container_milestones.vessel_imo, container_milestones.vessel_mmsi, container_milestones.voyage, container_milestones.mode, container_milestones.vessel, container_trackings.shipping_company from container_trackings, container_milestones where container_milestones.container_id = container_trackings.container_id and container_milestones.estimated_time_arrival = 't' and container_trackings.finished_journey = 'f'"
+
+      ActiveRecord::Base.connection.execute(my_containers_sql)
+
+      my_etas_sql = "select container_id, MAX(milestone_timestamp) from temporary_etas group by container_id "
+
+      #puts "starting etas selection"
+      my_etas = ActiveRecord::Base.connection.execute(my_etas_sql).values
+      #puts my_etas.inspect
+      #puts "*******"
+
+      
+      
 
       puts "STarting ETA info"
 
       CSV.open(new_filename, 'a+', :write_headers=> true,
         :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel', 'shipping_company']) do |csv|
         
-          my_containers.each do |mycont|
+          my_etas.each do |mycont|
             puts mycont.inspect
+            my_container_id = mycont[0]
+            my_milestone_timestamp = mycont[1]
+            my_eta_info = TemporaryEta.where("container_id = ? and milestone_timestamp = ?",my_container_id, my_milestone_timestamp ).first 
+
           
             #Create CSV row here
             #wash out commas in selected fields for export
-            temp_location_name = remove_comma(mycont[3])
-            temp_location_city = remove_comma(mycont[4])
-            temp_location_country = remove_comma(mycont[5])
-            temp_location_unlocode = remove_comma(mycont[6])
-            temp_location_facility = remove_comma(mycont[7])
-            temp_description = remove_comma(mycont[8])
-            temp_raw_description = remove_comma(mycont[9])
-            temp_voyage = remove_comma(mycont[12])
-            temp_mode = remove_comma(mycont[13])
-            temp_vessel = remove_comma(mycont[14])
+            temp_location_name = remove_comma(my_eta_info.location_name)
+            temp_location_city = remove_comma(my_eta_info.location_city)
+            temp_location_country = remove_comma(my_eta_info.location_country)
+            temp_location_unlocode = remove_comma(my_eta_info.location_unlocode)
+            temp_location_facility = remove_comma(my_eta_info.location_facility)
+            temp_description = remove_comma(my_eta_info.description)
+            temp_raw_description = remove_comma(my_eta_info.raw_descripition)
+            temp_voyage = remove_comma(my_eta_info.voyage)
+            temp_mode = remove_comma(my_eta_info.mode)
+            temp_vessel = remove_comma(my_eta_info.vessel)
   
-            csv << [mycont[0],  mycont[2], temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, mycont[10], mycont[11], temp_voyage, temp_mode, temp_vessel,mycont[1] ]
+            csv << [my_eta_info.container_id,  my_eta_info.milestone_timestamp, temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, my_eta_info.vessel_imo,  my_eta_info.vessel_mmsi, temp_voyage, temp_mode, temp_vessel, my_eta_info.shipping_company ]
         
 
       end

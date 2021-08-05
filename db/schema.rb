@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_25_175625) do
+ActiveRecord::Schema.define(version: 2021_08_05_224332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,28 @@ ActiveRecord::Schema.define(version: 2021_07_25_175625) do
   create_table "shipping_lines_scac_codes", force: :cascade do |t|
     t.bigint "carrier_code"
     t.string "scac_code"
+  end
+
+  create_table "temporary_etas", force: :cascade do |t|
+    t.string "container_id"
+    t.datetime "milestone_timestamp"
+    t.string "location_name"
+    t.string "location_city"
+    t.string "location_country"
+    t.string "location_unlocode"
+    t.string "location_facility"
+    t.string "description"
+    t.string "raw_descripition"
+    t.string "vessel_imo"
+    t.string "vessel_mmsi"
+    t.string "voyage"
+    t.string "mode"
+    t.string "vessel"
+    t.string "latitude"
+    t.string "longitude"
+    t.string "shipping_company"
+    t.index ["container_id"], name: "index_temporary_etas_on_container_id"
+    t.index ["milestone_timestamp"], name: "index_temporary_etas_on_milestone_timestamp"
   end
 
 end
