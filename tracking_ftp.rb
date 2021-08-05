@@ -97,7 +97,7 @@ class TrackingFTP < Net::FTP
       filename = name_csv
       #col_sep = "\t"
       CSV.open(filename, 'a+',  :write_headers=> true,
-        :headers => ['container_id', 'shipping_company', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
+        :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel', 'shipping_company']) do |csv|
         
         my_containers.each do |mycont|
           puts mycont.inspect
@@ -115,7 +115,7 @@ class TrackingFTP < Net::FTP
           temp_mode = remove_comma(mycont[13])
           temp_vessel = remove_comma(mycont[14])
 
-          csv << [mycont[0], mycont[1], mycont[2], temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, mycont[10], mycont[11], temp_voyage, temp_mode, temp_vessel]
+          csv << [mycont[0], mycont[2], temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, mycont[10], mycont[11], temp_voyage, temp_mode, temp_vessel, mycont[1]]
 
         
 
@@ -135,7 +135,7 @@ class TrackingFTP < Net::FTP
       puts "STarting ETA info"
 
       CSV.open(new_filename, 'a+', :write_headers=> true,
-        :headers => ['container_id', 'shipping_company', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
+        :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel', 'shipping_company']) do |csv|
         
           my_containers.each do |mycont|
             puts mycont.inspect
@@ -153,7 +153,7 @@ class TrackingFTP < Net::FTP
             temp_mode = remove_comma(mycont[13])
             temp_vessel = remove_comma(mycont[14])
   
-            csv << [mycont[0], mycont[1], mycont[2], temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, mycont[10], mycont[11], temp_voyage, temp_mode, temp_vessel]
+            csv << [mycont[0],  mycont[2], temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, mycont[10], mycont[11], temp_voyage, temp_mode, temp_vessel,mycont[1] ]
         
 
       end
