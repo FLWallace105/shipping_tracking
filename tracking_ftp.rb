@@ -98,8 +98,10 @@ class TrackingFTP < Net::FTP
       puts "container_id = #{container_ids.inspect}"
 
       filename = name_csv
-      CSV.open(filename, 'a+', col_sep: "\t") do |csv|
-        csv << ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']
+      col_sep = '\t'
+      CSV.open(filename, 'a+', col_sep: col_sep, :write_headers=> true,
+        :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
+        
       container_ids.each do |mycont|
         my_rec = ContainerMilestone.where("container_id = ? and planned = ?", mycont, false).order(:milestone_timestamp).reverse.first
         if my_rec.nil?
@@ -119,8 +121,9 @@ class TrackingFTP < Net::FTP
 
       new_filename = estimated_name_csv
 
-      CSV.open(new_filename, 'a+', col_sep: "\t") do |csv|
-        csv << ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']
+      CSV.open(new_filename, 'a+', col_sep: col_sep, :write_headers=> true,
+        :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
+        
       container_ids.each do |mycont|
         my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont, true).order(:milestone_timestamp).reverse.first
         if my_rec.nil?
