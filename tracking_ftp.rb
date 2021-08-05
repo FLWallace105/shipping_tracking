@@ -98,8 +98,8 @@ class TrackingFTP < Net::FTP
       puts "container_id = #{container_ids.inspect}"
 
       filename = name_csv
-      col_sep = "\t"
-      CSV.open(filename, 'a+', col_sep: col_sep, :write_headers=> true,
+      #col_sep = "\t"
+      CSV.open(filename, 'a+',  :write_headers=> true,
         :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
         
       container_ids.each do |mycont|
@@ -108,7 +108,19 @@ class TrackingFTP < Net::FTP
           puts "Container_id #{mycont} has no milestones"
         else
           #Create CSV row here
-          csv << [my_rec.container_id, my_rec.milestone_timestamp, my_rec.location_name, my_rec.location_city, my_rec.location_country, my_rec.location_unlocode, my_rec.location_facility, my_rec.description, my_rec.raw_descripition, my_rec.vessel_imo, my_rec.vessel_mmsi, my_rec.voyage, my_rec.mode, my_rec.vessel]
+          #wash out commas in selected fields for export
+          temp_location_name = remove_comma(my_rec.location_name)
+          temp_location_city = remove_comma(my_rec.location_city)
+          temp_location_country = remove_comma(my_rec.location_country)
+          temp_location_unlocode = remove_comma(my_rec.location_unlocode)
+          temp_location_facility = remove_comma(my_rec.location_unlocode)
+          temp_description = remove_comma(my_rec.description)
+          temp_raw_description = remove_comma(my_rec.raw_descripition)
+          temp_voyage = remove_comma(my_rec.voyage)
+          temp_mode = remove_comma(my_rec.mode)
+          temp_vessel = remove_comma(my_rec.vessel)
+
+          csv << [my_rec.container_id, my_rec.milestone_timestamp, temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, my_rec.vessel_imo, my_rec.vessel_mmsi, temp_voyage, temp_mode, temp_vessel]
 
         end
 
@@ -121,7 +133,7 @@ class TrackingFTP < Net::FTP
 
       new_filename = estimated_name_csv
 
-      CSV.open(new_filename, 'a+', col_sep: col_sep, :write_headers=> true,
+      CSV.open(new_filename, 'a+', :write_headers=> true,
         :headers => ['container_id', 'milestone_timestamp', 'location_name','location_city', 'location_country', 'location_unlocode', 'location_facility', 'description', 'raw_description', 'vessel_imo', 'vessel_mmsi', 'voyage', 'mode', 'vessel']) do |csv|
         
       container_ids.each do |mycont|
@@ -130,8 +142,20 @@ class TrackingFTP < Net::FTP
           puts "Container_id #{mycont} has no ETAs"
         else
           #Create CSV row here we are grabbing the first in reverse milestone timptamp order
-            csv << [my_rec.container_id, my_rec.milestone_timestamp, my_rec.location_name, my_rec.location_city, my_rec.location_country, my_rec.location_unlocode, my_rec.location_facility, my_rec.description, my_rec.raw_descripition, my_rec.vessel_imo, my_rec.vessel_mmsi, my_rec.voyage, my_rec.mode, my_rec.vessel]
-            puts my_rec.inspect
+            #wash out commas in selected fields for export
+          temp_location_name = remove_comma(my_rec.location_name)
+          temp_location_city = remove_comma(my_rec.location_city)
+          temp_location_country = remove_comma(my_rec.location_country)
+          temp_location_unlocode = remove_comma(my_rec.location_unlocode)
+          temp_location_facility = remove_comma(my_rec.location_unlocode)
+          temp_description = remove_comma(my_rec.description)
+          temp_raw_description = remove_comma(my_rec.raw_descripition)
+          temp_voyage = remove_comma(my_rec.voyage)
+          temp_mode = remove_comma(my_rec.mode)
+          temp_vessel = remove_comma(my_rec.vessel)
+
+          csv << [my_rec.container_id, my_rec.milestone_timestamp, temp_location_name, temp_location_city, temp_location_country, temp_location_unlocode, temp_location_facility, temp_description, temp_raw_description, my_rec.vessel_imo, my_rec.vessel_mmsi, temp_voyage, temp_mode, temp_vessel]
+          puts my_rec.inspect
           
 
         end
@@ -170,6 +194,18 @@ class TrackingFTP < Net::FTP
       #close
       File.delete(file)
       puts "Successfully uploaded CSV #{message}"
+    end
+
+    def remove_comma(myfield)
+      #puts "myfield = #{myfield.inspect}"
+      if myfield == nil
+        return nil
+      else
+        #puts myfield.inspect
+        my_return_field = myfield.gsub(/\,/i, " ")
+        my_return_field = my_return_field.gsub(/\./i, " ")
+        return my_return_field
+      end
     end
 
     
