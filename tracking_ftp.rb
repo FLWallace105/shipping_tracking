@@ -87,7 +87,7 @@ class TrackingFTP < Net::FTP
     def upload_tracking_file_ftp
       #Grab all container_trackings where finished_journey = f and associated container_milestones via sql
 
-      my_containers_sql = "select container_trackings.container_id , container_trackings.shipping_company, container_milestones.milestone_timestamp, container_milestones.location_name, container_milestones.location_city,  container_milestones.location_country, container_milestones.location_unlocode, container_milestones.location_facility,  container_milestones.description, container_milestones.raw_descripition, container_milestones.vessel_imo, container_milestones.vessel_mmsi, container_milestones.voyage, container_milestones.mode, container_milestones.vessel  from container_trackings, container_milestones where container_trackings.container_id = container_milestones.container_id "
+      my_containers_sql = "select container_trackings.container_id , container_trackings.shipping_company, container_milestones.milestone_timestamp, container_milestones.location_name, container_milestones.location_city,  container_milestones.location_country, container_milestones.location_unlocode, container_milestones.location_facility,  container_milestones.description, container_milestones.raw_descripition, container_milestones.vessel_imo, container_milestones.vessel_mmsi, container_milestones.voyage, container_milestones.mode, container_milestones.vessel  from container_trackings, container_milestones where container_trackings.container_id = container_milestones.container_id and container_trackings.finished_journey = 'f' and container_trackings.uploaded = 'f' "
       my_containers = ActiveRecord::Base.connection.execute(my_containers_sql).values
 
       #puts my_containers.inspect
@@ -125,7 +125,19 @@ class TrackingFTP < Net::FTP
       
       upload_tracking_csv(filename, "last_milestone_tracking")
 
-      #Below is estimated_time_arrival = true
+      #Here we determine if the journey is finished, so as to exclude it from ETAs.
+      #my_finished_journey = "select container_milestones.container_id, container_milestones.milestone_timestamp, container_milestones.location_city from container_milestones, destination_ports where destination_ports.container_id = container_milestones.container_id and LOWER(container_milestones.location_city) = LOWER(destination_ports.city) and container_milestones.planned = 'f' "
+
+      my_finished_journey = "update container_trackings set finished_journey = 't' from (select container_milestones.container_id from container_milestones, destination_ports where destination_ports.container_id = container_milestones.container_id and LOWER(container_milestones.location_city) = LOWER(destination_ports.city) and container_milestones.planned = 'f' ) as subquery where container_trackings.container_id = subquery.container_id"
+
+      my_uploaded_sql = "update container_trackings set uploaded = 't' where finished_journey = 't' "
+
+
+      
+      my_finished_recs = ActiveRecord::Base.connection.execute(my_finished_journey)
+
+      my_uploaded_milestones = ActiveRecord::Base.connection.execute(my_uploaded_sql)
+      
 
       new_filename = estimated_name_csv
 

@@ -407,6 +407,7 @@ module ShippingInfo
 
             temp_estimated_time_arrival = false
             my_destination_city = nil
+            new_temp_city = myt.dig('location', 'city')
 
             my_destination_port = DestinationPort.find_by_container_id(container_id)
             if my_destination_port != nil && my_destination_port != []
@@ -416,8 +417,10 @@ module ShippingInfo
             end
             if myt['raw_description'] =~ /estim.+/i || ( myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i && myt['planned'] == 'true')
               temp_estimated_time_arrival = true
-            elsif (my_destination_city != nil && myt.dig('location', 'city') == my_destination_city)
+            elsif (my_destination_city != nil  && new_temp_city != nil) #need to handle all nil cases
+              if ( new_temp_city.downcase == my_destination_city.downcase)
               temp_estimated_time_arrival = true
+              end
             else
               temp_estimated_time_arrival = false
             end
