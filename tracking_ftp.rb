@@ -123,7 +123,7 @@ class TrackingFTP < Net::FTP
 
       end #csv generate
       
-      #upload_tracking_csv(filename, "last_milestone_tracking")
+      upload_tracking_csv(filename, "last_milestone_tracking")
 
       #Below is estimated_time_arrival = true
 
@@ -190,8 +190,8 @@ class TrackingFTP < Net::FTP
       end #csv generate
       #below to go back to parent directory
       
-      #upload_tracking_csv(new_filename, "estimated_arrival_tracking")
-      #close
+      upload_tracking_csv(new_filename, "estimated_arrival_tracking")
+      close
 
       #Here mark finished_journey = true, upload full history, then mark upload = true
 
