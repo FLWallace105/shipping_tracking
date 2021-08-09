@@ -123,7 +123,7 @@ class TrackingFTP < Net::FTP
 
       end #csv generate
       
-      upload_tracking_csv(filename, "last_milestone_tracking")
+      #upload_tracking_csv(filename, "last_milestone_tracking")
 
       #Below is estimated_time_arrival = true
 
@@ -138,6 +138,12 @@ class TrackingFTP < Net::FTP
       my_containers_sql = "insert into temporary_etas (container_id, milestone_timestamp, location_name, location_city, location_country, location_unlocode, location_facility, description, raw_descripition, vessel_imo, vessel_mmsi, voyage, mode, vessel, shipping_company)  select container_trackings.container_id ,  container_milestones.milestone_timestamp, container_milestones.location_name, container_milestones.location_city,  container_milestones.location_country, container_milestones.location_unlocode, container_milestones.location_facility,  container_milestones.description, container_milestones.raw_descripition, container_milestones.vessel_imo, container_milestones.vessel_mmsi, container_milestones.voyage, container_milestones.mode, container_milestones.vessel, container_trackings.shipping_company from container_trackings, container_milestones where container_milestones.container_id = container_trackings.container_id and container_milestones.estimated_time_arrival = 't' and container_trackings.finished_journey = 'f'"
 
       ActiveRecord::Base.connection.execute(my_containers_sql)
+
+      #Find destination port here
+      #select container_milestones.container_id, container_milestones.milestone_timestamp, container_milestones.location_city, destination_ports.city from container_milestones, destination_ports where destination_ports.container_id = container_milestones.container_id and destination_ports.city = container_milestones.location_city and container_milestones.estimated_time_arrival = 'f' and container_milestones.planned = 't' and container_milestones.milestone_timestamp is not null and container_milestones.raw_descripition ilike '%arriv%';
+
+
+
 
       my_etas_sql = "select container_id, MAX(milestone_timestamp) from temporary_etas group by container_id "
 
@@ -156,9 +162,11 @@ class TrackingFTP < Net::FTP
         
           my_etas.each do |mycont|
             puts mycont.inspect
+            next if mycont[1] == nil
             my_container_id = mycont[0]
             my_milestone_timestamp = mycont[1]
             my_eta_info = TemporaryEta.where("container_id = ? and milestone_timestamp = ?",my_container_id, my_milestone_timestamp ).first 
+            #puts "my_eta_info = #{my_eta_info.inspect}"
 
           
             #Create CSV row here
@@ -182,8 +190,8 @@ class TrackingFTP < Net::FTP
       end #csv generate
       #below to go back to parent directory
       
-      upload_tracking_csv(new_filename, "estimated_arrival_tracking")
-      close
+      #upload_tracking_csv(new_filename, "estimated_arrival_tracking")
+      #close
 
       #Here mark finished_journey = true, upload full history, then mark upload = true
 

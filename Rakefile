@@ -10,6 +10,12 @@ namespace :request_ftp_info do
         ShippingInfo::TrackGetter.new.get_ftp_shipping_info
     end
 
+    desc 'stop tracking containers in csv file'
+    task :stop_tracking do |t|
+        ShippingInfo::TrackGetter.new.stop_tracking
+
+    end
+
     desc 'load container_trackings csv file from production'
     task :load_container_trackings do |t|
         ShippingInfo::TrackGetter.new.load_container_trackings
