@@ -418,7 +418,7 @@ module ShippingInfo
             if myt['raw_description'] =~ /estim.+/i || ( myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i && myt['planned'] == 'true')
               temp_estimated_time_arrival = true
             elsif (my_destination_city != nil  && new_temp_city != nil) #need to handle all nil cases
-              if ( new_temp_city.downcase == my_destination_city.downcase)
+              if ( new_temp_city.downcase == my_destination_city.downcase && myt['planned'] == 'true')
               temp_estimated_time_arrival = true
               end
             else
