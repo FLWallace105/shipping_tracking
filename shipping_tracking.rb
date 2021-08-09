@@ -194,10 +194,64 @@ module ShippingInfo
         DestinationPort.where("container_id = ?", my_container).destroy_all
         ContainerTracking.where("container_id = ?", my_container).destroy_all
         
-
-
       end
       puts "All done"
+
+    end
+
+    def containers_should_track_info
+      ContainerShouldTrack.delete_all
+      #Now reset index
+      ActiveRecord::Base.connection.reset_pk_sequence!('containers_should_tracks')
+      CSV.foreach('most_recent_container_list.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
+        puts row.inspect
+        ContainerShouldTrack.create(container_id: row['Container #'], shipping_company: row['Bill Of Lading'][0..3], bill_of_lading: row['Bill Of Lading'])
+      end
+
+      my_containers_not_tracked_sql = "select container_id, shipping_company, bill_of_lading, created_at from containers_should_tracks where container_id not in (select container_id from container_trackings)"
+
+      my_containers_not_tracked = ActiveRecord::Base.connection.execute(my_containers_not_tracked_sql).values
+
+      File.delete('containers_no_should_track.csv') if File.exist?('containers_no_should_track.csv')
+
+      column_header = ["container_id", "shipping_company", "bill_of_lading", "created_at" ]
+
+      CSV.open('containers_no_should_track.csv','a+', :write_headers=> true, :headers => column_header) do |hdr|
+        column_header = nil
+
+        my_containers_not_tracked.each do |myc|
+          puts myc.inspect
+          csv_data_out = [myc[0], myc[1], myc[2], myc[3]]
+          hdr << csv_data_out
+
+        end
+        csv_data_out = ["------------ Containers with No Milestones -----------"]
+        hdr << csv_data_out
+
+      my_containers_no_milestones_sql = "select container_id, shipping_company, bill_of_lading, created_at from container_trackings where finished_journey = 'f' and container_id not in (select container_id from container_milestones)"
+
+      my_containers_no_milestones = ActiveRecord::Base.connection.execute(my_containers_no_milestones_sql).values
+      my_containers_no_milestones.each do |mycnm|
+        csv_data_out = [mycnm[0], mycnm[1], mycnm[2], mycnm[3]]
+        hdr << csv_data_out
+
+      end
+
+      csv_data_out = ["------------ Containers with No Tracking References -----------"]
+      hdr << csv_data_out
+      my_containers_no_tracking_sql = "select container_id, shipping_company, bill_of_lading, created_at from container_trackings where finished_journey = 'f' and vizion_reference_id is null"
+
+      my_containers_no_tracking = ActiveRecord::Base.connection.execute(my_containers_no_tracking_sql).values
+
+      my_containers_no_tracking.each do |mycnt|
+        csv_data_out = [mycnt[0], mycnt[1], mycnt[2], mycnt[3]]
+        hdr << csv_data_out
+
+      end
+
+
+
+      end #csv
 
 
 

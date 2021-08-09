@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_06_183256) do
+ActiveRecord::Schema.define(version: 2021_08_09_225118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 2021_08_06_183256) do
     t.boolean "finished_journey", default: false
     t.boolean "uploaded", default: false
     t.index ["container_id"], name: "index_container_trackings_on_container_id"
+  end
+
+  create_table "containers_should_tracks", force: :cascade do |t|
+    t.string "container_id"
+    t.string "shipping_company"
+    t.string "bill_of_lading"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "destination_ports", force: :cascade do |t|

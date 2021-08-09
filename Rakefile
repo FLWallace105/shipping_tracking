@@ -16,6 +16,11 @@ namespace :request_ftp_info do
 
     end
 
+    desc 'find out which containers we should be tracking but are not'
+    task :find_out_containers_should_track do |t|
+        ShippingInfo::TrackGetter.new.containers_should_track_info
+    end
+
     desc 'load container_trackings csv file from production'
     task :load_container_trackings do |t|
         ShippingInfo::TrackGetter.new.load_container_trackings
