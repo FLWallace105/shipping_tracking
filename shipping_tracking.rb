@@ -214,7 +214,7 @@ module ShippingInfo
 
       File.delete('containers_no_should_track.csv') if File.exist?('containers_no_should_track.csv')
 
-      column_header = ["container_id", "shipping_company", "bill_of_lading", "created_at" ]
+      column_header = ["container_id", "shipping_company", "bill_of_lading", "created_at", "vizion_reference_id" ]
 
       CSV.open('containers_no_should_track.csv','a+', :write_headers=> true, :headers => column_header) do |hdr|
         column_header = nil
@@ -228,11 +228,11 @@ module ShippingInfo
         csv_data_out = ["------------ Containers with No Milestones -----------"]
         hdr << csv_data_out
 
-      my_containers_no_milestones_sql = "select container_id, shipping_company, bill_of_lading, created_at from container_trackings where finished_journey = 'f' and container_id not in (select container_id from container_milestones)"
+      my_containers_no_milestones_sql = "select container_id, shipping_company, bill_of_lading, created_at, vizion_reference_id from container_trackings where finished_journey = 'f' and container_id not in (select container_id from container_milestones)"
 
       my_containers_no_milestones = ActiveRecord::Base.connection.execute(my_containers_no_milestones_sql).values
       my_containers_no_milestones.each do |mycnm|
-        csv_data_out = [mycnm[0], mycnm[1], mycnm[2], mycnm[3]]
+        csv_data_out = [mycnm[0], mycnm[1], mycnm[2], mycnm[3], mycnm[4]]
         hdr << csv_data_out
 
       end
