@@ -10,7 +10,7 @@
 - [x] Export above data into ACS FTP site.
 - [x] Export an estimated time of arrival milestone in separate file for all containers where this exists.
 - [ ] Export milestone history for each container as a separate file.
-- [ ] Mark container_trackings with journey_finished = TRUE after upload to FTP site and some processing finished condition.
+- [x] Mark container_trackings with journey_finished = TRUE after upload to FTP site and some processing finished condition.
 - [ ] When journey is finished, cancel/release the Vizion Reference per their request.
 - [ ] Make the CSV ftp export include the longitude and latitude data. It exists in the table but the current code bombs out when trying to write to the outbound csv file.
 - [ ] Make the app timezone aware. Currently the app strips out timezone information.
