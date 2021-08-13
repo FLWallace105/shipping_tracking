@@ -150,6 +150,61 @@ module ShippingInfo
 
     end
 
+    def no_etas_container_file
+      puts "STarting"
+
+      File.delete('containers_no_etas.csv') if File.exist?('containers_no_etas.csv')
+
+      column_header = ["container_id", "finished_journey", "no_milestones", "eta_available" ]
+
+      CSV.open('containers_no_etas.csv','a+', :write_headers=> true, :headers => column_header) do |hdr|
+        column_header = nil
+
+      CSV.foreach('no_etas_8_13.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
+        #puts row.inspect
+        puts row['Container #']
+        container_id = row['Container #']
+        container_tracking = ContainerTracking.where("container_id = ?", container_id).first
+        container_milestone = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", container_id, true).order(milestone_timestamp: :desc).first
+        puts container_tracking.inspect
+        puts container_milestone.inspect
+
+        tracking_info = "container_id not in system"
+
+        if container_tracking.nil?
+          tracking_info = "container_id not in system"
+
+        else
+          tracking_info = container_tracking.finished_journey
+        end
+        
+        no_milestones = false
+        if container_milestone.nil?
+          no_milestones = true
+        else
+          no_milestones = false
+        end
+
+        eta_available = false
+        if container_milestone.nil?
+          eta_available = false
+        else
+          eta_available =  container_milestone.estimated_time_arrival
+        end
+        
+
+        csv_data_out = [container_id, tracking_info, no_milestones, eta_available]
+
+        hdr << csv_data_out
+
+      end
+
+      end #close csv
+
+    end
+
+
+
     def containers_no_etas
       puts "Starting"
       container_ids = Array.new
@@ -479,12 +534,12 @@ module ShippingInfo
             end
 
             #puts "STARTING BLOCK estimated_time_arrival = t, #{myt['raw_description']}, #{myt['planned']}"
-            if ( myt['raw_description'] =~ /estim.+/i ||  myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i ) && myt['planned'] == true
+            if ( myt['raw_description'] =~ /estim.+/i ||  myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i ) 
               #puts "Setting estimated_time_arrival = t, #{myt['raw_description']}, #{myt['planned']}"
               temp_estimated_time_arrival = true
             elsif (my_destination_city != nil  && new_temp_city != nil) #need to handle all nil cases
               #puts "City stuff: milestone city = #{new_temp_city.downcase} and destination city = #{my_destination_city.downcase}"
-              if ( new_temp_city.downcase == my_destination_city.downcase && myt['planned'] == 'true')
+              if ( new_temp_city.downcase == my_destination_city.downcase )
               temp_estimated_time_arrival = true
               end
             else

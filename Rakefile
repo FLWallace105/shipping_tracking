@@ -16,6 +16,12 @@ namespace :request_ftp_info do
 
     end
 
+    desc 'find out info for no etas from csv file'
+    task :find_out_info_no_etas do |t|
+        ShippingInfo::TrackGetter.new.no_etas_container_file
+
+    end
+
     desc 'find out which containers we should be tracking but are not'
     task :find_out_containers_should_track do |t|
         ShippingInfo::TrackGetter.new.containers_should_track_info
