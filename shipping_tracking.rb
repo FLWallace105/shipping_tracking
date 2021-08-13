@@ -100,14 +100,22 @@ module ShippingInfo
       end
 
       ContainerMilestone.delete_all
-      ActiveRecord::Base.connection.reset_pk_sequence!('container_milestones.csv')
+      ActiveRecord::Base.connection.reset_pk_sequence!('container_milestones')
       CSV.foreach('container_milestones.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
         puts row.inspect
         ContainerMilestone.create(container_id: row['container_id'], milestone_timestamp: row['milestone_timestamp'] , location_name: row['location_name'], location_city: row['location_city'], location_country: row['location_country'],location_unlocode: row['location_unlocode'], location_facility: row['location_facility'],  description: row['description'], raw_descripition: row['raw_descripition'], vessel_imo: row['vessel_imo'], vessel_mmsi: row['vessel_mmsi'], voyage: row['voyage'], mode: row['mode'], vessel: row['vessel'], latitude: row['latitude'], longitude: row['longitude'], estimated_time_arrival: row['estimated_time_arrival'], planned: row['planned'] )
 
       end
 
+      DestinationPort.delete_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('destination_ports')
+      CSV.foreach('destination_ports.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
+        puts row.inspect
+        DestinationPort.create(container_id: row['container_id'], port_name: row['port_name'], city: row['city'], state: row['state'], unlocode: row['unlocode'], facility: row['facility'], latitude: row['latitude'], longitude: row['longitude'])
+      end
+
       
+
 
 
       puts "all done"
@@ -469,9 +477,13 @@ module ShippingInfo
             else 
               my_destination_city = nil
             end
-            if myt['raw_description'] =~ /estim.+/i || ( myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i && myt['planned'] == 'true')
+
+            #puts "STARTING BLOCK estimated_time_arrival = t, #{myt['raw_description']}, #{myt['planned']}"
+            if ( myt['raw_description'] =~ /estim.+/i ||  myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i ) && myt['planned'] == true
+              #puts "Setting estimated_time_arrival = t, #{myt['raw_description']}, #{myt['planned']}"
               temp_estimated_time_arrival = true
             elsif (my_destination_city != nil  && new_temp_city != nil) #need to handle all nil cases
+              #puts "City stuff: milestone city = #{new_temp_city.downcase} and destination city = #{my_destination_city.downcase}"
               if ( new_temp_city.downcase == my_destination_city.downcase && myt['planned'] == 'true')
               temp_estimated_time_arrival = true
               end
@@ -517,14 +529,18 @@ module ShippingInfo
       end
 
       #Bulk upsert
+      local_milestones = local_milestones.uniq
       puts "local_milestones = #{local_milestones.inspect}"
       if local_milestones != []
+        
+        ContainerMilestone.where("container_id = ? ", container_id).destroy_all
         my_result = ContainerMilestone.insert_all(local_milestones)
         puts "my_result = #{my_result.inspect}"
       else
         puts "No milestones yet for this container: #{container_id}"
       end
 
+      local_destination_ports = local_destination_ports.uniq
       puts "local_destination_ports = #{local_destination_ports.inspect}"
       if local_destination_ports != []
         my_result = DestinationPort.insert_all(local_destination_ports)
