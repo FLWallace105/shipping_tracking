@@ -22,6 +22,12 @@ namespace :request_ftp_info do
 
     end
 
+    desc 'start analysis containers no etas'
+    task :start_analysis_container_no_eta do |t|
+        ShippingInfo::TrackGetter.new.container_no_eta_analysis
+    end
+
+
     desc 'find out which containers we should be tracking but are not'
     task :find_out_containers_should_track do |t|
         ShippingInfo::TrackGetter.new.containers_should_track_info

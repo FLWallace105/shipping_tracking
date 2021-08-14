@@ -1,0 +1,262 @@
+container_id,milestone_timestamp,location_city,raw_descripition
+SEGU6093421
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+SEGU6093421,,,
+SEGU6093421,2021-08-11 07:00:00 UTC,Los Angeles,Container in transit for import
+SEGU6093421,2021-08-10 07:00:00 UTC,Los Angeles,Train arrival for import
+SEGU6093421,2021-08-09 07:00:00 UTC,Los Angeles,Train arrival for import
+SEGU6093421,2021-08-08 07:00:00 UTC,Winslow,Container on rail for import
+SEGU6093421,2021-08-08 05:00:00 UTC,Amarillo,Container on rail for import
+SEGU6093421,2021-08-07 05:00:00 UTC,Kansas City,Container on rail for import
+SEGU6093421,2021-08-06 05:00:00 UTC,Galesburg,Container on rail for import
+SEGU6093421,2021-08-03 04:00:00 UTC,Elkhart,Container on rail for import
+SEGU6093421,2021-07-31 04:00:00 UTC,Portsmouth,Container on rail for import
+SEGU6093421,2021-07-30 04:00:00 UTC,Norfolk,Container on rail for import
+SEGU6093421,2021-07-29 04:00:00 UTC,Norfolk,Container in transit for import
+SEGU6093421,2021-07-28 04:00:00 UTC,Norfolk,Full Load on rail for import
+SEGU6093421,2021-07-27 04:00:00 UTC,Norfolk,Discharged
+SEGU6093421,2021-07-10 00:00:00 UTC,Damietta,Loaded on board
+SEGU6093421,2021-07-01 00:00:00 UTC,Damietta,Ready to be loaded
+SEGU6093421,2021-06-29 00:00:00 UTC,Damietta,Empty to shipper
+TCNU2664600
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU2664600,2021-08-11 07:00:00 UTC,Los Angeles,Container in transit for import
+TCNU2664600,2021-08-10 07:00:00 UTC,Los Angeles,Train arrival for import
+TCNU2664600,2021-08-09 07:00:00 UTC,Los Angeles,Train arrival for import
+TCNU2664600,2021-08-08 07:00:00 UTC,Winslow,Container on rail for import
+TCNU2664600,2021-08-08 06:00:00 UTC,Belen,Container on rail for import
+TCNU2664600,2021-08-08 05:00:00 UTC,Amarillo,Container on rail for import
+TCNU2664600,2021-08-07 05:00:00 UTC,Kansas City,Container on rail for import
+TCNU2664600,2021-08-06 07:00:00 UTC,Chicago,Container on rail for import
+TCNU2664600,2021-08-06 05:00:00 UTC,Galesburg,Container on rail for import
+TCNU2664600,2021-08-03 04:00:00 UTC,Elkhart,Container on rail for import
+TCNU2664600,2021-07-31 04:00:00 UTC,Portsmouth,Container on rail for import
+TCNU2664600,2021-07-30 04:00:00 UTC,Norfolk,Container on rail for import
+TCNU2664600,2021-07-29 04:00:00 UTC,Norfolk,Container in transit for import
+TCNU2664600,2021-07-28 04:00:00 UTC,Norfolk,Full Load on rail for import
+TCNU2664600,2021-07-27 04:00:00 UTC,Norfolk,Discharged
+TCNU2664600,2021-07-10 00:00:00 UTC,Damietta,Loaded on board
+TCNU2664600,2021-07-01 00:00:00 UTC,Damietta,Ready to be loaded
+TCNU2664600,2021-06-29 00:00:00 UTC,Damietta,Empty to shipper
+OOLU8616474
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+OOLU8616474,2021-07-21 17:05:00 UTC,Singapore,Discharged at T/S POD
+OOLU8616474,2021-07-16 15:25:00 UTC,Chattogram,Loaded at First POL
+OOLU8616474,2021-07-14 22:00:00 UTC,Chattogram,Cargo Received
+OOLU8616474,2021-07-14 18:00:00 UTC,Chattogram,Empty Equipment Despatched
+OOLU8616474
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+OOLU8616474,2021-07-21 17:05:00 UTC,Singapore,Discharged at T/S POD
+OOLU8616474,2021-07-16 15:25:00 UTC,Chattogram,Loaded at First POL
+OOLU8616474,2021-07-14 22:00:00 UTC,Chattogram,Cargo Received
+OOLU8616474,2021-07-14 18:00:00 UTC,Chattogram,Empty Equipment Despatched
+CCLU7167331
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+CCLU7167331,2021-07-21 10:45:00 UTC,Singapore,Discharged at T/S POD
+CCLU7167331,2021-07-16 15:25:00 UTC,Chattogram,Loaded at First POL
+CCLU7167331,2021-07-13 22:00:00 UTC,Chattogram,Cargo Received
+CCLU7167331,2021-07-13 18:00:00 UTC,Chattogram,Empty Equipment Despatched
+TRHU4736473
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TRHU4736473,2021-07-21 20:50:00 UTC,Singapore,Discharged at T/S POD
+TRHU4736473,2021-07-16 15:25:00 UTC,Chattogram,Loaded at First POL
+TRHU4736473,2021-07-13 22:00:00 UTC,Chattogram,Cargo Received
+TRHU4736473,2021-07-13 18:00:00 UTC,Chattogram,Empty Equipment Despatched
+GAOU6205117
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+KOCU4006045
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+KOCU4675605
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+KOCU4756857
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU1488934
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU1488934,2021-09-03 04:00:00 UTC,Toronto,Arrival in
+TCNU1488934,2021-08-31 03:00:00 UTC,Halifax,Departure from
+TCNU1488934,2021-08-30 15:00:00 UTC,Halifax,Vessel arrival
+TCNU1488934,2021-08-28 20:30:00 UTC,Halifax,Vessel arrival
+TCNU1488934,2021-08-26 20:30:00 UTC,Halifax,Vessel arrival
+TCNU1488934,2021-08-11 11:42:00 UTC,Colombo,Vessel departed
+TCNU1488934,2021-08-11 00:41:00 UTC,Colombo,Loaded
+TCNU1488934,2021-08-10 17:00:00 UTC,Colombo,Vessel departure
+TCNU1488934,2021-08-09 23:00:00 UTC,Colombo,Vessel departure
+TCNU1488934,2021-06-28 21:19:00 UTC,Colombo,Arrival in
+TCNU1488934,2021-06-28 14:05:00 UTC,Colombo,Discharged
+TCNU1488934,2021-06-28 09:36:00 UTC,Colombo,Vessel arrived
+TCNU1488934,2021-06-23 23:18:00 UTC,Chattogram,Loaded
+TCNU1488934,2021-06-23 07:42:00 UTC,Chattogram,Vessel departed
+TCNU1488934,2021-06-22 23:30:00 UTC,Chattogram,Arrival in
+TCNU1488934,2021-06-20 23:00:00 UTC,Chattogram,Gate out empty
+TCNU5516422
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU5516422,2021-08-16 23:00:00 UTC,Elizabeth,Empty Container Returned from Customer
+TCNU5516422,2021-08-16 17:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-16 12:30:00 UTC,New York,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-16 11:00:00 UTC,New York,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-15 16:00:00 UTC,New York,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-13 23:00:00 UTC,Elizabeth,Empty Container Returned from Customer
+TCNU5516422,2021-08-13 17:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-13 12:30:00 UTC,New York,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-13 11:00:00 UTC,New York,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-13 10:00:00 UTC,Elizabeth,Empty Container Returned from Customer
+TCNU5516422,2021-08-13 05:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-13 04:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-13 00:30:00 UTC,New York,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-12 23:30:00 UTC,New York,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-12 23:00:00 UTC,New York,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-12 22:00:00 UTC,New York,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-12 18:30:00 UTC,New York,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-12 16:00:00 UTC,New York,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-01 23:00:00 UTC,Damietta,'MOL COURAGE 1128' Departure from Port of Loading
+TCNU5516422,2021-08-01 22:00:00 UTC,Damietta,Loaded on 'MOL COURAGE 1128' at Port of Loading
+TCNU5516422,2021-08-01 17:54:00 UTC,Damietta,'MOL COURAGE 1128' Departure from Port of Loading
+TCNU5516422,2021-08-01 14:14:00 UTC,Damietta,Loaded on 'MOL COURAGE 1128' at Port of Loading
+TCNU5516422,2021-07-26 19:08:00 UTC,Damietta,Gate In to Outbound Terminal
+TCNU5516422,2021-07-26 11:07:00 UTC,Damietta,Empty Container Release to Shipper
+TCNU4932430
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU9664222
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+KKTU7887918
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU9664222
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+KKFU7891195
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+KKFU7891195,2021-09-12 14:00:00 UTC,Elizabeth,Empty Container Returned from Customer
+KKFU7891195,2021-09-12 08:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+KKFU7891195,2021-09-12 03:30:00 UTC,New York,Unloaded from 'HYUNDAI FAITH 096E' at Port of Discharging
+KKFU7891195,2021-09-12 02:00:00 UTC,New York,'HYUNDAI FAITH 096E' POD Berthing Destination
+KKFU7891195,2021-09-11 21:30:00 UTC,New York,'HYUNDAI FAITH 096E' Arrival at Port of Discharging
+KKFU7891195,2021-08-28 09:00:00 UTC,Elizabeth,Empty Container Returned from Customer
+KKFU7891195,2021-08-28 03:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+KKFU7891195,2021-08-27 22:30:00 UTC,New York,Unloaded from 'ONE HONOLULU 213E' at Port of Discharging
+KKFU7891195,2021-08-27 21:00:00 UTC,New York,'ONE HONOLULU 213E' POD Berthing Destination
+KKFU7891195,2021-08-27 16:30:00 UTC,New York,'ONE HONOLULU 213E' Arrival at Port of Discharging
+KKFU7891195,2021-08-21 08:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7891195,2021-08-20 23:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7891195,2021-08-20 21:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7891195,2021-08-19 08:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7891195,2021-08-19 01:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7891195,2021-08-18 23:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7891195,2021-08-18 21:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7891195,2021-08-17 01:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7891195,2021-08-06 10:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7891195,2021-08-06 08:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7891195,2021-08-05 17:30:00 UTC,Colombo,Loaded on 'ONE HONOLULU 213E' at Transhipment Port
+KKFU7891195,2021-08-05 15:30:00 UTC,Colombo,Loaded on 'ONE HONOLULU 213E' at Transhipment Port
+KKFU7891195,2021-07-12 01:10:00 UTC,Colombo,Unloaded from 'X-PRESS LHOTSE 108S' at Transhipment Port
+KKFU7891195,2021-07-11 14:15:00 UTC,Colombo,'X-PRESS LHOTSE 108S' T/S Berthing Destination
+KKFU7891195,2021-07-10 15:48:00 UTC,Colombo,'X-PRESS LHOTSE 108S' Arrival at Transhipment Port
+KKFU7891195,2021-07-06 07:34:00 UTC,Chattogram,'X-PRESS LHOTSE 108S' Departure from Port of Loading
+KKFU7891195,2021-07-06 07:00:00 UTC,Chattogram,Loaded on 'X-PRESS LHOTSE 108S' at Port of Loading
+KKFU7891195,2021-07-02 23:45:00 UTC,Chattogram,Gate In to Outbound Terminal
+KKFU7891195,2021-07-02 20:00:00 UTC,Chattogram,Empty Container Release to Shipper
+KKFU7974514
+tracking information
+finished_journey = false
+"--- End tracking info, if finished journey is true not printing milestones ----"
+KKFU7974514,2021-09-12 14:00:00 UTC,Elizabeth,Empty Container Returned from Customer
+KKFU7974514,2021-09-12 08:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+KKFU7974514,2021-09-12 03:30:00 UTC,New York,Unloaded from 'HYUNDAI FAITH 096E' at Port of Discharging
+KKFU7974514,2021-09-12 02:00:00 UTC,New York,'HYUNDAI FAITH 096E' POD Berthing Destination
+KKFU7974514,2021-09-11 21:30:00 UTC,New York,'HYUNDAI FAITH 096E' Arrival at Port of Discharging
+KKFU7974514,2021-08-28 09:00:00 UTC,Elizabeth,Empty Container Returned from Customer
+KKFU7974514,2021-08-28 03:00:00 UTC,New York,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+KKFU7974514,2021-08-27 22:30:00 UTC,New York,Unloaded from 'ONE HONOLULU 213E' at Port of Discharging
+KKFU7974514,2021-08-27 21:00:00 UTC,New York,'ONE HONOLULU 213E' POD Berthing Destination
+KKFU7974514,2021-08-27 16:30:00 UTC,New York,'ONE HONOLULU 213E' Arrival at Port of Discharging
+KKFU7974514,2021-08-21 08:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7974514,2021-08-20 23:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7974514,2021-08-20 21:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7974514,2021-08-19 08:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7974514,2021-08-19 01:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7974514,2021-08-18 23:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7974514,2021-08-18 21:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7974514,2021-08-17 01:00:00 UTC,Colombo,Loaded on 'HYUNDAI FAITH 096E' at Transhipment Port
+KKFU7974514,2021-08-06 10:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7974514,2021-08-06 08:00:00 UTC,Colombo,Departure from Transhipment Port
+KKFU7974514,2021-08-05 17:30:00 UTC,Colombo,Loaded on 'ONE HONOLULU 213E' at Transhipment Port
+KKFU7974514,2021-08-05 15:30:00 UTC,Colombo,Loaded on 'ONE HONOLULU 213E' at Transhipment Port
+KKFU7974514,2021-07-11 18:02:00 UTC,Colombo,Unloaded from 'X-PRESS LHOTSE 108S' at Transhipment Port
+KKFU7974514,2021-07-11 14:15:00 UTC,Colombo,'X-PRESS LHOTSE 108S' T/S Berthing Destination
+KKFU7974514,2021-07-10 15:48:00 UTC,Colombo,'X-PRESS LHOTSE 108S' Arrival at Transhipment Port
+KKFU7974514,2021-07-06 07:34:00 UTC,Chattogram,'X-PRESS LHOTSE 108S' Departure from Port of Loading
+KKFU7974514,2021-07-06 07:00:00 UTC,Chattogram,Loaded on 'X-PRESS LHOTSE 108S' at Port of Loading
+KKFU7974514,2021-07-02 23:45:00 UTC,Chattogram,Gate In to Outbound Terminal
+KKFU7974514,2021-07-02 20:00:00 UTC,Chattogram,Empty Container Release to Shipper
+NYKU4425050
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+CAIU9323520
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+NYKU4803864
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU6423598
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TCNU6648064
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+TLLU5507334
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+OOLU8963149
+tracking information
+finished_journey = true
+"--- End tracking info, if finished journey is true not printing milestones ----"
+======= Start Containers that have no Milestones
+container_id,vizion_reference_id,created_at,finished_journey
+CCLU1918887,94a66a26-b165-4c1b-b3a9-36b6012a5748,2021-08-03 21:00:04 UTC,false
+FFAU2707788,e2abae1f-95c0-4527-96b3-acbaf1ed3716,2021-08-05 21:00:05 UTC,false
+BMOU5112330,No tracking info for this container
+EITU1688545,No tracking info for this container
+HMCU9010099,No tracking info for this container
+SEGU6849416,98a0249c-6b66-49ff-a35d-f38986abbc4b,2021-08-07 21:00:04 UTC,false
+MRSU4492688,1afcbaaf-9adc-4f72-81ea-aebc9d5088d7,2021-08-07 21:00:04 UTC,false
+SMCU1192022,af0d50dc-56dc-4b3f-b427-d6fac5673966,2021-08-07 21:00:04 UTC,false
+SLHU4500038,ef0b6f5c-257b-43d7-a7da-00d4203efe53,2021-07-27 00:06:43 UTC,false
+NLLU4114635,06788e12-71c7-492e-8444-91aae92b8502,2021-08-03 21:00:04 UTC,false

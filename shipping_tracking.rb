@@ -153,9 +153,13 @@ module ShippingInfo
     def no_etas_container_file
       puts "STarting"
 
+      ContainerMissingEta.delete_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('containers_missing_etas')
+      bulk_insert_array = Array.new
+
       File.delete('containers_no_etas.csv') if File.exist?('containers_no_etas.csv')
 
-      column_header = ["container_id", "finished_journey", "no_milestones", "eta_available" ]
+      column_header = ["container_id", "finished_journey", "milestone_exists", "eta_available" ]
 
       CSV.open('containers_no_etas.csv','a+', :write_headers=> true, :headers => column_header) do |hdr|
         column_header = nil
@@ -165,7 +169,7 @@ module ShippingInfo
         puts row['Container #']
         container_id = row['Container #']
         container_tracking = ContainerTracking.where("container_id = ?", container_id).first
-        container_milestone = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", container_id, true).order(milestone_timestamp: :desc).first
+        container_milestone = ContainerMilestone.where("container_id = ? ", container_id).order(milestone_timestamp: :desc).first
         puts container_tracking.inspect
         puts container_milestone.inspect
 
@@ -180,9 +184,9 @@ module ShippingInfo
         
         no_milestones = false
         if container_milestone.nil?
-          no_milestones = true
-        else
           no_milestones = false
+        else
+          no_milestones = true
         end
 
         eta_available = false
@@ -197,9 +201,95 @@ module ShippingInfo
 
         hdr << csv_data_out
 
+        
+        my_hash = { "container_id" => container_id, "finished_journey" => tracking_info, "milestone_exists" => no_milestones, "eta_available" => eta_available}
+        bulk_insert_array.push(my_hash)
+
       end
 
       end #close csv
+
+      my_result = ContainerMissingEta.insert_all(bulk_insert_array)
+      puts "my_result = #{my_result.inspect}"
+
+
+    end
+
+    def container_no_eta_analysis
+      puts "Starting Analysis ..."
+
+      File.delete('analysis_milestones_exist.csv') if File.exist?('analysis_milestones_exist.csv')
+
+      column_header = ["container_id", "milestone_timestamp", "location_city", "raw_descripition" ]
+
+      CSV.open('analysis_milestones_exist.csv','a+', :write_headers=> true, :headers => column_header) do |hdr|
+        column_header = nil
+      
+
+      my_containers_milestone_exists = ContainerMissingEta.where("eta_available = ? and milestone_exists = ?", false, true)
+
+      puts "Container has no ETA available but has milestones"
+
+      my_containers_milestone_exists.each do |myc|
+        my_container_id = myc.container_id
+        my_tracking_info = ContainerTracking.find_by_container_id(my_container_id)
+        my_container_milestones = ContainerMilestone.where("container_id = ? ", my_container_id).order(milestone_timestamp: :desc)
+        csv_data_out = [my_container_id]
+        hdr << csv_data_out
+        puts "tracking_info:"
+        puts my_tracking_info.inspect
+        puts "--------------"
+        csv_data_out = ["tracking information"]
+        hdr << csv_data_out
+        my_string = "finished_journey = #{my_tracking_info.finished_journey}"
+        csv_data_out = [my_string]
+        hdr << csv_data_out
+        csv_data_out = ["--- End tracking info, if finished journey is true not printing milestones ----"]
+        hdr << csv_data_out
+      
+        if my_tracking_info.finished_journey == false
+          my_container_milestones.each do |mymile|
+            puts "**********"
+            puts mymile.inspect
+            puts "**********"
+            csv_data_out = [my_container_id, mymile.milestone_timestamp, mymile.location_city, mymile.raw_descripition]
+            hdr << csv_data_out
+          end
+        end
+
+      end
+
+      
+      my_containers_no_milestone = ContainerMissingEta.where("eta_available = ? and milestone_exists = ?", false, false)
+      csv_data_out = ["======= Start Containers that have no Milestones"]
+      hdr << csv_data_out
+      csv_data_out = ["container_id", "vizion_reference_id", "created_at", "finished_journey"]
+      hdr << csv_data_out
+      my_containers_no_milestone.each do |myc|
+        my_container_id = myc.container_id
+        my_tracking_info = ContainerTracking.find_by_container_id(my_container_id)
+        puts my_tracking_info.inspect
+        local_reference_id = nil
+        if !my_tracking_info.nil?
+
+          if !my_tracking_info.vizion_reference_id.nil?
+          local_reference_id = my_tracking_info.vizion_reference_id
+          end
+          puts "local_referencne_id = #{local_reference_id}"
+
+          csv_data_out = [my_container_id, local_reference_id, my_tracking_info.created_at, my_tracking_info.finished_journey ]
+          hdr << csv_data_out
+        else
+          csv_data_out = [my_container_id, "No tracking info for this container" ]
+          hdr << csv_data_out
+
+        end
+
+      end
+
+
+    end #CSV
+
 
     end
 
