@@ -539,7 +539,7 @@ module ShippingInfo
 
         end
 
-        if my_reference_info.parsed_response == {"error"=>"Reference not found."} || my_reference_info.parsed_response == {"message"=>"Endpoint request timed out"}
+        if my_reference_info.parsed_response == {"error"=>"Reference not found."} || my_reference_info.parsed_response == {"message"=>"Endpoint request timed out"} || my_reference_info.parsed_response == {"error"=>"Unexpected error occurred."}
           puts "Error response, skipping"
           next
         end
