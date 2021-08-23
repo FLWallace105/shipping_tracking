@@ -48,16 +48,27 @@ class TrackingFTP < Net::FTP
               puts "Master Bill of Lading Field is null, not processing"
               next
             end
-            shipping_company = master_bill_lading[0..3]
-            #check to see if this is a supported scac code, otherwise next
-            my_scac_code = ShippingLineScacCode.where("scac_code = ?", shipping_company)
-            puts "my_scac_code = #{my_scac_code.inspect}"
-            if my_scac_code == nil || my_scac_code == []
-              puts "That scac code is not supported by Vizion API, moving to next row"
+            #check here container matches 4letters7digits
+            container_id = row['Container #']
+            if container_id !~ /\A[a-zA-Z]{4}\d{7}/
+              puts "Container info: #{container_id} is not correct, skipping"
               next
             end
-            container_id = row['Container #']
-            if container_id != nil && container_id !~ /\//i
+
+            shipping_company = master_bill_lading[0..3]
+            #check to see if this is a supported scac code, otherwise next
+            my_carrier_code = ShippingLineCarrierCode.where("carrier_code = ?", shipping_company)
+            puts "my_carrier_code = #{my_carrier_code.inspect}"
+            if my_carrier_code == nil || my_carrier_code == []
+              puts "That carrier code is not supported by Vizion API will try and create by auto-carrier"
+              #try to create request via auto_carrier
+              my_container = ContainerTracking.find_by_container_id(container_id)
+              if my_container != nil
+                puts "Not creating new record"
+              else
+                ContainerTracking.create(container_id: container_id, bill_of_lading: master_bill_lading)
+              end
+            elsif container_id != nil && container_id !~ /\//i
               my_container = ContainerTracking.find_by_container_id(container_id)
               if my_container != nil
                 puts "Not creating new record"

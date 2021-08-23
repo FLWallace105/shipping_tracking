@@ -471,18 +471,23 @@ module ShippingInfo
         mybody = { }
         if mycont.shipping_company == 'EGLV'
           mybody = {
-            "scac": mycont.shipping_company,
+            "carrier_code": mycont.shipping_company,
             "bill_of_lading": mycont.bill_of_lading,
             "container_id": mycont.container_id
               
           }.to_json
 
 
-        else
+        elsif mycont.shipping_company != nil
           mybody = {
-            "scac": mycont.shipping_company,
+            "carrier_code": mycont.shipping_company,
             "container_id": mycont.container_id
               
+          }.to_json
+
+        else
+          mybody = {
+            "container_id": mycont.container_id         
           }.to_json
 
         end

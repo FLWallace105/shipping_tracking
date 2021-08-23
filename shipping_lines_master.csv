@@ -1,1 +1,16 @@
-carrier_name,carrier_id,carrier_codeAliança Navegação e Logística (Aliança),1,SUDUANL,2,ANNUAPL,3,APLUCheng Lie Navigation (CNC),4,CMDUChina Shipping Container Lines (CSCL),5,COSUCMA-CGM,6,CMDUCompañía Chilena de Navegación Interoceánica S.A. (CCNI),7,SUDUContainerships,8,CDMUCOSCO,9,COSUEvergreen,10,EGLVHyundai Merchant Marine (HMM),11,HDMUHamburg-Süd,12,SUDUHapag Lloyd,13,HCLU"Kawasaki Kisen Kaisha, Ltd. (K-Line)",14,ONEYMacAndrews,15,CMDUMaersk,16,MAEUMitsui O.S.K. Lines (MOL),17,ONEYMCC Transport (MCC),18,MAEUMSC,19,MSCUOcean Network Express (ONE),20,ONEYOOCL,21,OOCLOPDR,22,CMDUSafmarine,23,SAFMSeago Line,24,MAEUSealand,25,MAEUUnited Arab Shipping Company,26,HLCUW.E.C. Lines,27,WECUZIM,28,ZIMU
+carrier_name,carrier_id,carrier_code
+ANL,1,ANNU
+CMA-CGM,2,CMDU
+COSCO,3,COSU
+Evergreen,4,EGLV
+Hyundai Merchant Marine (HMM),5,HDMU
+Hamburg-Sud,6,SUDU
+Hapag-Lloyd,7,HLCU
+Maersk,8,MAEU
+MSC,9,MSCU
+Ocean Network Express (ONE),10,ONEY
+OOCL,11,OOCL
+Safmarine,12,SAFM
+W.E.C. Lines,13,WECU
+Yang Ming,14,YMLU
+ZIM,15,ZIMU
