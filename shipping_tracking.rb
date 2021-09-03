@@ -316,13 +316,48 @@ module ShippingInfo
       container_ids.each do |mycont|
         #puts mycont['container_id']
         my_rec = ContainerMilestone.where("container_id = ? and estimated_time_arrival = ?", mycont['container_id'], true).order(:milestone_timestamp).reverse.first
-        if my_rec.nil?
-          puts "Container_id #{mycont['container_id']} has no milestones"
+        puts my_rec.inspect
+        if my_rec == nil
+          puts "Container_id #{mycont['container_id']} has NO ETAS"
           csv_data_out = [mycont['container_id'], mycont['shipping_company'], mycont['vizion_reference_id'], mycont['vision_organization_id'], mycont['bill_of_lading'] ]
           hdr << csv_data_out
+          #No milestones exist for this container
+          temp_rec  = ContainerMilestone.where("container_id = ?", mycont['container_id']).order(:milestone_timestamp).reverse
+          if temp_rec == []
+            csv_data_out = ["-- No Milestones This Container---"]
+            hdr << csv_data_out
+
+          else
+            #We have milestones, no ETAS
+            csv_data_out = ["------ No ETA But Milestones This Container-------"]
+            hdr << csv_data_out
+            csv_data_out = ["container_id", "milestone_timestamp", "location_city", "planned", "description", "raw_descripition"]
+            hdr << csv_data_out
+            temp_rec.each do |temp|
+              csv_data_out = [temp.container_id, temp.milestone_timestamp, temp.location_city, temp.planned, temp.description, temp.raw_descripition]
+              hdr << csv_data_out
+            end
+
+
+            
+            csv_data_out = ["------ End Milestones This Container -------"]
+            hdr << csv_data_out
+          end
+
         #  csv_data_out = [mycont]
         else
           puts "we have an ETA for this container: #{mycont['container_id']}"
+          #csv_data_out = mycont
+          #hdr << csv_data_out
+          #csv_data_out = ["--- ETA Milestone ---"]
+          #hdr << csv_data_out
+          #csv_data_out = ["container_id", "milestone_timestamp", "location_city", "planned", "description", "raw_descripition"]
+          #hdr << csv_data_out
+          #csv_data_out = [my_rec.container_id, my_rec.milestone_timestamp, my_rec.location_city, my_rec.planned, my_rec.description, my_rec.raw_descripition]
+          #csv_data_out = ["--- END ETA Milestone ---"]
+          #hdr << csv_data_out
+
+
         end
         
 
@@ -338,14 +373,15 @@ module ShippingInfo
       puts "Starting to remove containers from tracking ..."
       CSV.foreach('stop_tracking.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
         puts row.inspect
-        my_container = row['CONTAINER']
-        #my_sql_delete_milestones = "delete from container_milestones where container_id = \'#{my_container}\'"
-        #ActiveRecord::Base.connection.execute(my_sql_delete_milestones)
-        #my_sql_delete_destination_port = "delete from destination_ports where container_id = \'#{my_container}\'"
-        #ActiveRecord::Base.connection.execute(my_sql_delete_destination_port)
-        ContainerMilestone.where( "container_id = ?", my_container).destroy_all
-        DestinationPort.where("container_id = ?", my_container).destroy_all
-        ContainerTracking.where("container_id = ?", my_container).destroy_all
+        vizion_reference_id = row['vizion_reference_id']
+        my_container_info = ContainerTracking.find_by_vizion_reference_id(vizion_reference_id)
+        my_container_id = my_container_info.container_id
+        puts my_container_id
+        DestinationPort.where("container_id = ?", my_container_id).destroy_all
+        ContainerMilestone.where("container_id = ?", my_container_id).destroy_all
+        ContainerTracking.where("container_id = ?", my_container_id).destroy_all
+
+        
         
       end
       puts "All done"

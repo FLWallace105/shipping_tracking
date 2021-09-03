@@ -1,197 +1,819 @@
-container_id,finished_journey,milestone_exists,eta_available
-SEGU6093421,false,true,false
-TCNU2664600,false,true,false
-BEAU2044860,false,true,true
-CCLU1918887,false,false,false
-OOCU7443038,false,true,true
-CCLU7672971,false,true,true
-CCLU7884667,false,true,true
-CCLU7971490,false,true,true
-FFAU3458664,false,true,true
-TLLU4486366,false,true,true
-CSNU6672701,false,true,true
-CCLU7771758,false,true,true
-FSCU8535820,false,true,true
-OOLU8302025,false,true,true
-CBHU6290980,false,true,true
-CCLU7975366,false,true,true
-DFSU7284047,false,true,true
-OOLU1245915,false,true,true
-CBHU5520060,false,true,true
-DFSU6265799,false,true,true
-OOCU7821056,false,true,true
-CAIU9428331,false,true,true
-CBHU5816262,false,true,true
-CSLU6182287,false,true,true
-CBHU9580581,false,true,true
-BEAU6239197,false,true,true
-CBHU9131549,false,true,true
-CSNU6247261,false,true,true
-TGBU8717333,false,true,true
-TEMU0096163,false,true,true
-CSNU7637011,false,true,true
-DFSU6317383,false,true,true
-OOLU8448663,false,true,true
-TCKU6183105,false,true,true
-CBHU8964284,false,true,true
-CBHU9418020,false,true,true
-CSNU1076762,false,true,true
-CSNU6400160,false,true,true
-FFAU2879231,false,true,true
-OOLU8616474,false,true,false
-OOLU8616474,false,true,false
-CCLU7167331,false,true,false
-TRHU4736473,false,true,false
-CSLU1532443,false,true,true
-FFAU1583965,false,true,true
-FFAU3273824,false,true,true
-OOLU7534812,false,true,true
-OOLU9802679,false,true,true
-CSNU7240127,false,true,true
-DFSU7347309,false,true,true
-CSLU6071241,false,true,true
-CBHU9109057,false,true,true
-CBHU9441919,false,true,true
-CSLU6071241,false,true,true
-FCIU7199445,false,true,true
-CCLU4360497,false,true,true
-OOLU7500010,false,true,true
-FFAU2707788,false,false,false
-OOCU8457756,false,true,true
-EGHU9785833,false,true,true
-TRHU4766879,false,true,true
-TRHU4937246,false,true,true
-TRHU5109570,false,true,true
-BMOU4470982,false,true,true
-EISU9403840,false,true,true
-EITU1795332,false,true,true
-TGBU6892471,false,true,true
-FCIU7063886,false,true,true
-FCIU7513704,false,true,true
-TCNU3671369,false,true,true
-TGBU6934767,false,true,true
-CAAU5346910,false,true,true
-EGHU9828278,false,true,true
-CAIU9790124,false,true,true
-EGHU9270437,false,true,true
-MAGU5298870,false,true,true
-EITU1815995,false,true,true
-TCLU7983692,false,true,true
-EGHU9689700,false,true,true
-TGBU4030159,false,true,true
-TRHU5239384,false,true,true
-FSCU8139795,false,true,true
-TRHU5681610,false,true,true
-DRYU9425143,false,true,true
-EITU9240541,false,true,true
-EGHU9055060,false,true,true
-EGHU9345623,false,true,true
-EITU1516891,false,true,true
-EITU9056771,false,true,true
-CAAU5420685,false,true,true
-TEMU8539859,false,true,true
-TEMU8690490,false,true,true
-TEMU8914590,false,true,true
-EITU9011078,false,true,true
-EITU9141404,false,true,true
-EITU1034610,false,true,true
-BMOU5112330,container_id not in system,false,false
-EITU1688545,container_id not in system,false,false
-HMCU9010099,container_id not in system,false,false
-CAIU9970194,false,true,true
-GAOU6340626,false,true,true
-TCLU4999550,false,true,true
-CAIU9968345,false,true,true
-HMMU6010407,false,true,true
-SEGU5802374,false,true,true
-KOCU4193389,false,true,true
-KOCU4919070,false,true,true
-BSIU9161111,false,true,true
-CAIU7667960,false,true,true
-HMMU6084523,false,true,true
-KOCU4118050,false,true,true
-KOCU4178194,false,true,true
-KOCU4318254,false,true,true
-KOCU4614169,false,true,true
-TCNU5067609,false,true,true
-CAIU4564870,false,true,true
-CAIU7468931,false,true,true
-TCNU5069068,false,true,true
-TCNU7229890,false,true,true
-BSIU9211850,false,true,true
-GAOU6205117,true,true,false
-KOCU4006045,true,true,false
-KOCU4675605,true,true,false
-KOCU4756857,true,true,false
-SEGU6849416,false,false,false
-KOCU4477261,false,true,true
-KOCU4566353,false,true,true
-HMMU6448456,false,true,true
-MRSU4492688,false,false,false
-SMCU1192022,false,false,false
-TCNU1488934,false,true,false
-HAMU1269494,false,true,true
-TCNU8326529,false,true,true
-TCNU8925527,false,true,true
-FFAU1245525,false,true,true
-MSMU5139314,false,true,true
-CAIU8016495,false,true,true
-TGCU5008699,false,true,true
-TRHU6250958,false,true,true
-TCNU5516422,false,true,false
-TCNU4932430,true,true,false
-AXIU1365550,false,true,true
-NYKU5238686,false,true,true
-BEAU5456650,false,true,true
-FFAU1827172,false,true,true
-TCLU4909963,false,true,true
-TCLU8422227,false,true,true
-FFAU1456889,false,true,true
-TCLU4621283,false,true,true
-TCLU5795783,false,true,true
-TCNU5898217,false,true,true
-TLLU5500983,false,true,true
-TCLU5795783,false,true,true
-TCLU5795783,false,true,true
-BEAU5423126,false,true,true
-TCNU9664222,true,true,false
-KKTU7887918,true,true,false
-TCNU9664222,true,true,false
-KKFU7891195,false,true,false
-KKFU7974514,false,true,false
-KKTU7767126,false,true,true
-KKTU7767126,false,true,true
-TCLU6756170,false,true,true
-TRLU9734229,false,true,true
-TCLU6756170,false,true,true
-TRHU2656450,false,true,true
-CRSU9367040,false,true,true
-KKFU7928885,false,true,true
-NYKU4369465,false,true,true
-TCLU9689250,false,true,true
-TRHU4177333,false,true,true
-FCIU9285028,false,true,true
-SEGU4990765,false,true,true
-FFAU1843825,false,true,true
-GESU6557620,false,true,true
-KKFU7923775,false,true,true
-NYKU4108477,false,true,true
-TCLU9826500,false,true,true
-NYKU4425050,true,true,false
-TLLU5457470,false,true,true
-TLLU5474821,false,true,true
-TRHU4358054,false,true,true
-CAIU9323520,true,true,false
-NYKU4803864,true,true,false
-TCNU6423598,true,true,false
-TCNU6648064,true,true,false
-TLLU5507334,true,true,false
-FDCU0634690,false,true,true
-TCNU4863643,false,true,true
-TCNU7773775,false,true,true
-BMOU6596840,false,true,true
-OOLU8963149,true,true,false
-SLHU4500038,false,false,false
-NLLU4114635,false,false,false
-TCNU1687160,false,true,true
-TCNU1687160,false,true,true
+container_id,shipping_company,vizion_reference_id,vision_organization_id,bill_of_lading
+SMCU1108562,HDMU,5c8edb76-0877-4557-9f82-4f9267ffb410,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM13156400
+-- No Milestones This Container---
+SMCU1140137,HDMU,ef86737a-34f7-44fc-9f05-5a479d8ddc9e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM13156400
+-- No Milestones This Container---
+GAOU6016514,HDMU,dd87277a-c17a-4939-817c-efde851f9fa1,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM13156400
+-- No Milestones This Container---
+SMCU1103494,HDMU,267ea8e8-5c65-4139-9e8f-9eb79cb09f51,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM13156400
+-- No Milestones This Container---
+CMAU7842263,CMDU,9c53574d-2926-411e-9e6f-a53485e9167f,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUBAC0264553
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+CMAU7842263,2021-09-11 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+CMAU7842263,2021-08-05 00:00:00 UTC,Singapore,false,Loaded on vessel,Loaded on board
+CMAU7842263,2021-07-23 00:00:00 UTC,Singapore,false,Discharged transshipment,Discharged in transhipment
+CMAU7842263,2021-07-17 00:00:00 UTC,Chattogram,false,Loaded on vessel,Loaded on board
+CMAU7842263,2021-07-16 00:00:00 UTC,Chattogram,false,Gate in at origin port,Ready to be loaded
+CMAU7842263,2021-07-13 00:00:00 UTC,Chattogram,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+TCNU4758967,YMLU,fd3ad449-cb6e-484f-a250-c793cf6b7bbb,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW425910643
+-- No Milestones This Container---
+WHSU5775609,,1ac0229b-34c8-401d-908b-621711c7f029,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX06141
+-- No Milestones This Container---
+WHSU5459920,,56230755-e8d1-4981-a745-99e71e0d95a7,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BA07454
+-- No Milestones This Container---
+WHSU6121578,,1141f4ed-0955-4a2c-a0a1-69e1374488cd,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BA07453
+-- No Milestones This Container---
+BEAU5497284,ONEY,b36f58f7-d6b5-4bde-8a6b-f2130ee42894,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ONEYSGNBR3837400
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+BEAU5497284,,Cai Mep - Tcit,false,Discharged from feeder,Water POL Unloading Destination
+BEAU5497284,,Ho Chi Minh City,false,Loaded on feeder,Feeder Loading at O/B Inland Port
+BEAU5497284,2021-09-17 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+BEAU5497284,2021-09-16 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+BEAU5497284,2021-09-16 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE BLUE JAY 023E' at Port of Discharging
+BEAU5497284,2021-09-16 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE BLUE JAY 023E' POD Berthing Destination
+BEAU5497284,2021-09-12 22:00:00 UTC,Long Beach,true,Vessel arrived at destination port,'ONE BLUE JAY 023E' Arrival at Port of Discharging
+BEAU5497284,2021-08-17 21:35:00 UTC,Cai Mep - Tcit,false,Vessel departure from origin port,'ONE BLUE JAY 023E' Departure from Port of Loading
+BEAU5497284,2021-08-17 01:36:00 UTC,Cai Mep - Tcit,false,Loaded on vessel,Loaded on 'ONE BLUE JAY 023E' at Port of Loading
+BEAU5497284,2021-08-15 21:46:00 UTC,Cai Mep - Tcit,false,Feeder arrived,Outbound Feeder Arrival at Inland Port
+BEAU5497284,2021-08-15 08:40:00 UTC,Ho Chi Minh City,false,Feeder departed,Feeder Departure from O/B Inland Port
+BEAU5497284,2021-08-10 20:11:00 UTC,Ho Chi Minh City,false,Gate in,Gate In to Outbound Terminal
+BEAU5497284,2021-08-10 00:10:00 UTC,Ho Chi Minh City,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+WHSU6144172,,785287ac-9e24-4fce-9549-5ab3e1e5d787,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX06051
+-- No Milestones This Container---
+TRIU8024336,,226badec-445e-4192-bc3e-08dfd7d5b572,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,MATS9060000000
+-- No Milestones This Container---
+MATU5517455,,ce6db4c3-679d-47d2-b536-10897cad1c4e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,MATS9060000000
+-- No Milestones This Container---
+FSCU8672401,,ba09c000-c983-43b7-aac6-7ece1b0c73ce,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SHALAX18301X
+-- No Milestones This Container---
+SEGU5936603,,4ec8b4ea-b670-4be9-8474-48930e183f41,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SZLAX210804201
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+SEGU5936603,2021-09-08 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+SEGU5936603,2021-09-07 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+SEGU5936603,2021-09-07 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE EAGLE 021E' at Port of Discharging
+SEGU5936603,2021-09-07 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE EAGLE 021E' POD Berthing Destination
+SEGU5936603,2021-08-29 08:00:00 UTC,Long Beach,true,Vessel arrived at destination port,'ONE EAGLE 021E' Arrival at Port of Discharging
+SEGU5936603,2021-08-14 15:54:00 UTC,Yantian District,false,Vessel departure from origin port,'ONE EAGLE 021E' Departure from Port of Loading
+SEGU5936603,2021-08-14 01:49:00 UTC,Yantian District,false,Loaded on vessel,Loaded on 'ONE EAGLE 021E' at Port of Loading
+SEGU5936603,2021-08-10 07:44:00 UTC,Yantian District,false,Gate in,Gate In to Outbound Terminal
+SEGU5936603,2021-08-09 11:03:00 UTC,Yantian District,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+DFSU6944418,,7ebd7eee-8bed-46f8-a687-31a4a0c046be,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX210732
+-- No Milestones This Container---
+WHSU2752575,,5e96bb7f-dd29-4e44-846a-441a656874b7,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX210702
+-- No Milestones This Container---
+ZCSU7295937,,ae07ab68-b9c5-4711-81ec-e935f022cbc7,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX210734
+-- No Milestones This Container---
+TCNU4428327,,8c7cc555-fa47-4b87-a504-7d653d10d977,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX210736
+-- No Milestones This Container---
+WHSU5117737,,5ba5c091-2cd4-45bd-92d7-296fec1f18fd,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX210776
+-- No Milestones This Container---
+WHSU5062336,,b6cf4416-6d96-4c32-b64f-c3e327fb5e23,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,100BX14655
+-- No Milestones This Container---
+WHSU5881410,,55ce502f-bb0f-4af6-a58c-bdf04ce3cc9a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX210792
+-- No Milestones This Container---
+WHSU6267161,,3fc0cd78-47bf-4041-85d7-40fe38518329,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,KCHPH2107099
+-- No Milestones This Container---
+WHSU5136850,,9dd37e03-c88c-48e0-a64a-b661ae67f51a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX210797
+-- No Milestones This Container---
+WHSU6151232,,0b6aa010-2c7a-494c-86b1-69be33d901e8,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,VLAX2107114
+-- No Milestones This Container---
+WHSU6054335,,09df85d3-6836-4d2f-bb29-43bc49932815,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC100BX16531
+-- No Milestones This Container---
+BMOU1468240,,13c17780-0fca-44d8-9d38-37cfe27eca69,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,UCMICMX56386
+-- No Milestones This Container---
+MRSU4097678,,e38fcff6-bbb1-463a-8d4d-ad53ca182cd0,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SHLAX210705501
+-- No Milestones This Container---
+CMXA21080013,,543775f3-d603-4b45-b8bf-b57225404101,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMXA21080013
+-- No Milestones This Container---
+WHSU6465450,,5ae9faca-3f4e-4e50-afd1-108ed4d92296,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SHLAX210806301
+-- No Milestones This Container---
+CMXA21080012,,f564a17a-4525-460a-b7eb-62e0f1cf16d5,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMXA21080012
+-- No Milestones This Container---
+WHSU6172641,,88946870-1f06-4395-a2fe-488d0b17d0fc,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,100BX17856
+-- No Milestones This Container---
+BEAU4133708,,68a2aad0-60c6-4661-83ff-1b76239485b8,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,7803345770
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+BEAU4133708,2021-09-30 05:00:00 UTC,LÃ¡zaro CÃ¡rdenas,true,Vessel arrived at destination port,Arrival final port of discharge
+BEAU4133708,2021-09-09 00:00:00 UTC,Ningbo,true,Vessel departed,Departure
+BEAU4133708,2021-09-08 00:00:00 UTC,Ningbo,true,Discharged from vessel,Discharge
+BEAU4133708,2021-08-27 00:00:00 UTC,Jakarta,true,Vessel departed,Departure
+BEAU4133708,2021-08-24 00:00:00 UTC,Jakarta,false,Gate in at origin port,Ready to be loaded
+BEAU4133708,2021-08-21 00:00:00 UTC,Jakarta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+WHSU6467426,,3642c0f7-4cba-4d47-86f0-02736cabe84a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SHLAX210806301
+-- No Milestones This Container---
+GESU6712706,,589fa522-97e2-445d-9d1f-ed4594a94e82,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,7803345484
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+GESU6712706,2021-09-30 05:00:00 UTC,LÃ¡zaro CÃ¡rdenas,true,Vessel arrived at destination port,Arrival final port of discharge
+GESU6712706,2021-09-11 00:00:00 UTC,Shanghai,true,Vessel departed,Departure
+GESU6712706,2021-09-07 00:00:00 UTC,Shanghai,true,Discharged from vessel,Discharge
+GESU6712706,2021-08-27 00:00:00 UTC,Jakarta,true,Vessel departed,Departure
+GESU6712706,2021-08-24 00:00:00 UTC,Jakarta,false,Gate in at origin port,Ready to be loaded
+GESU6712706,2021-08-22 00:00:00 UTC,Jakarta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+JXLU6751204,,0bbd9b80-eff7-46e0-8f92-afa040a020a2,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,AYLSA210717690
+-- No Milestones This Container---
+APHU4640770,,315f7065-eb47-415d-b5d5-1ddd30ae64ec,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SHLAX210809701
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+APHU4640770,2021-08-24 00:00:00 UTC,Shanghai,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+OOCU6919285,,674fb59f-866e-41a3-a243-bd0cef707b3b,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,2676335170
+-- No Milestones This Container---
+SAXU2029907,,65fcdaf5-a008-4de4-9e8c-d0f414471925,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CPWSIN-2106423
+-- No Milestones This Container---
+BSIU9777977,,8ef78d40-9dca-46ca-a776-c83633dc032e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HAIN1M000349
+-- No Milestones This Container---
+WHLU5675800,,40caf8f5-15f0-43c2-a658-e616e9e742c7,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,039BX44013
+-- No Milestones This Container---
+BEAU5980395,,c5a1a753-3ae5-4c2b-b4e5-f8fef894e891,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05123
+-- No Milestones This Container---
+FSCU8501862,,44928648-5bf0-4474-afe7-e5c247550912,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,MATS8603795002
+-- No Milestones This Container---
+CMAU6710160,,eb1bf420-864b-453b-830a-fa031c00d371,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,7803345957
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+CMAU6710160,2021-09-30 05:00:00 UTC,LÃ¡zaro CÃ¡rdenas,true,Vessel arrived at destination port,Arrival final port of discharge
+CMAU6710160,2021-09-09 00:00:00 UTC,Ningbo,true,Vessel departed,Departure
+CMAU6710160,2021-09-08 00:00:00 UTC,Ningbo,true,Discharged from vessel,Discharge
+CMAU6710160,2021-08-27 00:00:00 UTC,Jakarta,true,Vessel departed,Departure
+CMAU6710160,2021-08-24 00:00:00 UTC,Jakarta,false,Gate in at origin port,Ready to be loaded
+CMAU6710160,2021-08-21 00:00:00 UTC,Jakarta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+OOLU9194650,,d6ea9582-e2af-4960-a9a2-5f719c77e475,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,NJLH060412572
+-- No Milestones This Container---
+WHSU6081876,,c7e0e9e2-1907-438f-a0c2-5ef0af835904,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05041
+-- No Milestones This Container---
+FBLU0021053,,a186ec48-73ea-4be6-aead-2e1ad67b5d59,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05126
+-- No Milestones This Container---
+SEGU6873876,YMLU,56a87f0b-9833-4c71-be0c-235a1b530813,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW42591043800
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+SEGU6873876,2021-07-31 00:09:00 UTC,Kaohsiung,false,Loaded on vessel,On Board
+SEGU6873876,2021-07-23 07:37:00 UTC,Kaohsiung,false,Truck arrived,Arrived
+SEGU6873876,2021-07-23 06:57:00 UTC,Kaohsiung,false,Gate out,In Transit
+SEGU6873876,2021-07-22 06:31:00 UTC,Kaohsiung,false,Discharged from vessel,Discharged
+SEGU6873876,2021-07-10 17:25:00 UTC,Jakarta,false,Loaded on vessel,On Board
+SEGU6873876,2021-07-06 00:42:00 UTC,Jakarta,false,Gate in at origin port,Received at Origin
+SEGU6873876,2021-07-03 20:02:00 UTC,Jakarta,false,Gate out empty,Empty to Shipper
+------ End Milestones This Container -------
+WHLU5828128,,db8a3693-1c6b-48ae-b626-d4b2a77c6550,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC039BX44492
+-- No Milestones This Container---
+WHSU6339575,,8f9858c6-8b34-430f-b5d2-d6c895c76f5b,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC039BX44492
+-- No Milestones This Container---
+TRHU4917379,,48f792af-1f3a-4dfd-b5de-beb465c2a8c4,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05450
+-- No Milestones This Container---
+WHSU6184220,,568cb237-7056-43dc-b840-5f4810993c81,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC027B633418
+-- No Milestones This Container---
+WHLU5500360,,d4e0be71-e816-431b-84f0-01a87846a5ad,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,039BX44012
+-- No Milestones This Container---
+APHU7261738,,df2d94d5-09e1-4f3f-aaa2-84b022b947a0,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,BAC0264311
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+APHU7261738,2021-09-02 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+APHU7261738,2021-07-29 00:00:00 UTC,Singapore,false,Loaded on vessel,Loaded on board
+APHU7261738,2021-07-19 00:00:00 UTC,Singapore,false,Discharged transshipment,Discharged in transhipment
+APHU7261738,2021-07-13 00:00:00 UTC,Chattogram,false,Loaded on vessel,Loaded on board
+APHU7261738,2021-07-12 00:00:00 UTC,Chattogram,false,Gate in at origin port,Ready to be loaded
+APHU7261738,2021-07-08 00:00:00 UTC,Chattogram,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+TCLU8262725,ONEY,2477c6d6-6dbd-42b0-a118-0fe59b1ac7b7,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ONEYSGNBP5018900
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCLU8262725,,Ho Chi Minh,false,Loaded on feeder,Feeder Loading at O/B Inland Port
+TCLU8262725,,Cai Mep - Ssit,false,Discharged from feeder,Water POL Unloading Destination
+TCLU8262725,,Ho Chi Minh,false,Loaded on feeder,Feeder Loading at O/B Inland Port
+TCLU8262725,,Cai Mep,false,Discharged from feeder,Water POL Unloading Destination
+TCLU8262725,2021-08-30 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+TCLU8262725,2021-08-29 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCLU8262725,2021-08-29 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE FALCON 018E' at Port of Discharging
+TCLU8262725,2021-08-29 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE FALCON 018E' POD Berthing Destination
+TCLU8262725,2021-08-28 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+TCLU8262725,2021-08-27 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCLU8262725,2021-08-27 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE FALCON 018E' at Port of Discharging
+TCLU8262725,2021-08-27 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE FALCON 018E' POD Berthing Destination
+TCLU8262725,2021-08-26 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+TCLU8262725,2021-08-25 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCLU8262725,2021-08-25 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE FALCON 018E' at Port of Discharging
+TCLU8262725,2021-08-25 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE FALCON 018E' POD Berthing Destination
+TCLU8262725,2021-08-19 12:00:00 UTC,Long Beach,true,Vessel arrived at destination port,'ONE FALCON 018E' Arrival at Port of Discharging
+TCLU8262725,2021-08-19 10:00:00 UTC,Long Beach,true,Vessel arrived at destination port,'ONE FALCON 018E' Arrival at Port of Discharging
+TCLU8262725,2021-07-29 06:15:00 UTC,Cai Mep - Ssit,false,Vessel departure from origin port,'ONE FALCON 018E' Departure from Port of Loading
+TCLU8262725,2021-07-28 21:35:00 UTC,Cai Mep - Ssit,false,Loaded on vessel,Loaded on 'ONE FALCON 018E' at Port of Loading
+TCLU8262725,2021-07-28 12:50:00 UTC,Cai Mep - Ssit,false,Feeder arrived,Outbound Feeder Arrival at Inland Port
+TCLU8262725,2021-07-27 20:24:00 UTC,Ho Chi Minh,false,Feeder departed,Feeder Departure from O/B Inland Port
+TCLU8262725,2021-07-20 19:53:00 UTC,Ho Chi Minh,false,Gate in,Gate In to Outbound Terminal
+TCLU8262725,2021-07-19 13:39:00 UTC,Ho Chi Minh,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+SLHU4500038,OOLU,ef0b6f5c-257b-43d7-a7da-00d4203efe53,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,OOLU2669839560
+-- No Milestones This Container---
+TGBU4400994,ONEY,4908973d-3aeb-46f0-9031-1fc33bce789c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ONEYSGNBP5018900
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TGBU4400994,,Ho Chi Minh,false,Loaded on feeder,Feeder Loading at O/B Inland Port
+TGBU4400994,,Cai Mep - Tcit,false,Discharged from feeder,Water POL Unloading Destination
+TGBU4400994,,Cai Mep,false,Discharged from feeder,Water POL Unloading Destination
+TGBU4400994,2021-08-30 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+TGBU4400994,2021-08-29 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TGBU4400994,2021-08-29 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE FALCON 018E' at Port of Discharging
+TGBU4400994,2021-08-29 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE FALCON 018E' POD Berthing Destination
+TGBU4400994,2021-08-28 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+TGBU4400994,2021-08-27 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TGBU4400994,2021-08-27 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE FALCON 018E' at Port of Discharging
+TGBU4400994,2021-08-27 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE FALCON 018E' POD Berthing Destination
+TGBU4400994,2021-08-26 02:00:00 UTC,Long Beach,true,Gate in empty return,Empty Container Returned from Customer
+TGBU4400994,2021-08-25 20:00:00 UTC,Long Beach,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TGBU4400994,2021-08-25 15:30:00 UTC,Long Beach,true,Discharged from vessel,Unloaded from 'ONE FALCON 018E' at Port of Discharging
+TGBU4400994,2021-08-25 14:00:00 UTC,Long Beach,true,Vessel berthed in port,'ONE FALCON 018E' POD Berthing Destination
+TGBU4400994,2021-08-19 12:00:00 UTC,Long Beach,true,Vessel arrived at destination port,'ONE FALCON 018E' Arrival at Port of Discharging
+TGBU4400994,2021-08-19 10:00:00 UTC,Long Beach,true,Vessel arrived at destination port,'ONE FALCON 018E' Arrival at Port of Discharging
+TGBU4400994,2021-07-29 06:15:00 UTC,Cai Mep - Tcit,false,Vessel departure from origin port,'ONE FALCON 018E' Departure from Port of Loading
+TGBU4400994,2021-07-28 21:30:00 UTC,Cai Mep - Tcit,false,Loaded on vessel,Loaded on 'ONE FALCON 018E' at Port of Loading
+TGBU4400994,2021-07-28 12:40:00 UTC,Cai Mep - Tcit,false,Feeder arrived,Outbound Feeder Arrival at Inland Port
+TGBU4400994,2021-07-27 20:21:00 UTC,Ho Chi Minh,false,Feeder departed,Feeder Departure from O/B Inland Port
+TGBU4400994,2021-07-20 20:06:00 UTC,Ho Chi Minh,false,Gate in,Gate In to Outbound Terminal
+TGBU4400994,2021-07-19 14:17:00 UTC,Ho Chi Minh,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+OOCU6953192,OOLU,0f16233f-2c98-4ee9-bdfb-356d278e9325,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,OOLU2674083570
+-- No Milestones This Container---
+OOCU6408080,OOLU,89c14897-22f8-4f55-b4ab-3d854060de3e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,OOLU2674083570
+-- No Milestones This Container---
+APHU7197156,CMDU,56061171-8c9a-4f3f-a12a-49efb8719cfb,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUSGN1211406
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+APHU7197156,2021-09-12 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+APHU7197156,2021-09-10 07:00:00 UTC,Long Beach,true,Vessel arrived at destination port,Arrival final port of discharge
+APHU7197156,2021-09-08 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+APHU7197156,2021-08-17 00:00:00 UTC,Yantian District,false,Loaded on vessel,Loaded on board
+APHU7197156,2021-08-09 00:00:00 UTC,Yantian District,false,Discharged transshipment,Discharged in transhipment
+APHU7197156,2021-08-05 00:00:00 UTC,Haiphong,false,Loaded on vessel,Loaded on board
+APHU7197156,2021-07-28 00:00:00 UTC,Haiphong,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+TCNU6780018,CMDU,dc878051-7e96-4e59-839f-cbfbd7606ca9,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUSGN1211402
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCNU6780018,2021-09-12 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+TCNU6780018,2021-09-10 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+TCNU6780018,2021-09-08 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+TCNU6780018,2021-08-17 00:00:00 UTC,Yantian District,false,Loaded on vessel,Loaded on board
+TCNU6780018,2021-08-09 00:00:00 UTC,Yantian District,false,Discharged transshipment,Discharged in transhipment
+TCNU6780018,2021-08-05 00:00:00 UTC,Haiphong,false,Loaded on vessel,Loaded on board
+TCNU6780018,2021-07-31 00:00:00 UTC,Haiphong,false,Gate in at origin port,Ready to be loaded
+TCNU6780018,2021-07-30 00:00:00 UTC,Haiphong,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+TCLU15296377,ONEY,7a948ca9-e965-47c5-b512-12feb47fffd5,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ONEYDACB14230600
+-- No Milestones This Container---
+TCNU2654897,CMDU,6193870d-d68b-4a9f-92f3-e99ebd8e4fff,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUSGN1211402
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCNU2654897,2021-09-12 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+TCNU2654897,2021-09-10 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+TCNU2654897,2021-09-08 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+TCNU2654897,2021-08-16 00:00:00 UTC,Yantian District,false,Loaded on vessel,Loaded on board
+TCNU2654897,2021-08-09 00:00:00 UTC,Yantian District,false,Discharged transshipment,Discharged in transhipment
+TCNU2654897,2021-08-05 00:00:00 UTC,Haiphong,false,Loaded on vessel,Loaded on board
+TCNU2654897,2021-07-31 00:00:00 UTC,Haiphong,false,Gate in at origin port,Ready to be loaded
+TCNU2654897,2021-07-30 00:00:00 UTC,Haiphong,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+BMOU5486200,CMDU,f577fa4c-5820-456e-85ce-fdcd8c4d25c8,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUSGN1211402
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+BMOU5486200,2021-09-12 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+BMOU5486200,2021-09-10 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+BMOU5486200,2021-09-08 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+BMOU5486200,2021-08-16 00:00:00 UTC,Yantian District,false,Loaded on vessel,Loaded on board
+BMOU5486200,2021-08-09 00:00:00 UTC,Yantian District,false,Discharged transshipment,Discharged in transhipment
+BMOU5486200,2021-08-05 00:00:00 UTC,Haiphong,false,Loaded on vessel,Loaded on board
+BMOU5486200,2021-07-31 00:00:00 UTC,Haiphong,false,Gate in at origin port,Ready to be loaded
+BMOU5486200,2021-07-30 00:00:00 UTC,Haiphong,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+ZCSU8957909,ZIMU,88cf1417-7d5e-40ce-a4af-b56f725c0dc8,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ZIMUZAP907982
+-- No Milestones This Container---
+ZCSU8775170,ZIMU,51074ae5-bad9-4f99-8f8b-a7b8355f8edd,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ZIMUZAP907982
+-- No Milestones This Container---
+FFAU1478825,ONEY,114b6c79-5bbb-4d5d-9aa8-978fa12bebaa,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ONEYSH9EQ0877500
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+FFAU1478825,2021-08-29 11:00:00 UTC,Los Angeles,true,Gate in empty return,Empty Container Returned from Customer
+FFAU1478825,2021-08-29 05:00:00 UTC,Los Angeles,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+FFAU1478825,2021-08-29 00:30:00 UTC,Los Angeles,true,Discharged from vessel,Unloaded from 'NYK DIANA 200E' at Port of Discharging
+FFAU1478825,2021-08-28 23:00:00 UTC,Los Angeles,true,Vessel berthed in port,'NYK DIANA 200E' POD Berthing Destination
+FFAU1478825,2021-08-21 21:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,'NYK DIANA 200E' Arrival at Port of Discharging
+FFAU1478825,2021-08-09 04:00:00 UTC,Shanghai,false,Vessel departure from origin port,'NYK DIANA 200E' Departure from Port of Loading
+FFAU1478825,2021-08-09 00:57:00 UTC,Shanghai,false,Loaded on vessel,Loaded on 'NYK DIANA 200E' at Port of Loading
+FFAU1478825,2021-08-02 20:28:00 UTC,Shanghai,false,Gate in,Gate In to Outbound Terminal
+FFAU1478825,2021-07-22 06:42:00 UTC,Shanghai,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+BMOU4860933,EGLV,d0708f82-172c-4813-89ff-b1a0275dc0a5,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,EGLV236100245777
+-- No Milestones This Container---
+CCLU1918887,COSU,94a66a26-b165-4c1b-b3a9-36b6012a5748,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,COSU6305654100
+-- No Milestones This Container---
+NLLU4114635,OOLU,06788e12-71c7-492e-8444-91aae92b8502,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,OOLU2670294590
+-- No Milestones This Container---
+TCLU5847568,CMDU,4cf9aac9-d10f-469b-bcb4-453ac05601ae,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUCFA0422622
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCLU5847568,2021-08-19 07:00:00 UTC,Los Angeles,false,Gate out empty,Empty to shipper
+TCLU5847568,2021-08-11 07:00:00 UTC,Los Angeles,false,Gate out to consignee,Container to consignee
+TCLU5847568,2021-08-10 07:00:00 UTC,Los Angeles,false,Rail arrived,Train arrival for import
+TCLU5847568,2021-08-09 07:00:00 UTC,Los Angeles,false,Rail arrived,Train arrival for import
+TCLU5847568,2021-08-08 07:00:00 UTC,Winslow,false,Loaded on rail,Container on rail for import
+TCLU5847568,2021-08-08 05:00:00 UTC,Amarillo,false,Loaded on rail,Container on rail for import
+TCLU5847568,2021-08-07 04:00:00 UTC,Wellington,false,Loaded on rail,Container on rail for import
+TCLU5847568,2021-08-06 05:00:00 UTC,Galesburg,false,Loaded on rail,Container on rail for import
+TCLU5847568,2021-08-03 04:00:00 UTC,Elkhart,false,Loaded on rail,Container on rail for import
+TCLU5847568,2021-07-31 04:00:00 UTC,Portsmouth,false,Loaded on rail,Container on rail for import
+TCLU5847568,2021-07-30 04:00:00 UTC,Norfolk,false,Loaded on rail,Container on rail for import
+TCLU5847568,2021-07-29 04:00:00 UTC,Norfolk,false,Gate out,Container in transit for import
+TCLU5847568,2021-07-28 04:00:00 UTC,Norfolk,false,Loaded on rail,Full Load on rail for import
+TCLU5847568,2021-07-14 04:00:00 UTC,Norfolk,false,Discharged from vessel,Discharged
+TCLU5847568,2021-06-27 00:00:00 UTC,Damietta,false,Loaded on vessel,Loaded on board
+TCLU5847568,2021-06-24 00:00:00 UTC,Damietta,false,Gate in at origin port,Ready to be loaded
+TCLU5847568,2021-06-21 00:00:00 UTC,Damietta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+SEGU6093421,CMDU,55fb16b1-0394-4977-bcaa-2227f23d90d8,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUCFA0423976
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+SEGU6093421,,,false,,
+SEGU6093421,2021-08-17 07:00:00 UTC,Long Beach,false,Gate in empty return,Empty in depot
+SEGU6093421,2021-08-11 07:00:00 UTC,Los Angeles,false,Gate out to consignee,Container to consignee
+SEGU6093421,2021-08-10 07:00:00 UTC,Los Angeles,false,Rail arrived,Train arrival for import
+SEGU6093421,2021-08-09 07:00:00 UTC,Los Angeles,false,Rail arrived,Train arrival for import
+SEGU6093421,2021-08-08 07:00:00 UTC,Winslow,false,Loaded on rail,Container on rail for import
+SEGU6093421,2021-08-08 05:00:00 UTC,Amarillo,false,Loaded on rail,Container on rail for import
+SEGU6093421,2021-08-07 05:00:00 UTC,Kansas City,false,Loaded on rail,Container on rail for import
+SEGU6093421,2021-08-06 05:00:00 UTC,Galesburg,false,Loaded on rail,Container on rail for import
+SEGU6093421,2021-08-03 04:00:00 UTC,Elkhart,false,Loaded on rail,Container on rail for import
+SEGU6093421,2021-07-31 04:00:00 UTC,Portsmouth,false,Loaded on rail,Container on rail for import
+SEGU6093421,2021-07-30 04:00:00 UTC,Norfolk,false,Loaded on rail,Container on rail for import
+SEGU6093421,2021-07-29 04:00:00 UTC,Norfolk,false,Gate out,Container in transit for import
+SEGU6093421,2021-07-28 04:00:00 UTC,Norfolk,false,Loaded on rail,Full Load on rail for import
+SEGU6093421,2021-07-27 04:00:00 UTC,Norfolk,false,Discharged from vessel,Discharged
+SEGU6093421,2021-07-10 00:00:00 UTC,Damietta,false,Loaded on vessel,Loaded on board
+SEGU6093421,2021-07-01 00:00:00 UTC,Damietta,false,Gate in at origin port,Ready to be loaded
+SEGU6093421,2021-06-29 00:00:00 UTC,Damietta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+TCNU2664600,CMDU,4fdde21c-1d8d-4e0f-bbd1-4d47b4b0c07b,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUCFA0423976
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCNU2664600,2021-08-18 07:00:00 UTC,Long Beach,false,Gate in empty return,Empty in depot
+TCNU2664600,2021-08-11 07:00:00 UTC,Los Angeles,false,Gate out to consignee,Container to consignee
+TCNU2664600,2021-08-10 07:00:00 UTC,Los Angeles,false,Rail arrived,Train arrival for import
+TCNU2664600,2021-08-09 07:00:00 UTC,Los Angeles,false,Rail arrived,Train arrival for import
+TCNU2664600,2021-08-08 07:00:00 UTC,Winslow,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-08-08 06:00:00 UTC,Belen,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-08-08 05:00:00 UTC,Amarillo,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-08-07 05:00:00 UTC,Kansas City,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-08-06 07:00:00 UTC,Chicago,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-08-06 05:00:00 UTC,Galesburg,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-08-03 04:00:00 UTC,Elkhart,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-07-31 04:00:00 UTC,Portsmouth,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-07-30 04:00:00 UTC,Norfolk,false,Loaded on rail,Container on rail for import
+TCNU2664600,2021-07-29 04:00:00 UTC,Norfolk,false,Gate out,Container in transit for import
+TCNU2664600,2021-07-28 04:00:00 UTC,Norfolk,false,Loaded on rail,Full Load on rail for import
+TCNU2664600,2021-07-27 04:00:00 UTC,Norfolk,false,Discharged from vessel,Discharged
+TCNU2664600,2021-07-10 00:00:00 UTC,Damietta,false,Loaded on vessel,Loaded on board
+TCNU2664600,2021-07-01 00:00:00 UTC,Damietta,false,Gate in at origin port,Ready to be loaded
+TCNU2664600,2021-06-29 00:00:00 UTC,Damietta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+CMAU5234855,CMDU,d4c9cdc6-95cf-45b7-9841-2f2bc7f07e07,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CMDUCFA0422622
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+CMAU5234855,2021-09-19 00:00:00 UTC,VÅ©ng TÃ u,true,Vessel arrived at destination port,Arrival final port of discharge
+CMAU5234855,2021-09-16 00:00:00 UTC,VÅ©ng TÃ u,true,Vessel arrived at destination port,Arrival final port of discharge
+CMAU5234855,2021-09-01 07:00:00 UTC,Los Angeles,true,Vessel departed,Departure
+CMAU5234855,2021-08-29 07:00:00 UTC,Los Angeles,true,Vessel departed,Departure
+CMAU5234855,2021-08-19 07:00:00 UTC,Los Angeles,false,Gate out empty,Empty to shipper
+CMAU5234855,2021-08-09 07:00:00 UTC,Los Angeles,false,Gate out to consignee,Container to consignee
+CMAU5234855,2021-08-08 07:00:00 UTC,Los Angeles,false,Rail arrived,Train arrival for import
+CMAU5234855,2021-08-07 07:00:00 UTC,Barstow,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-08-06 06:00:00 UTC,Belen,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-08-06 05:00:00 UTC,Amarillo,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-08-06 04:00:00 UTC,Wellington,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-08-05 07:00:00 UTC,Chicago,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-08-05 05:00:00 UTC,Galesburg,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-08-02 04:00:00 UTC,Elkhart,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-07-29 04:00:00 UTC,Portsmouth,false,Loaded on rail,Container on rail for import
+CMAU5234855,2021-07-27 04:00:00 UTC,Norfolk,false,Gate out,Container in transit for import
+CMAU5234855,2021-07-26 04:00:00 UTC,Norfolk,false,Loaded on rail,Full Load on rail for import
+CMAU5234855,2021-07-14 04:00:00 UTC,Norfolk,false,Discharged from vessel,Discharged
+CMAU5234855,2021-06-27 00:00:00 UTC,Damietta,false,Loaded on vessel,Loaded on board
+CMAU5234855,2021-06-24 00:00:00 UTC,Damietta,false,Gate in at origin port,Ready to be loaded
+CMAU5234855,2021-06-21 00:00:00 UTC,Damietta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+DRYU9456988,ONEY,a72cff9b-e660-4ef1-bff0-9ec560a32c75,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ONEYALYB04700700
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+DRYU9456988,2021-08-12 18:03:00 UTC,New York,false,Gate in empty return,Empty Container Returned from Customer
+DRYU9456988,2021-08-12 04:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+DRYU9456988,2021-08-11 21:34:00 UTC,New York,false,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+DRYU9456988,2021-08-09 04:30:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+DRYU9456988,2021-08-08 22:30:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+DRYU9456988,2021-08-08 17:58:00 UTC,New York,false,Discharged from vessel,Unloaded from 'EXPRESS ATHENS 1127' at Port of Discharging
+DRYU9456988,2021-08-08 03:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+DRYU9456988,2021-08-07 22:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+DRYU9456988,2021-08-07 21:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+DRYU9456988,2021-08-07 16:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'EXPRESS ATHENS 1127' at Port of Discharging
+DRYU9456988,2021-08-07 16:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+DRYU9456988,2021-08-07 15:14:00 UTC,New York,false,Vessel berthed in port,'EXPRESS ATHENS 1127' POD Berthing Destination
+DRYU9456988,2021-08-07 15:00:00 UTC,New York,true,Vessel berthed in port,'EXPRESS ATHENS 1127' POD Berthing Destination
+DRYU9456988,2021-08-07 11:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'EXPRESS ATHENS 1127' at Port of Discharging
+DRYU9456988,2021-08-07 10:00:00 UTC,New York,true,Vessel berthed in port,'EXPRESS ATHENS 1127' POD Berthing Destination
+DRYU9456988,2021-08-07 04:30:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+DRYU9456988,2021-08-06 22:30:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+DRYU9456988,2021-08-06 18:00:00 UTC,New York,true,Discharged from vessel,Unloaded from 'EXPRESS ATHENS 1127' at Port of Discharging
+DRYU9456988,2021-08-06 16:30:00 UTC,New York,true,Vessel berthed in port,'EXPRESS ATHENS 1127' POD Berthing Destination
+DRYU9456988,2021-08-06 10:00:00 UTC,New York,false,Vessel arrived at destination port,'EXPRESS ATHENS 1127' Arrival at Port of Discharging
+DRYU9456988,2021-07-25 05:00:00 UTC,Damietta,false,Vessel departure from origin port,'EXPRESS ATHENS 1127' Departure from Port of Loading
+DRYU9456988,2021-07-24 16:29:00 UTC,Damietta,false,Loaded on vessel,Loaded on 'EXPRESS ATHENS 1127' at Port of Loading
+DRYU9456988,2021-07-17 23:11:00 UTC,Damietta,false,Gate in,Gate In to Outbound Terminal
+DRYU9456988,2021-07-15 13:07:00 UTC,Damietta,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+TCNU5516422,ONEY,4bdd20e9-819c-416b-b771-b4b78286cdd6,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ONEYALYB04845300
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCNU5516422,2021-08-24 05:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCNU5516422,2021-08-23 22:54:00 UTC,New York,false,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-18 23:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCNU5516422,2021-08-18 17:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-18 12:30:00 UTC,New York,false,Discharged from vessel,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-17 10:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCNU5516422,2021-08-17 04:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-16 23:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-16 23:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCNU5516422,2021-08-16 22:50:00 UTC,New York,false,Vessel berthed in port,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-16 22:00:00 UTC,New York,true,Vessel berthed in port,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-16 17:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-16 12:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-16 11:00:00 UTC,New York,true,Vessel berthed in port,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-15 16:00:00 UTC,New York,true,Vessel arrived at destination port,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-14 08:00:00 UTC,New York,true,Vessel arrived at destination port,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-14 07:40:00 UTC,New York,false,Vessel arrived at destination port,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-13 23:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCNU5516422,2021-08-13 17:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-13 12:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-13 11:00:00 UTC,New York,true,Vessel berthed in port,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-13 10:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCNU5516422,2021-08-13 05:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-13 04:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCNU5516422,2021-08-13 00:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-12 23:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'MOL COURAGE 1128' at Port of Discharging
+TCNU5516422,2021-08-12 23:00:00 UTC,New York,true,Vessel berthed in port,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-12 22:00:00 UTC,New York,true,Vessel berthed in port,'MOL COURAGE 1128' POD Berthing Destination
+TCNU5516422,2021-08-12 18:30:00 UTC,New York,true,Vessel arrival,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-12 16:00:00 UTC,New York,true,Vessel arrived at destination port,'MOL COURAGE 1128' Arrival at Port of Discharging
+TCNU5516422,2021-08-01 23:00:00 UTC,Damietta,true,Vessel departed,'MOL COURAGE 1128' Departure from Port of Loading
+TCNU5516422,2021-08-01 22:00:00 UTC,Damietta,true,Loaded on vessel,Loaded on 'MOL COURAGE 1128' at Port of Loading
+TCNU5516422,2021-08-01 17:54:00 UTC,Damietta,false,Vessel departure from origin port,'MOL COURAGE 1128' Departure from Port of Loading
+TCNU5516422,2021-08-01 14:14:00 UTC,Damietta,false,Loaded on vessel,Loaded on 'MOL COURAGE 1128' at Port of Loading
+TCNU5516422,2021-07-26 19:08:00 UTC,Damietta,false,Gate in,Gate In to Outbound Terminal
+TCNU5516422,2021-07-26 11:07:00 UTC,Damietta,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+TGBU5058124,EGLV,485b891f-caef-4084-b24a-ef2f2a9b8728,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,EGLV080100474991
+-- No Milestones This Container---
+EMCU9695950,EGLV,3f2a16e9-c2f6-46d5-836c-db81c9f1b2ed,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,EGLV080100474991
+-- No Milestones This Container---
+TEMU6634733,EGLV,6537e86a-56b3-422a-9f88-b8c7ce31cb06,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,EGLV235101200809
+-- No Milestones This Container---
+TGBU8038883,EGLV,d312c476-ced5-4315-912f-687c359bf3ff,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,EGLV235101455319
+-- No Milestones This Container---
+HMCU9004244,EGLV,437f6a69-deed-4156-8fa7-11c10cf789c9,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,EGLV236100245769
+-- No Milestones This Container---
+EISU8327073,EGLV,7db33078-3d2e-4771-ba3a-6062fbe41d98,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,EGLV235101455319
+-- No Milestones This Container---
+BMOU5565589,YMLU,43902383-9465-417f-b482-f08da0ed4238,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW425910533
+-- No Milestones This Container---
+CAAU5048665,,6ad0efff-a71e-4e33-afe5-71dfb8790fbc,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLU100BA02330
+-- No Milestones This Container---
+FFAU2707788,COSU,e2abae1f-95c0-4527-96b3-acbaf1ed3716,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,COSU6309241430
+-- No Milestones This Container---
+MRSU4492688,HDMU,1afcbaaf-9adc-4f72-81ea-aebc9d5088d7,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM24373201
+-- No Milestones This Container---
+SMCU1192022,HDMU,af0d50dc-56dc-4b3f-b427-d6fac5673966,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM24373201
+-- No Milestones This Container---
+SEGU6849416,HDMU,98a0249c-6b66-49ff-a35d-f38986abbc4b,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM13156400
+-- No Milestones This Container---
+WHSU5483818,,bf456976-0df4-4197-940d-23818de2c446,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BA06938
+-- No Milestones This Container---
+TLLU5853548,,23068d9d-3746-4330-a8da-ce81aa11905c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BA06938
+-- No Milestones This Container---
+WHSU5160440,,ecb50e9d-d93d-4f9a-ac44-69b34fe4567b,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,LGB2107048
+-- No Milestones This Container---
+TCLU1752335,,6b795652-d302-451a-8367-252d99cd0abd,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,LAX2107061
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCLU1752335,2021-09-18 07:00:00 UTC,Long Beach,true,Vessel arrived at destination port,Arrival final port of discharge
+TCLU1752335,2021-09-12 07:00:00 UTC,Long Beach,true,Vessel arrived at destination port,Arrival final port of discharge
+TCLU1752335,2021-08-09 00:00:00 UTC,Nansha,false,Loaded on vessel,Loaded on board
+TCLU1752335,2021-07-29 00:00:00 UTC,Nansha,false,Discharged transshipment,Discharged in transhipment
+TCLU1752335,2021-07-26 00:00:00 UTC,Haiphong,false,Loaded on vessel,Loaded on board
+TCLU1752335,2021-07-22 00:00:00 UTC,Haiphong,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+WHSU6003976,,63ebbd37-f98f-4c86-b4d3-248534f441a5,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC100BX14465
+-- No Milestones This Container---
+RFCU4100045,,b8d1aaca-de04-4148-91e0-03f143e88e5c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,IDJKT0000033810
+-- No Milestones This Container---
+DRYU9137070,,2d1a28b6-c31c-4f59-8e26-a44c74d0a261,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SEL1H2520500
+-- No Milestones This Container---
+CAIU7700707,YMLU,f8edf648-5549-4b4c-8164-539749ff01ad,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW236597246
+-- No Milestones This Container---
+WHSU5822212,,2b74d4ed-c918-4538-8ad6-d1c2c1312c0c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BX06150
+-- No Milestones This Container---
+GCXU5357837,,f54a5246-4224-4560-891b-77a719efc77c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC120BA04861
+-- No Milestones This Container---
+TEMU8115315,,cbcf45a1-fce7-4be9-83c4-5c0f41da2cbe,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC120BA04861
+-- No Milestones This Container---
+BEAU4527297,YMLU,73a4cb7d-df4b-4860-8558-1f29854716ba,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW490402570
+-- No Milestones This Container---
+WHSU6379048,,cb83c3ae-23a4-4bf0-a41c-bd0e71e64073,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX06050
+-- No Milestones This Container---
+WHSU5919199,,967227be-44bb-43d3-864f-7c353a438ea1,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX06304
+-- No Milestones This Container---
+TCLU8532414,,59eef6f0-dc1f-45d0-8fe2-9d94b0bba0c3,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05972
+-- No Milestones This Container---
+WHSU5954287,,4d7233bd-8fc1-4da9-b063-2a5c621c40d8,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC039BX48967
+-- No Milestones This Container---
+APHU6977395,,68564d88-4552-4e33-b2de-d84d6623965f,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,BAC0265785
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+APHU6977395,2021-09-11 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+APHU6977395,2021-08-05 00:00:00 UTC,Singapore,false,Loaded on vessel,Loaded on board
+APHU6977395,2021-08-01 00:00:00 UTC,Singapore,false,Discharged transshipment,Discharged in transhipment
+APHU6977395,2021-07-24 00:00:00 UTC,Chattogram,false,Loaded on vessel,Loaded on board
+APHU6977395,2021-07-22 00:00:00 UTC,Chattogram,false,Gate in at origin port,Ready to be loaded
+APHU6977395,2021-07-18 00:00:00 UTC,Chattogram,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+NLLU4114126,,0d3f8c87-09ee-4a33-bce8-7d833d529e37,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,PFSL21070962
+-- No Milestones This Container---
+SEGU4337940,YMLU,bf7231fb-d22b-4699-b459-49bc914c47e3,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW425910629
+-- No Milestones This Container---
+TCNU6065278,,5c6a17ca-a2ed-40ec-840f-56dd86babbec,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,MATS7825145000
+-- No Milestones This Container---
+TRHU4256601,,1a2975f6-2655-46bd-a2c8-0cc288cb898a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,TFYV036979
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TRHU4256601,2021-08-26 02:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TRHU4256601,2021-08-25 20:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TRHU4256601,2021-08-25 15:30:00 UTC,New York,false,Discharged from vessel,Unloaded from 'CMA CGM IVANHOE 1129' at Port of Discharging
+TRHU4256601,2021-08-24 23:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TRHU4256601,2021-08-24 22:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TRHU4256601,2021-08-24 17:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TRHU4256601,2021-08-24 16:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TRHU4256601,2021-08-24 12:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'CMA CGM IVANHOE 1129' at Port of Discharging
+TRHU4256601,2021-08-24 11:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'CMA CGM IVANHOE 1129' at Port of Discharging
+TRHU4256601,2021-08-24 11:00:00 UTC,New York,true,Vessel berthed in port,'CMA CGM IVANHOE 1129' POD Berthing Destination
+TRHU4256601,2021-08-24 10:00:00 UTC,New York,true,Vessel berthed in port,'CMA CGM IVANHOE 1129' POD Berthing Destination
+TRHU4256601,2021-08-24 09:59:00 UTC,New York,false,Vessel berthed in port,'CMA CGM IVANHOE 1129' POD Berthing Destination
+TRHU4256601,2021-08-24 07:00:00 UTC,New York,true,Vessel arrived at destination port,'CMA CGM IVANHOE 1129' Arrival at Port of Discharging
+TRHU4256601,2021-08-22 02:26:00 UTC,New York,false,Vessel arrived at destination port,'CMA CGM IVANHOE 1129' Arrival at Port of Discharging
+TRHU4256601,2021-08-08 08:06:00 UTC,Damietta,false,Vessel departure from origin port,'CMA CGM IVANHOE 1129' Departure from Port of Loading
+TRHU4256601,2021-08-07 19:23:00 UTC,Damietta,false,Loaded on vessel,Loaded on 'CMA CGM IVANHOE 1129' at Port of Loading
+TRHU4256601,2021-08-05 22:52:00 UTC,Damietta,false,Gate in,Gate In to Outbound Terminal
+TRHU4256601,2021-08-04 22:28:00 UTC,Damietta,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+TRIU9106090,,d5402dd8-c566-4dda-ad61-1b99d18f67ae,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SFLPKL2107601
+-- No Milestones This Container---
+DFSU6389151,,268a8f97-3f18-4b71-ad60-c4b0b590b555,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,BAC0265785
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+DFSU6389151,2021-09-11 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+DFSU6389151,2021-08-05 00:00:00 UTC,Singapore,false,Loaded on vessel,Loaded on board
+DFSU6389151,2021-08-01 00:00:00 UTC,Singapore,false,Discharged transshipment,Discharged in transhipment
+DFSU6389151,2021-07-24 00:00:00 UTC,Chattogram,false,Loaded on vessel,Loaded on board
+DFSU6389151,2021-07-22 00:00:00 UTC,Chattogram,false,Gate in at origin port,Ready to be loaded
+DFSU6389151,2021-07-18 00:00:00 UTC,Chattogram,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+EITU1688545,,918555d7-9e78-4332-9af4-5757047a1de4,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ELVG080100475009
+-- No Milestones This Container---
+HMCU9010099,,c36f9bbc-b68d-4927-bf29-7ecdf1824c11,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ELVG080100475009
+-- No Milestones This Container---
+FCIU8043523,,99575383-b8e6-42a0-beb6-0d1cf5250a38,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SHGK1A717600
+-- No Milestones This Container---
+CAIU6806356,,9154106b-ec23-4ea5-8b42-b2df7f5a446e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WWLLWLC10805750E
+-- No Milestones This Container---
+GLDU7653245,,53bf6074-df62-48e7-a09f-e50630cad600,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,TFYV037111
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+GLDU7653245,2021-08-31 04:00:00 UTC,New York,true,Vessel arrived at destination port,Arrival final port of discharge
+GLDU7653245,2021-08-28 04:00:00 UTC,New York,true,Vessel arrived at destination port,Arrival final port of discharge
+GLDU7653245,2021-08-16 00:00:00 UTC,Damietta,false,Loaded on vessel,Loaded on board
+GLDU7653245,2021-08-12 00:00:00 UTC,Damietta,false,Gate in at origin port,Ready to be loaded
+GLDU7653245,2021-08-09 00:00:00 UTC,Damietta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+WHSU6041493,,5ccd4687-0b68-4552-868a-bd39f4915bad,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BX06433
+-- No Milestones This Container---
+TCNU5739935,,7bb0e434-ff7e-4fac-ab65-6104fa30dbb5,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC027B661905
+-- No Milestones This Container---
+WHLU5649610,,d715934e-cc1f-417e-b904-8e5d8d6304c4,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,100BA02611
+-- No Milestones This Container---
+WHSU6518014,,65a133d0-0ee4-42cd-95df-90adcca2ae72,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC027B656808
+-- No Milestones This Container---
+SMLU7703419,,b10ab96b-94c1-4560-b8fc-e505d82a3eb3,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SMLU671637-9A
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+SMLU7703419,2021-07-01 07:00:00 UTC,Chicago,false,Out shipper's owned full,Out shipper's owned full
+SMLU7703419,2021-06-30 07:00:00 UTC,Chicago,false,Discharged from rail,Import unload full from rail
+SMLU7703419,2021-06-29 07:00:00 UTC,Chicago,false,Rail arrived,Train arrival for import
+SMLU7703419,2021-06-28 07:00:00 UTC,Fort Madison,false,Loaded on rail,Container on rail for import
+SMLU7703419,2021-06-14 07:00:00 UTC,Long Beach,false,Gate out,Container in transit for import
+SMLU7703419,2021-06-13 07:00:00 UTC,Long Beach,false,Gate in,Received for import transfer
+SMLU7703419,2021-06-12 07:00:00 UTC,Long Beach,false,Gate out,Container in transit for import
+SMLU7703419,2021-06-11 07:00:00 UTC,Long Beach,false,Discharged from vessel,Discharged
+SMLU7703419,2021-05-04 00:00:00 UTC,Binhai,false,Loaded on vessel,Loaded on board
+SMLU7703419,2021-05-02 00:00:00 UTC,Binhai,false,Gate in at origin port,Ready to be loaded
+------ End Milestones This Container -------
+TCKU6285447,,9ff24a91-3a6e-4484-b7e9-0746d383ef26,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,TFYV037110
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCKU6285447,2021-08-31 04:00:00 UTC,New York,true,Vessel arrived at destination port,Arrival final port of discharge
+TCKU6285447,2021-08-28 04:00:00 UTC,New York,true,Vessel arrived at destination port,Arrival final port of discharge
+TCKU6285447,2021-08-16 00:00:00 UTC,Damietta,false,Loaded on vessel,Loaded on board
+TCKU6285447,2021-08-11 00:00:00 UTC,Damietta,false,Gate in at origin port,Ready to be loaded
+TCKU6285447,2021-08-09 00:00:00 UTC,Damietta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+DFSU7434846,,2507f06b-b351-4086-80bc-41cc3dffb6dd,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,BPNH21080022
+-- No Milestones This Container---
+YMMU6053685,YMLU,38ea1e88-83e1-4750-9ff2-a6a5cd3cfbe1,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW302503801
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+YMMU6053685,2021-08-21 16:41:00 UTC,Hong Kong,false,Loaded on vessel,On Board
+YMMU6053685,2021-08-16 19:51:00 UTC,Hong Kong,false,Gate in at origin port,Received at Origin
+YMMU6053685,2021-08-13 10:11:00 UTC,Hong Kong,false,Gate out empty,Empty to Shipper
+------ End Milestones This Container -------
+WHSU5731508,,b8860596-b114-49fe-922e-24eefa94f80e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BA08171
+-- No Milestones This Container---
+SKHU9310103,,26e0f143-1170-4a64-b9a9-459c02b03c98,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,NLJSO 2108097-00
+-- No Milestones This Container---
+GESU6737495,,d0c94445-2aa3-4668-ad9d-97a602fc6721,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,NLJSO 2108097-00
+-- No Milestones This Container---
+SKHU8933897,,52bc9707-97b6-4379-9d1f-c05868cfa53c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,NLJSO 2108097-00
+-- No Milestones This Container---
+WHSU6462949,,b2463e69-2233-4973-80cf-3831f4de721c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BX06935
+-- No Milestones This Container---
+WHSU6382226,,05774cdd-9890-4ece-9c23-3d4ca9832f44,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BX06935
+-- No Milestones This Container---
+WHLU5515150,,2a639d78-c790-4f7f-ab3c-abcea73d43f3,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BA08254
+-- No Milestones This Container---
+WHSU5266509,,55195108-54ad-4fa0-8f57-90fefcc7328c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BA08254
+-- No Milestones This Container---
+NLLU2012070,,06f92f62-098f-4af1-8577-249dc4a8a1b2,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,PFSL21060744
+-- No Milestones This Container---
+SLHU2000440,,255fadab-7892-49bd-8e79-44f330cb7316,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CPWSIN-2106378
+-- No Milestones This Container---
+GESU4819022,,d6fb17aa-4fe7-47b3-8d0b-fcf284e6d284,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,PFSL21060782
+-- No Milestones This Container---
+FCIU3497267,,79e3709e-60e9-47be-9ddb-8acdeaf09824,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,PFSL21060815
+-- No Milestones This Container---
+YMLU8742951,HDMU,fe8cd03f-9791-4189-8058-0b881afe6b98,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,HDMUSELM90794100
+-- No Milestones This Container---
+FBLU0098501,,cdb96a19-87f8-4580-b073-3bce9193ceff,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,039BX44013
+-- No Milestones This Container---
+FFAU1296918,YMLU,64d54725-05f0-41b4-9b4f-14c280a1ef09,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW42591043800
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+FFAU1296918,2021-07-31 07:32:00 UTC,Kaohsiung,false,Loaded on vessel,On Board
+FFAU1296918,2021-07-23 08:13:00 UTC,Kaohsiung,false,Truck arrived,Arrived
+FFAU1296918,2021-07-23 07:20:00 UTC,Kaohsiung,false,Gate out,In Transit
+FFAU1296918,2021-07-22 06:38:00 UTC,Kaohsiung,false,Discharged from vessel,Discharged
+FFAU1296918,2021-07-10 17:27:00 UTC,Jakarta,false,Loaded on vessel,On Board
+FFAU1296918,2021-07-05 23:52:00 UTC,Jakarta,false,Gate in at origin port,Received at Origin
+FFAU1296918,2021-07-03 19:57:00 UTC,Jakarta,false,Gate out empty,Empty to Shipper
+------ End Milestones This Container -------
+DFSU7749294,,41425a88-8a30-431e-8373-18b94a968f93,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05460
+-- No Milestones This Container---
+YMMU1228688,YMLU,32b10ccc-091b-4082-86c2-cc259ea678cc,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW302503381
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+YMMU1228688,2021-07-22 18:07:00 UTC,Hong Kong,false,Loaded on vessel,On Board
+YMMU1228688,2021-07-15 17:15:00 UTC,Hong Kong,false,Gate in at origin port,Received at Origin
+YMMU1228688,2021-07-14 15:05:00 UTC,Hong Kong,false,Gate out empty,Empty to Shipper
+------ End Milestones This Container -------
+WHSU5962301,,200c6778-a77a-4098-8152-15d79e24390e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,039BX44012
+-- No Milestones This Container---
+WHSU6427167,,21f332dd-4b41-4130-aec1-2017510b025a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,100BA02367
+-- No Milestones This Container---
+MAGU5673462,YMLU,3dc4e7a1-b48b-4ed2-bf0f-20f86145d9f1,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW425910533
+-- No Milestones This Container---
+TCNU4196514,,350905d6-bf7c-43b0-b16f-e04120baded7,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLU100BA02330
+-- No Milestones This Container---
+WHSU6092417,,19307609-bd2b-4a01-9d8f-a22ef988cba8,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BA06939
+-- No Milestones This Container---
+WHSU5927213,,d660cf4e-887d-4c3c-ae81-0f7bc8a4a780,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BA06939
+-- No Milestones This Container---
+WHSU6007333,,a87e08ec-57a9-4da8-af79-0d113b0be3fd,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,LGB2107048
+-- No Milestones This Container---
+TCKU7311221,,5f154550-6205-425c-a91b-3ad8227f5005,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLU040BX05752
+-- No Milestones This Container---
+WHSU5848829,,3181f0ae-f2a1-44db-86f2-8941fb6662e0,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05750
+-- No Milestones This Container---
+DFSU7675226,,a6cb32f2-ce69-4d86-904c-8ca665eff38f,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,039BX46480
+-- No Milestones This Container---
+HJCU9033538,,fdf3ce10-32fc-479b-a9cf-adbbf1d56f82,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SMLMSHEG1A388600
+-- No Milestones This Container---
+WHSU2622463,,1010b856-a359-4540-8f74-b2ea1e33309a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC100BA02462
+-- No Milestones This Container---
+DRYU9607976,,a17d39ee-54d7-49d5-bb16-cedf33d9ef15,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SEL1H2520500
+-- No Milestones This Container---
+WHSU5347489,,6a119ba9-1273-4682-8079-ff7e715e6c65,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX06135
+-- No Milestones This Container---
+MAGU5548250,YMLU,a1e8f2ac-df02-4c40-8c26-45103b7be7ca,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW236597246
+-- No Milestones This Container---
+GCXU5360825,,31d46820-6ef9-4d3f-b2f4-76d645278b06,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC120BA04861
+-- No Milestones This Container---
+CAIU8743323,,0cee07b8-4d46-441b-a31e-d3efefe0969e,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SESHA2107165
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+CAIU8743323,2021-08-25 07:00:00 UTC,Long Beach,false,Vessel arrived at destination port,Arrival final port of discharge
+CAIU8743323,2021-08-24 07:00:00 UTC,Long Beach,false,Vessel arrived at destination port,Arrival final port of discharge
+CAIU8743323,2021-08-03 00:00:00 UTC,Ningbo,false,Loaded on vessel,Loaded on board
+CAIU8743323,2021-07-30 00:00:00 UTC,Ningbo,false,Gate in at origin port,Ready to be loaded
+CAIU8743323,2021-07-23 00:00:00 UTC,Ningbo,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+FFAU1009427,YMLU,a91934b8-4d5e-49f3-bdee-1e75ceeb4558,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW490402570
+-- No Milestones This Container---
+WHSU5547208,,a6661461-10d0-424f-8245-d2c471083b6b,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX06050
+-- No Milestones This Container---
+CAAU5023184,,13021bee-bede-4320-9072-d14b41ec3fd9,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05972
+-- No Milestones This Container---
+FBLU0103423,,b0f9b165-7665-4138-a8ba-54d5b09bff9a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC040BX05972
+-- No Milestones This Container---
+CMAU4556918,,19f68b90-a6a2-434d-b69f-f25dd92ac864,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,BAC026578770
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+CMAU4556918,2021-09-20 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+CMAU4556918,2021-09-19 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+CMAU4556918,2021-08-22 00:00:00 UTC,Singapore,false,Loaded on vessel,Loaded on board
+CMAU4556918,2021-07-31 00:00:00 UTC,Singapore,false,Discharged transshipment,Discharged in transhipment
+CMAU4556918,2021-07-24 00:00:00 UTC,Chattogram,false,Loaded on vessel,Loaded on board
+CMAU4556918,2021-07-22 00:00:00 UTC,Chattogram,false,Gate in at origin port,Ready to be loaded
+CMAU4556918,2021-07-19 00:00:00 UTC,Chattogram,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+EGHU3413058,,cc27f84b-0cbd-4cd8-aaed-033dcfbf516a,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,CPWSIN-2107500
+-- No Milestones This Container---
+FFAU1255225,YMLU,62aa1683-85dd-4716-8df2-f21eb911667d,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,YMLUW425910629
+-- No Milestones This Container---
+MATU5147710,,b94b4ca2-43e0-48a2-9242-6891663370bf,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,MATS6640606000
+-- No Milestones This Container---
+TCLU9664755,,9c1a2460-9b5f-4c99-bc1d-1e7efe8de5bb,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,TFYV036979
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+TCLU9664755,2021-08-24 23:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCLU9664755,2021-08-24 22:00:00 UTC,Elizabeth,true,Gate in empty return,Empty Container Returned from Customer
+TCLU9664755,2021-08-24 17:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCLU9664755,2021-08-24 16:00:00 UTC,New York,true,Gate out from destination port,Gate Out from Inbound Terminal for Delivery to Consignee (or Port Shuttle)
+TCLU9664755,2021-08-24 12:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'CMA CGM IVANHOE 1129' at Port of Discharging
+TCLU9664755,2021-08-24 11:30:00 UTC,New York,true,Discharged from vessel,Unloaded from 'CMA CGM IVANHOE 1129' at Port of Discharging
+TCLU9664755,2021-08-24 11:00:00 UTC,New York,true,Vessel berthed in port,'CMA CGM IVANHOE 1129' POD Berthing Destination
+TCLU9664755,2021-08-24 10:00:00 UTC,New York,true,Vessel berthed in port,'CMA CGM IVANHOE 1129' POD Berthing Destination
+TCLU9664755,2021-08-24 09:59:00 UTC,New York,false,Vessel berthed in port,'CMA CGM IVANHOE 1129' POD Berthing Destination
+TCLU9664755,2021-08-24 07:00:00 UTC,New York,true,Vessel arrived at destination port,'CMA CGM IVANHOE 1129' Arrival at Port of Discharging
+TCLU9664755,2021-08-22 02:26:00 UTC,New York,false,Vessel arrived at destination port,'CMA CGM IVANHOE 1129' Arrival at Port of Discharging
+TCLU9664755,2021-08-08 08:06:00 UTC,Damietta,false,Vessel departure from origin port,'CMA CGM IVANHOE 1129' Departure from Port of Loading
+TCLU9664755,2021-08-07 07:22:00 UTC,Damietta,false,Loaded on vessel,Loaded on 'CMA CGM IVANHOE 1129' at Port of Loading
+TCLU9664755,2021-08-04 21:25:00 UTC,Damietta,false,Gate in,Gate In to Outbound Terminal
+TCLU9664755,2021-08-03 23:08:00 UTC,Damietta,false,Gate out empty,Empty Container Release to Shipper
+------ End Milestones This Container -------
+FFAU1614834,,b5dff369-a10d-4319-96b2-432364f21293,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,TFYV036981
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+FFAU1614834,2021-08-24 04:00:00 UTC,New York,false,Vessel arrived at destination port,Arrival final port of discharge
+FFAU1614834,2021-08-07 00:00:00 UTC,Damietta,false,Loaded on vessel,Loaded on board
+FFAU1614834,2021-08-04 00:00:00 UTC,Damietta,false,Gate in at origin port,Ready to be loaded
+FFAU1614834,2021-08-03 00:00:00 UTC,Damietta,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+CAIU4452715,,72e354c8-62ec-4f34-9b0c-c05fe37994d5,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,SMLMSHEG1A516600
+-- No Milestones This Container---
+MATU2632202,,8fcb937d-4653-4f6b-a11f-54c0ef2f4618,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,MATS8789956000
+-- No Milestones This Container---
+BMOU5112330,,3e07d22b-1a8c-4414-af2d-0650dcee1d63,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,ELVG080100475009
+-- No Milestones This Container---
+WHSU2634865,,869dff5e-be0e-41b7-8418-0eb89133116c,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,WHLC100BX15413
+-- No Milestones This Container---
+CAIU4566169,,9532596a-8b85-431c-aa00-c5a034f73177,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,GCNLCLAX10867400
+-- No Milestones This Container---
+HMMU6298973,,c02d8232-0779-4280-8e21-f52029c887da,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,GCNLCLAX10867400
+-- No Milestones This Container---
+FBLU0023591,,81fe76f2-7700-40f5-9082-dc91d5310c94,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,100BA02622
+-- No Milestones This Container---
+CMAU7622654,,dd770b69-fdd4-4fa8-95f8-b47b468f9fec,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,BAC0264311
+------ No ETA But Milestones This Container-------
+container_id,milestone_timestamp,location_city,planned,description,raw_descripition
+CMAU7622654,2021-09-02 07:00:00 UTC,Los Angeles,true,Vessel arrived at destination port,Arrival final port of discharge
+CMAU7622654,2021-07-29 00:00:00 UTC,Singapore,false,Loaded on vessel,Loaded on board
+CMAU7622654,2021-07-19 00:00:00 UTC,Singapore,false,Discharged transshipment,Discharged in transhipment
+CMAU7622654,2021-07-13 00:00:00 UTC,Chattogram,false,Loaded on vessel,Loaded on board
+CMAU7622654,2021-07-12 00:00:00 UTC,Chattogram,false,Gate in at origin port,Ready to be loaded
+CMAU7622654,2021-07-08 00:00:00 UTC,Chattogram,false,Gate out empty,Empty to shipper
+------ End Milestones This Container -------
+DFSU7662996,,d73daab4-c43d-4b09-b78e-06e9e4246a24,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,040BX06433
+-- No Milestones This Container---
+WHSU5114450,,b22c2e57-f533-4d76-8535-4025b87d04ff,f59471f6-a2e5-46f9-9c1c-6d26b71afe64,100BA02611
+-- No Milestones This Container---
