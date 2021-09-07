@@ -20,7 +20,7 @@ module EtaFinder
                 eta_found = true
             else
                 eta_found = false
-            end
+            
         end
 
         puts "ETA is #{eta_found}"
