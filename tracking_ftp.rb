@@ -188,7 +188,7 @@ class TrackingFTP < Net::FTP
             next if mycont[1] == nil
             my_container_id = mycont[0]
             my_milestone_timestamp = mycont[1]
-            my_eta_info = TemporaryEta.where("container_id = ? and milestone_timestamp = ?",my_container_id, my_milestone_timestamp ).first 
+            my_eta_info = TemporaryEta.where("container_id = ? and milestone_timestamp = ?",my_container_id, my_milestone_timestamp ).order('milestone_timestamp desc').first 
             #puts "my_eta_info = #{my_eta_info.inspect}"
 
           
@@ -214,13 +214,28 @@ class TrackingFTP < Net::FTP
       #below to go back to parent directory
       
       upload_tracking_csv(new_filename, "estimated_arrival_tracking")
-      close
+      
 
       #Here mark finished_journey = true, upload full history, then mark upload = true
 
-      
+      my_no_tracking_sql = "select container_id, shipping_company, vizion_reference_id,  bill_of_lading, created_at, updated_at, finished_journey, uploaded from container_trackings where container_id not in (select container_id from container_milestones)"
+
+      my_no_tracking = ActiveRecord::Base.connection.execute(my_no_tracking_sql).values
+
+      no_milestone_filename = lack_milestone
+
+      CSV.open(no_milestone_filename, 'a+', :write_headers=> true,
+        :headers => ['container_id', 'shipping_company', 'vizion_reference_id','bill_of_lading', 'created_at', 'updated_at', 'finished_journey', 'uploaded']) do |csv|
+          my_no_tracking.each do |myn|
+            csv << [myn[0], myn[1], myn[2], myn[3], myn[4], myn[5], myn[6], myn[7] ]
+            
+          end
 
 
+        end #CSV
+
+      upload_tracking_csv(no_milestone_filename, "containers no milestones")
+      close
 
     end
 
@@ -232,7 +247,10 @@ class TrackingFTP < Net::FTP
     def estimated_name_csv
       "ETA_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
     end
-
+    
+    def lack_milestone
+      "No_Milestone_#{Time.current.strftime('%Y_%m_%d_%H_%M_%S_%L')}.csv"
+    end
 
     def upload_tracking_csv(file, message)
       directory = '/Inbound'

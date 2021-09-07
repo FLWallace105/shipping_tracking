@@ -12,7 +12,7 @@ Dir[File.join(__dir__, 'models', '*.rb')].each { |file| require file }
 
 module ShippingInfo
   class TrackGetter
-    
+    include EtaFinder  
 
     def initialize
       #something here
@@ -663,19 +663,27 @@ module ShippingInfo
             else 
               my_destination_city = nil
             end
+            raw_description = myt.dig('raw_description')
+
+            #puts "Got here"
+
+            temp_estimated_time_arrival = determine_eta(raw_description, new_temp_city, my_destination_city, is_planned, container_id)
+
+            #puts "Am here"
+
 
             #puts "STARTING BLOCK estimated_time_arrival = t, #{myt['raw_description']}, #{myt['planned']}"
-            if ( myt['raw_description'] =~ /estim.+/i ||  myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i ) 
+            #if ( myt['raw_description'] =~ /estim.+/i ||  myt['raw_description'] =~ /vessel\sarrive.+destination\sport/i ) 
               #puts "Setting estimated_time_arrival = t, #{myt['raw_description']}, #{myt['planned']}"
-              temp_estimated_time_arrival = true
-            elsif (my_destination_city != nil  && new_temp_city != nil) #need to handle all nil cases
+              #temp_estimated_time_arrival = true
+            #elsif (my_destination_city != nil  && new_temp_city != nil) #need to handle all nil cases
               #puts "City stuff: milestone city = #{new_temp_city.downcase} and destination city = #{my_destination_city.downcase}"
-              if ( new_temp_city.downcase == my_destination_city.downcase )
-              temp_estimated_time_arrival = true
-              end
-            else
-              temp_estimated_time_arrival = false
-            end
+              #if ( new_temp_city.downcase == my_destination_city.downcase )
+              #temp_estimated_time_arrival = true
+              #end
+            #else
+              #temp_estimated_time_arrival = false
+            #end
             
             
             temp_location_name = myt.dig('location', 'name')
