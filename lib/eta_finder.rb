@@ -16,8 +16,12 @@ module EtaFinder
                 eta_found = true
             when   /.+ pod\sberth.+dest.+/i  && carrier_code == 'ONEY'
                 eta_found = true
-            else (my_destination_city != nil  && new_temp_city != nil) && (new_temp_city.downcase == my_destination_city.downcase) && (is_planned == true)
+            elsif (my_destination_city != nil  && new_temp_city != nil) && (new_temp_city.downcase == my_destination_city.downcase) && (is_planned == true)
                 eta_found = true
+
+            else
+                eta_found = false
+            end
         end
 
         puts "ETA is #{eta_found}"
