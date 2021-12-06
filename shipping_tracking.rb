@@ -368,6 +368,29 @@ module ShippingInfo
 
     end
 
+    def generate_stop_tracking
+
+      File.delete('stop_tracking.csv') if File.exist?('stop_tracking.csv')
+      column_header = ["container_id", "vizion_reference_id" ]
+
+      CSV.open('stop_tracking.csv','a+', :write_headers=> true, :headers => column_header) do |hdr|
+        column_header = nil
+        CSV.foreach('container_id_stop_tracking.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
+          puts row.inspect
+          container_id = row['container_id']
+          my_container_info = ContainerTracking.find_by_container_id(container_id)
+          next if my_container_info == nil
+          puts my_container_info.inspect
+          csv_data_out = [container_id, my_container_info.vizion_reference_id ]
+          hdr << csv_data_out
+
+
+        end
+
+      end #CSV open
+
+    end
+
 
     def stop_tracking
       puts "Starting to remove containers from tracking ..."
@@ -392,10 +415,11 @@ module ShippingInfo
       ContainerShouldTrack.delete_all
       #Now reset index
       ActiveRecord::Base.connection.reset_pk_sequence!('containers_should_tracks')
-      CSV.foreach('most_recent_container_list.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
+      CSV.foreach('no_info_vizion.csv', :encoding => 'ISO-8859-1', :headers => true) do |row|
         puts row.inspect
-        ContainerShouldTrack.create(container_id: row['Container #'], shipping_company: row['Bill Of Lading'][0..3], bill_of_lading: row['Bill Of Lading'])
+        ContainerShouldTrack.create(container_id: row['Container_num'], shipping_company: row['Master_BOL'][0..3], bill_of_lading: row['Master_BOL'])
       end
+      
 
       my_containers_not_tracked_sql = "select container_id, shipping_company, bill_of_lading, created_at from containers_should_tracks where container_id not in (select container_id from container_trackings)"
 

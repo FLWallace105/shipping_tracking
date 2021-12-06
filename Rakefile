@@ -10,6 +10,11 @@ namespace :request_ftp_info do
         ShippingInfo::TrackGetter.new.get_ftp_shipping_info
     end
 
+    desc 'create stop_tracking.csv file from csv with only container_id'
+    task :create_stop_tracking_file do |t|
+        ShippingInfo::TrackGetter.new.generate_stop_tracking
+    end
+
     desc 'stop tracking containers in csv file'
     task :stop_tracking do |t|
         ShippingInfo::TrackGetter.new.stop_tracking
