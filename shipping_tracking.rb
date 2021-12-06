@@ -398,6 +398,7 @@ module ShippingInfo
         puts row.inspect
         vizion_reference_id = row['vizion_reference_id']
         my_container_info = ContainerTracking.find_by_vizion_reference_id(vizion_reference_id)
+        next if my_container_info == nil
         my_container_id = my_container_info.container_id
         puts my_container_id
         DestinationPort.where("container_id = ?", my_container_id).destroy_all
